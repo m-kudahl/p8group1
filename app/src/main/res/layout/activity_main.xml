@@ -10,14 +10,14 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:style="@style/GreenButton"
+        android:style="@style/BlueButton"
         android:text="Button"
         tools:layout_editor_absoluteX="193dp"
         tools:layout_editor_absoluteY="74dp" />
 
     <Button
         android:id="@+id/button3"
-        style="@style/GreenButton"
+        style="@style/BlueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
