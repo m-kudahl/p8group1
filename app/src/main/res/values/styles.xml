@@ -3,9 +3,11 @@
     <style name="GreenButton" parent="ThemeOverlay.AppCompat">
         <item name="android:backgroundTint">#00FF00</item>
     </style>
+
     <style name="BlueButton" parent="ThemeOverlay.AppCompat">
         <item name="android:backgroundTint">#2E5788</item>
     </style>
+
 </resources>
 
 
