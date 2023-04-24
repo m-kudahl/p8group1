@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "564726884061",
+    "firebase_url": "https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "p8-g1-bc27c",
+    "storage_bucket": "p8-g1-bc27c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564726884061:android:e6317ecacc34bae07c5d34",
+        "android_client_info": {
+          "package_name": "com.example.plswork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564726884061-rlsjhjngedblhv9fq85la13f0lmngisr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADE6036YOEZxdEtjD2Rcctz-YY7If4YS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564726884061-rlsjhjngedblhv9fq85la13f0lmngisr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
