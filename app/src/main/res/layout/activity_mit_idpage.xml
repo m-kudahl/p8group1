@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mit_id"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="color/bg"
-    android:orientation="vertical">
-
-    <View
+    android:background="@color/bg"
+    tools:context=".MitIDpage">
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/contentBox">
+        android:layout_height="match_parent"
+    </TextView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mit_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/contentBox"
+        android:orientation="vertical">
 
 
         <TextView
@@ -22,6 +23,5 @@
 
         </TextView>
 
-    </View>
-
-</LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
