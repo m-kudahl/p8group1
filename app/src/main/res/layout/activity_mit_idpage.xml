@@ -7,21 +7,26 @@
     tools:context=".MitIDpage">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-    </TextView>
+        android:layout_height="20dp"
+        android:text="Mit ID"/>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/mit_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@color/contentBox"
         android:orientation="vertical">
 
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="This is a test"/>
 
-        </TextView>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
