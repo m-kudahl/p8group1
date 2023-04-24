@@ -11,4 +11,6 @@ public class MitIDpage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mit_idpage);
     }
+
+
 }
