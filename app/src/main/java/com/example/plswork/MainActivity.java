@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Kode der åbner EducationActivity i stedet for MainActivity
         Intent EducationActivityIntent = new Intent(
-                this, EducationActivity.class
+                this, EducationSUActivity.class
         );
         startActivity(EducationActivityIntent);
         //Slutter her

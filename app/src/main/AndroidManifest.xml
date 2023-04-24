@@ -12,7 +12,16 @@
         android:theme="@style/Theme.Plswork"
         tools:targetApi="31">
         <activity
-            android:name=".EducationActivity"
+            android:name=".EducationSUActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EducationOptionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EducationDiplomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EducationHomeActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
