@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_homepage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="color/bg"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="bottom|center_vertical"
+        android:background="@color/contentBox"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/category1"
+                android:layout_width="match_parent"
+                android:layout_height="0db"
+                android:layout_margin="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@color/buttonBlueText"
+                android:text="Category 1" />
+
+            <Button
+                android:id="@+id/category2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@color/buttonBlueText"
+                android:text="Category 2" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/category3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@color/buttonBlueText"
+                android:text="Category 3" />
+
+            <Button
+                android:id="@+id/category4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@color/buttonBlueText"
+                android:text="Category 4" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/category5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@color/buttonBlueText"
+                android:text="Category 5" />
+
+            <Button
+                android:id="@+id/category6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@color/buttonBlueText"
+                android:text="Category 6" />
+
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
