@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <include
         layout="@layout/appbar"/>
+
 
     <EditText
         android:id="@+id/editTextName"
@@ -99,7 +99,5 @@
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
