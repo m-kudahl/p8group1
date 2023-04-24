@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".EducationHomeActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="606dp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewEducationHome"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="2dp"
+        android:text="Education"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollViewEducationHome"
+        android:layout_width="match_parent"
+        android:layout_height="604dp"
+        android:background="@color/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/EducationHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/contentBox"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingLeft="32dp"
+            android:paddingTop="20dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="20dp">
+
+
+            <TextView
+                android:id="@+id/EducationHomeText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="15dp"
+                android:text="Here is information for you If you are a refugee from Ukraine since 24th of February and consider studying in Denmark.
+                    \nOn this page you can get information about:"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/EducationHomeText1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diplom verification"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/EducationHomeText1.3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how and if you can verify your current education"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/EducationHomeText1.4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Education options"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/EducationHomeText1.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="what are your options for studying in Denmark"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/EducationHomeText1.6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SU"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/EducationHomeText1.7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="how to check if you can receive SU while studying in Denmark"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                />
+
+            <Button
+                android:id="@+id/DiplomVerification"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/white"
+                android:text="Diplom verification"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText" />
+
+            <Button
+                android:id="@+id/EducationOptions"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:text="Education Options"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText" />
+
+            <Button
+                android:id="@+id/SU"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:text="SU"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
