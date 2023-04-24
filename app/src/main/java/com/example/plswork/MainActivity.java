@@ -3,6 +3,7 @@ package com.example.plswork;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.text.TextUtils;
@@ -48,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Kode der åbner EducationActivity i stedet for MainActivity
+        Intent EducationActivityIntent = new Intent(
+                this, EducationActivity.class
+        );
+        startActivity(EducationActivityIntent);
+        //Slutter her
+
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
 
