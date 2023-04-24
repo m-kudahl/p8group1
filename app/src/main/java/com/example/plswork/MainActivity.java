@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
+
+
     AutoCompleteTextView autocomplete;
+
 
     String[] cities = { "Randers", "Aalborg","Aarhus",
             "Copenhagen"};
@@ -17,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.inflateMenu(R.menu.main_menu);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle(null);
+
 
 
         autocomplete = (AutoCompleteTextView)
@@ -27,5 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
         autocomplete.setThreshold(2);
         autocomplete.setAdapter(adapter);
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
     }
 }
