@@ -98,6 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:text="What is MitID?"
                     android:textStyle="bold"
@@ -186,6 +187,7 @@
 
                         <!-- Second Column with ImageButton -->
                         <ImageButton
+                            android:id="@+id/mitIDButton"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -202,20 +204,23 @@
                                 android:layout_weight="0.5">
 
                                 <ImageButton
+                                    android:id="@+id/googleStoreButton"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/getongoogle" />
+                                    android:scaleType="centerInside"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/getongoogleplaystore" />
                             </TableRow>
 
                             <TableRow
                                 android:layout_weight="0.5">
                                 <ImageButton
+                                    android:id="@+id/appleStoreButton"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
+                                    android:layout_weight="1"
                                     android:scaleType="centerInside"
-                                    android:src="@drawable/getonapples" />
+                                    android:src="@drawable/getonapplestore" />
                             </TableRow>
 
                         </TableLayout>
