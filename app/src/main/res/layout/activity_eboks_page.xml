@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg"
-    tools:context=".NemKontoPage">
+    tools:context=".EBoksPage">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -57,10 +57,10 @@
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/title_NemKonto"
+        android:id="@+id/title_EBoks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="NemKonto"
+        android:text="E-Boks"
         android:textSize="45dp"
         android:gravity="center"
         android:background="@color/white"
@@ -73,12 +73,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="120dp"
-        app:layout_constraintTop_toBottomOf="@id/title_NemKonto"
+        app:layout_constraintTop_toBottomOf="@id/title_EBoks"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-            android:id="@+id/nem_konto"
+            android:id="@+id/EBoks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
@@ -102,7 +102,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="What is a NemKonto?"
+                    android:text="What is E-Boks?"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -113,14 +113,14 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginRight="20dp"
-                    android:text="In Denmark, a NemKonto is an ordinary bank account used to receive payments from the government."/>
+                    android:text="E-Boks is the most widely used digital mailbox in Denmark. Here you will receive e-mail from public authorities, your bank, insurance company and much more."/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
-                    android:text="For more information visit the NemKonto website: https://www.nemkonto.dk/da/Servicemenu/Engelsk"/>
+                    android:text="For more information visit the E-Boks website: https://www.nemkonto.dk/da/Servicemenu/Engelsk"/>
 
             </LinearLayout>
 
@@ -138,6 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -146,8 +147,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="How do I get a NemKonto?"
+                    android:text="How do I get an E-Boks?"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -156,24 +156,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="If you have MitID, you can assign yourself a NemKonto by using the self-service option on NemKonto's website."/>
+                    android:text="In order to get an E-Boks, you should do one of two things."/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="If you do not have MitID, you can assign a NemKonto by contacting your bank and informing them which of your accounts as your NemKonto."/>
-
+                    android:layout_marginLeft="20dp"
+                    android:text="• Go to Borger Service, where you can receive help."/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="For more information visit the following website:
-                    https://www.nemkonto.dk/da/Servicemenu/Engelsk/NemKonto-easy-account-for-citizens"/>
+                    android:layout_marginLeft="20dp"
+                    android:text="• If you have a MitID, you can simply go to this page and sign up:"/>
 
             </LinearLayout>
 
@@ -183,53 +178,35 @@
                 android:layout_marginRight="50dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="5dp"
                 android:background="@color/black"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
                 <TextView
-                    android:id="@+id/subtitle_FAQ"
+                    android:id="@+id/subtitle_HowToUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="How do I use E-Boks?"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:textSize="18sp"
-                    android:layout_marginRight="20dp"
-                    android:textStyle="bold"
-                    android:text="How do I use NemKonto?"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="• What if I change my bank account?"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="• What does it cost to set up a NemKonto?"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="• Can I receive public payments to another account besides my NemKonto?"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="• Where can I get more information?"/>
+                    android:layout_marginBottom="10dp"
+                    android:text="In order to use E-Boks you can login on their website or for convinience, you can download the E-Boks application on your phone."/>
 
             </LinearLayout>
-
-
-
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
