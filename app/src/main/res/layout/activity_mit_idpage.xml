@@ -57,7 +57,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title_MitID"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="Mit ID"
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="120dp"
-        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title_MitID"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -151,6 +151,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="If you have just arrived in Denmark, you can get MitID in 2 different ways:"/>
 
                 <TextView
