@@ -93,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -199,12 +200,56 @@
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="In order to use E-Boks you can login on their website or for convinience, you can download the E-Boks application on your phone."/>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <TableRow>
+                        <!-- First Column with TextView -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:text="In order to use E-Boks you can login on their website or for convinience, you can download the E-Boks application on your phone."/>
+
+                        <!-- Second Column with ImageButtons -->
+
+                        <TableLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TableRow
+                                android:layout_weight="0.5">
+
+                                <ImageButton
+                                    android:id="@+id/googleStoreButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scaleType="centerInside"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/getongoogleplaystore" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="0.5">
+                                <ImageButton
+                                    android:id="@+id/appleStoreButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/getonapplestore" />
+                            </TableRow>
+
+                        </TableLayout>
+
+                    </TableRow>
+
+                </TableLayout>
 
             </LinearLayout>
         </LinearLayout>
