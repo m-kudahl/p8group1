@@ -24,13 +24,20 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText nameText, emailText, passwordText;
     Button registerButton;
 
+    FirebaseDatabase firebaseDatabase;
+
+    DatabaseReference databaseReference;
     User user;
     FirebaseAuth mAuth;
     AutoCompleteTextView autocomplete;
@@ -90,9 +97,10 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Enter municipal", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                user = new User(email, name, municipal);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                myDatabaseRef = database.getReference("")
+                user = new User();
+                firebaseDatabase = FirebaseDatabase.getInstance();
+                databaseReference = firebaseDatabase.getReference("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/");
+
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -106,11 +114,34 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
                                 }
+                                addDatatoFirebase(email, name, municipal);
                             }
                         });
             }
         });
 
+
+    }
+    private void addDatatoFirebase(String email, String name, String municipal){
+
+        user.setUserFullName(name);
+        user.setUserEmail(email);
+        user.setUserMunicipality(municipal);
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                databaseReference.setValue(user);
+                Toast.makeText(MainActivity.this, "data added", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(MainActivity.this, "Fail to add data " + error, Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 }
