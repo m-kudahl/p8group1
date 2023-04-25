@@ -33,13 +33,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="SELECT YOUR REGION" />
+                android:text="SELECT YOUR REGION"
+                android:textColor="@color/black"/>
 
             <Spinner
                 android:id="@+id/RegionSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/RegionSpinner_values" />
+                android:entries="@array/RegionSpinner_values"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -48,7 +50,8 @@
                 android:text="THE FOLLOWING ARE THE DIFFERENT PAYMENT OPTIONS FOR TRAVELLING WITH TRAIN IN DENMARK"
                 android:textSize="10dp"
                 android:paddingBottom="15dp"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -71,7 +74,8 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="THE DANISH ELECTRONIC TICKET-LESS TAVEL CARD SYSTEM"
-                android:textSize="10dp" />
+                android:textSize="10dp"
+                android:textColor="@color/black"/>
 
             <Button
                 android:layout_width="250dp"
@@ -124,7 +128,8 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="APPLICATIONS FOR PLANNING AND ORDERING TICKETS"
-                android:textSize="10dp" />
+                android:textSize="10dp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -190,7 +195,8 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="THE DANISH ELECTRONIC TICKET-LESS TAVEL CARD SYSTEM"
-                android:textSize="10dp" />
+                android:textSize="10dp"
+                android:textColor="@color/black"/>
 
             <Button
                 android:layout_width="250dp"
