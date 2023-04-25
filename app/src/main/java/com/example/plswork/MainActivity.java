@@ -94,12 +94,12 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 if(TextUtils.isEmpty(municipal)){
-                    Toast.makeText(MainActivity.this, "Enter municipal", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Enter municipality", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 user = new User();
-                firebaseDatabase = FirebaseDatabase.getInstance();
-                databaseReference = firebaseDatabase.getReference("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/");
+                firebaseDatabase = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/");
+                databaseReference = firebaseDatabase.getReference("User");
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
