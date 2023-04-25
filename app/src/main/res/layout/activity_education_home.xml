@@ -139,8 +139,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                />
+                android:paddingRight="5dp" />
 
             <Button
                 android:id="@+id/DiplomVerification"
@@ -170,6 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="60dp"
                 android:backgroundTint="@color/white"
                 android:text="SU"
                 android:textAlignment="center"

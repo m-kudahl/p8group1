@@ -159,7 +159,6 @@
                 android:layout_height="wrap_content"
                 android:text="MitID"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"/>
