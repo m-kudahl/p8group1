@@ -123,7 +123,7 @@
                 android:text="How do I get MitID?"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
-
+            
             <TextView
                 android:id="@+id/subsequent_textHowDoI"
                 android:layout_width="match_parent"
