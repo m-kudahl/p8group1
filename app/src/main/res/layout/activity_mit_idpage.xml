@@ -89,19 +89,58 @@
 
 
             <TextView
+                android:id="@+id/subtitleWhatIs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This is a test"/>
+                android:layout_marginTop="20dp"
+                android:text="What is MitID?"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/subsequent_textWhatIs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This is a test"/>
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="MitID is the Danish national eID, MitID, is every resident's personal key to digital services in Denmark, including self-service solutions provided by the public sector.
+                For more information visit the MitID website: https://lifeindenmark.borger.dk/apps-and-digital-services/mitid"
+                android:layout_below="@+id/subtitle"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black"/>
 
             <TextView
+                android:id="@+id/subtitleHowDoI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This is a test"/>
+                android:layout_marginTop="20dp"
+                android:text="How do I get MitID?"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/subsequent_textHowDoI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="MitID is the Danish national eID, MitID, is every resident's personal key to digital services in Denmark, including self-service solutions provided by the public sector.
+                For more information visit the MitID website: https://lifeindenmark.borger.dk/apps-and-digital-services/mitid"
+                android:layout_below="@+id/subtitle"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
