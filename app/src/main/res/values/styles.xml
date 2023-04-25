@@ -8,6 +8,13 @@
         <item name="android:backgroundTint">#2E5788</item>
     </style>
 
+    <style name="WhiteButton" parent="ThemeOverlay.AppCompat">
+        <item name="android:backgroundTint">#FFFFFFFF</item>
+        <item name="android:textColor">#2148C0</item>
+
+    </style>
+
+
 </resources>
 
 
