@@ -239,7 +239,28 @@
                 android:layout_marginBottom="20dp"
                 android:background="@color/black"/>
 
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+                <TextView
+                    android:id="@+id/subtitle_HowToUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:text="How do I use MitID?"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="In order to use MitID, you must....."/>
 
+            </LinearLayout>
 
 
 
