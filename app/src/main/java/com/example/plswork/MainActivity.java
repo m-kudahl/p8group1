@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //Kode der åbner EducationActivity i stedet for MainActivity
-        Intent EducationActivityIntent = new Intent(
+        Intent SecondActivityIntent = new Intent(
                 this, EducationSUActivity.class
         );
-        startActivity(EducationActivityIntent);
+        startActivity(SecondActivityIntent);
         //Slutter her
 
         setContentView(R.layout.activity_main);
