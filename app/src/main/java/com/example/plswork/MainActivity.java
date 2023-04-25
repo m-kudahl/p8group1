@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     EditText nameText, emailText, passwordText;
     Button registerButton;
 
+    User user;
     FirebaseAuth mAuth;
     AutoCompleteTextView autocomplete;
 
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Enter municipal", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                user = new User(email, name, municipal);
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 myDatabaseRef = database.getReference("")
                 mAuth.createUserWithEmailAndPassword(email, password)
