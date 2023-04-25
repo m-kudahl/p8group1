@@ -2,4 +2,13 @@
 <resources>
     <string name="app_name">lol</string>
     <string name="example_autocompletetextview">Example showing AutoCompleteTextView</string>
+    <string-array name="RegionSpinner_values">
+        <item>Midtjylland</item>
+        <item>Nordjylland</item>
+        <item>Syddanmark</item>
+        <item>Sjælland</item>
+        <item>Hovedstaden</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
