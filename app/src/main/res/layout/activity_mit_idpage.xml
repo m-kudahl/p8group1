@@ -172,7 +172,7 @@
                     android:layout_marginBottom="10dp"
                     android:text="For more information visit the following website:
                     https://www.mitid.dk/en-gb/get-started-with-mitid/"/>
-
+                
             </LinearLayout>
 
             <View
