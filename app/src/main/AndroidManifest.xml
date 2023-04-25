@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".NemKontoPage"
+            android:exported="false" />
+        <activity
             android:name=".HomepageTest"
             android:exported="false" />
         <activity
