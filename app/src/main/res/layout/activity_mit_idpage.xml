@@ -169,10 +169,49 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="For more information visit the following website:
-                    https://www.mitid.dk/en-gb/get-started-with-mitid/"/>
-                
+                    android:layout_marginBottom="10dp"/>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+                        <!-- First Column with TextView -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="For more information visit the following website:
+                            https://www.mitid.dk/en-gb/get-started-with-mitid/"/>
+
+                        <!-- Second Column with ImageButton -->
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_launcher_background" />
+
+                        <!-- Third Column with TableLayout -->
+                        <TableLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TableRow>
+                                <ImageButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_launcher_background" />
+                            </TableRow>
+
+                            <TableRow>
+                                <ImageButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_launcher_background" />
+                            </TableRow>
+
+                        </TableLayout>
+
+                    </TableRow>
+
+                </TableLayout>
             </LinearLayout>
 
             <View
@@ -183,7 +222,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@color/black"/>
-            
+
 
 
 
