@@ -5,9 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.google.android.material.tabs.TabLayout;
-
 public class ViewPagerAdapter extends FragmentStateAdapter {
+
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
@@ -15,23 +14,15 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        switch(position){
-            case 0:
-                return new EssentialsTab();
-
-            case 1:
-                return new EverydayTap();
-            default: return new  EssentialsTab();
+        switch (position){
+            case 0: return new BusFragment();
+            case 1: return new TrainFragment();
+            default: return new BusFragment();
         }
-
     }
-
 
     @Override
     public int getItemCount() {
         return 2;
     }
-
-
 }
-
