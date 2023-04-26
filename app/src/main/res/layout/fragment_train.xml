@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+
+        <LinearLayout
+            android:id="@+id/BusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/contentBox"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingLeft="32dp"
+            android:paddingTop="20dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="SELECT YOUR REGION"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/RegionSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/RegionSpinner_values"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="THE FOLLOWING ARE THE DIFFERENT PAYMENT OPTIONS FOR TRAVELLING WITH TRAIN IN DENMARK"
+                android:textSize="10dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="REJSEKORT"
+                android:textColor="@color/blueText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="(TRAVEL CARD)"
+                android:textColor="@color/blueText"
+                android:textSize="10dp"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="THE DANISH ELECTRONIC TICKET-LESS TAVEL CARD SYSTEM"
+                android:textSize="10dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:text="WHICH CARD IS RIGHT FOR ME?"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"/>
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="HOW DO I USE MY TRAVEL CARD"
+                />
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="HOW DO I TOP UP MY TRAVEL CARD?" />
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="GET TRAVEL CARD"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="APPLICATIONS"
+                android:textColor="@color/blueText"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="APPLICATIONS FOR PLANNING AND ORDERING TICKETS"
+                android:textSize="10dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="DSB APP"
+                android:textColor="@color/blueText"
+                android:paddingTop="10dp"/>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="WHAT CAN YOU DO WITH THE APP?" />
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="HOW DO YOU PAY WITH THE APP?" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="MIDTTRAFIK APP"
+                android:textColor="@color/blueText"/>
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="WHAT CAN YOU DO WITH THE APP?" />
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="HOW DO YOU PAY WITH THE APP?" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="CASH/CARD"
+                android:textColor="@color/blueText"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="THE DANISH ELECTRONIC TICKET-LESS TAVEL CARD SYSTEM"
+                android:textSize="10dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:text="HOW DO I BUY TICKETS"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText" />
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>
