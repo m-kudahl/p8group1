@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+//for at lave min intent kode
+import android.content.Intent;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -48,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        //Kode der åbner EducationActivity i stedet for MainActivity
+        Intent SecondActivityIntent = new Intent(
+                this, EducationHomeActivity.class
+        );
+        startActivity(SecondActivityIntent);
+        //Slutter her
+
+
+
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
 
