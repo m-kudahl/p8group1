@@ -9,22 +9,19 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:theme="@style/Theme.Plswork"
         tools:targetApi="31">
         <activity
-            android:name=".MainTransport"
-            android:exported="true" />
-        <activity
-            android:name=".BenefitsPage"
+            android:name=".EducationSUActivity"
             android:exported="false" />
         <activity
-            android:name=".EBoksPage"
-            android:exported="true" />
-        <activity
-            android:name=".NemKontoPage"
+            android:name=".EducationOptionsActivity"
             android:exported="false" />
         <activity
-            android:name=".MitIDpage"
+            android:name=".EducationDiplomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EducationHomeActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
