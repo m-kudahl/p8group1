@@ -16,12 +16,14 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bus" />
+            android:text="Bus"
+            app:layout="@layout/fragment_bus" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Train" />
+            android:text="Train"
+            app:layout="@layout/fragment_train" />
 
     </com.google.android.material.tabs.TabLayout>
 
