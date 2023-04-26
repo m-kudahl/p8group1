@@ -24,8 +24,8 @@
             android:name=".EducationHomeActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
+            android:name=".Tab_Layout"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
