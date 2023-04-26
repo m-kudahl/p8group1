@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".MainTransport"
+            android:exported="true" />
+        <activity
             android:name=".BenefitsPage"
             android:exported="false" />
         <activity
