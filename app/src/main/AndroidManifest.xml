@@ -12,6 +12,21 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".BenefitsPage"
+            android:exported="false" />
+        <activity
+            android:name=".EBoksPage"
+            android:exported="false" />
+        <activity
+            android:name=".NemKontoPage"
+            android:exported="false" />
+        <activity
+            android:name=".HomepageTest"
+            android:exported="false" />
+        <activity
+            android:name=".MitIDpage"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
