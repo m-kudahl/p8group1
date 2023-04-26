@@ -16,12 +16,9 @@
             android:exported="false" />
         <activity
             android:name=".EBoksPage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".NemKontoPage"
-            android:exported="false" />
-        <activity
-            android:name=".HomepageTest"
             android:exported="false" />
         <activity
             android:name=".MitIDpage"
