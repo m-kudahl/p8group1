@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".EssentialsTab"
     android:orientation="vertical"
-
     >
 
 
