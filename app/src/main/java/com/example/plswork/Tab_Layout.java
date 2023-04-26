@@ -19,7 +19,7 @@ public class Tab_Layout extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.tablayout);
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewPager);
         viewPagerAdapter = new TabLayoutViewPage(this);
