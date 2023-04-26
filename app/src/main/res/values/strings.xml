@@ -6,6 +6,8 @@
     <string name="back">Back</string>
     <string name="profile">Profile</string>
     <string name="example_autocompletetextview">Example showing AutoCompleteTextView</string>
+    <string name="Daylylife" />
+    <string name="Essentials" />
     <string-array name="RegionSpinner_values">
         <item>Midtjylland</item>
         <item>Nordjylland</item>
