@@ -29,6 +29,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent SecondActivityIntent = new Intent(
+                this, Tab_Layout.class
+        );
+        startActivity(SecondActivityIntent);
+
+
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
 
