@@ -95,7 +95,8 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
                 android:textStyle="italic"
-                android:text="https://ufm.dk/en/education/recognition-and-transparency/get-assessment/form-standard"
+                android:text="@string/link_EducationDiplomOnlineApp"
+                android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -121,7 +122,8 @@
                 android:paddingBottom="15dp"
                 android:layout_marginBottom="220dp"
                 android:textStyle="italic"
-                android:text="https://ufm.dk/en/education/recognition-and-transparency/get-assessment/form-standard/pdf-application"
+                android:text="@string/link_EducationDiplomPDFApp"
+                android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 

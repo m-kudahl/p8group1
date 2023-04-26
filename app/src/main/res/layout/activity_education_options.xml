@@ -97,7 +97,8 @@
                 android:paddingBottom="15dp"
                 android:layout_marginBottom="195dp"
                 android:textStyle="italic"
-                android:text="https://ufm.dk/en/refugees-from-ukraine-welcome/higher-education-options-in-denmark-if-you-are-a-refugee-from-ukraine"
+                android:text="@string/link_EducationOptions"
+                android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 

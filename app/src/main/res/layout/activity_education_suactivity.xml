@@ -93,7 +93,8 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
                 android:textStyle="italic"
-                android:text="https://www.su.dk/english/"
+                android:text="@string/link_EducationSUInfo"
+                android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -126,7 +127,8 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
                 android:textStyle="italic"
-                android:text="https://www.su.dk/english/su-as-a-foreign-citizen/equal-status-according-to-danish-rules/you-fall-within-section-2-2-or-3-of-the-act-on-integration-of-aliens-in-denmark/"
+                android:text="@string/link_EducationSUConditions"
+                android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 

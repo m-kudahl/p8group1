@@ -25,7 +25,7 @@
     <TextView
         android:id="@+id/textViewEducationHome"
         android:layout_width="0dp"
-        android:layout_height="75dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="2dp"
         android:text="Education"

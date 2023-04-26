@@ -8,6 +8,11 @@
     <string name="example_autocompletetextview">Example showing AutoCompleteTextView</string>
     <string name="Daylylife" />
     <string name="Essentials" />
+    <string name="link_EducationDiplomOnlineApp">https://ufm.dk/en/education/recognition-and-transparency/get-assessment/form-standard</string>
+    <string name="link_EducationDiplomPDFApp">https://ufm.dk/en/education/recognition-and-transparency/get-assessment/form-standard/pdf-application</string>
+    <string name="link_EducationOptions">https://ufm.dk/en/refugees-from-ukraine-welcome/higher-education-options-in-denmark-if-you-are-a-refugee-from-ukraine</string>
+    <string name="link_EducationSUInfo">https://www.su.dk/english/</string>
+    <string name="link_EducationSUConditions">https://www.su.dk/english/su-as-a-foreign-citizen/equal-status-according-to-danish-rules/you-fall-within-section-2-2-or-3-of-the-act-on-integration-of-aliens-in-denmark/</string>
     <string-array name="RegionSpinner_values">
         <item>Midtjylland</item>
         <item>Nordjylland</item>
