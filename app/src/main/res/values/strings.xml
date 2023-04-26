@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">lol</string>
     <string name="example_autocompletetextview">Example showing AutoCompleteTextView</string>
+    <string name="Daylylife" />
+    <string name="Essentials" />
 </resources>

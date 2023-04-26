@@ -1,31 +1,65 @@
 package com.example.plswork;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.GridLayout;
 
-import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+//import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
+//import com.example.tablayout.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    AutoCompleteTextView autocomplete;
 
-    String[] cities = { "Randers", "Aalborg","Aarhus",
-            "Copenhagen"};
+    TabLayout tabLayout;
+    ViewPager2 viewPager2;
+    ViewPagerAdapter viewPagerAdapter;
+
+
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager2 = findViewById(R.id.viewPager);
+        viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPager2.setAdapter(viewPagerAdapter);
 
 
-        autocomplete = (AutoCompleteTextView)
-                findViewById(R.id.autoCompleteTextView);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager2.setCurrentItem(tab.getPosition());
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this,android.R.layout.select_dialog_item, cities);
+            }
 
-        autocomplete.setThreshold(2);
-        autocomplete.setAdapter(adapter);
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                tabLayout.getTabAt(position).select();
+
+            }
+        });
     }
 }
+
