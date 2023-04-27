@@ -226,7 +226,7 @@
                                 android:layout_weight="0.5">
 
                                 <ImageButton
-                                    android:id="@+id/googleStoreButton"
+                                    android:id="@+id/googleStoreButtonEBoks"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:scaleType="centerInside"
@@ -237,7 +237,7 @@
                             <TableRow
                                 android:layout_weight="0.5">
                                 <ImageButton
-                                    android:id="@+id/appleStoreButton"
+                                    android:id="@+id/appleStoreButtonEBoks"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"

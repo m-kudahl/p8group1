@@ -207,7 +207,7 @@
                                 android:layout_weight="0.5">
 
                                 <ImageButton
-                                    android:id="@+id/googleStoreButton"
+                                    android:id="@+id/googleStoreButtonMitID"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:scaleType="centerInside"
@@ -218,7 +218,7 @@
                             <TableRow
                                 android:layout_weight="0.5">
                                 <ImageButton
-                                    android:id="@+id/appleStoreButton"
+                                    android:id="@+id/appleStoreButtonMitID"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -279,7 +279,6 @@
                                 android:layout_weight="0.5">
 
                                 <TextView
-                                    android:id="@+id/googleStoreButton"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Already have MitID?"
@@ -289,7 +288,7 @@
                             <TableRow
                                 android:layout_weight="0.5">
                                 <CheckBox
-                                    android:id="@+id/appleStoreButton"
+                                    android:id="@+id/MitIDCheckBox"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
