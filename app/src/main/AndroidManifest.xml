@@ -30,6 +30,9 @@
         <activity
             android:name=".Tab_Layout"
             android:exported="true" />
+        <activity
+            android:name=".MainTransport"
+            android:exported="true" />
 
 
 
