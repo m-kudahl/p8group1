@@ -1,7 +1,10 @@
 package com.example.plswork;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -9,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -18,6 +22,14 @@ import android.widget.Toast;
  * create an instance of this fragment.
  */
 public class BusFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+
+
+    Button RejsekortTopUp;
+    Button WhichCardisRight;
+    Button HowDoIUseTravelCard;
+    Button GetTravelCard;
+    Button WhatCanYouDo;
+    Button HowDoYouPay;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +45,60 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
         spinner.setAdapter(RegionAdapter);
         spinner.setOnItemSelectedListener(this);
         return view;
+
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        RejsekortTopUp = (Button) getView().findViewById(R.id.RejsekortTopUp);
+        WhichCardisRight = (Button) getView().findViewById(R.id.WhichCardisRight);
+        HowDoIUseTravelCard = (Button) getView().findViewById(R.id.HowDoIUseTravelCard);
+        GetTravelCard = (Button) getView().findViewById(R.id.GetTravelCard);
+        WhatCanYouDo = (Button) getView().findViewById(R.id.WhatCanYouDo);
+        HowDoYouPay = (Button) getView().findViewById(R.id.HowDoYouPay);
+
+        RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.rejsekort.dk/Hjaelp/Betaling");
+            }
+        } );
+
+        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
+            }
+        });
+        HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du");
+            }
+        });
+        GetTravelCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.rejsekort.dk/Bestil");
+            }
+        });
+        WhatCanYouDo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/");
+            }
+        });
+        HowDoYouPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/");
+            }
+        });
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
     @Override

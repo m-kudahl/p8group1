@@ -78,6 +78,7 @@
                 android:textColor="@color/black"/>
 
             <Button
+                android:id="@+id/WhichCardisRight"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -87,6 +88,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"/>
             <Button
+                android:id="@+id/HowDoIUseTravelCard"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -97,6 +99,7 @@
                 android:text="HOW DO I USE MY TRAVEL CARD"
                 />
             <Button
+                android:id="@+id/RejsekortTopUp"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -106,6 +109,7 @@
                 android:textColor="@color/buttonBlueText"
                 android:text="HOW DO I TOP UP MY TRAVEL CARD?" />
             <Button
+                android:id="@+id/GetTravelCard"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -140,6 +144,7 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"/>
             <Button
+                android:id="@+id/WhatCanYouDo"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -149,6 +154,7 @@
                 android:textColor="@color/buttonBlueText"
                 android:text="WHAT CAN YOU DO WITH THE APP?" />
             <Button
+                android:id="@+id/HowDoYouPay"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -170,7 +176,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="THE DANISH ELECTRONIC TICKET-LESS TAVEL CARD SYSTEM"
+                android:text="YOU CAN STILL PAY FOR TICKETS WITH CASH AND CARD AT PHYSICAL STATIONS AND BOOTHS"
                 android:textSize="10dp"
                 android:textColor="@color/black"/>
 
