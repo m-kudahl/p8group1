@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.view.View.OnClickListener;
+import android.content.Intent;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     AutoCompleteTextView autocomplete;
@@ -27,5 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         autocomplete.setThreshold(2);
         autocomplete.setAdapter(adapter);
+
+        Button btn = (Button)findViewById(R.id.registerButton);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        });
     }
 }
