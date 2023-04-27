@@ -195,6 +195,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:scaleType="centerInside"
+                            android:background="@drawable/button_shade"
                             android:src="@drawable/mitid_logo" />
 
                         <!-- Third Column with TableLayout -->
@@ -212,6 +213,7 @@
                                     android:layout_height="wrap_content"
                                     android:scaleType="centerInside"
                                     android:layout_weight="1"
+                                    android:background="@drawable/button_shade"
                                     android:src="@drawable/getongoogleplaystore" />
                             </TableRow>
 
@@ -223,6 +225,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:scaleType="centerInside"
+                                    android:background="@drawable/button_shade"
                                     android:src="@drawable/getonapplestore" />
                             </TableRow>
 
