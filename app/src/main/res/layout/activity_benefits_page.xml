@@ -121,7 +121,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
-                    android:text="For more information visit refugees.dk website, which has an excellent overview of the various factors that determine YOUR benefit: http://refugees.dk/fakta/integration-job-uddannelse/ydelser/ as well as here: https://www.nyidanmark.dk/en-GB/Words%20and%20Concepts%20Front%20Page/US/Family/Public_benefits"/>
+                    android:text="For more information visit refugees.dk website, which has an excellent overview of the various factors that determine YOUR benefit:"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="http://refugees.dk/fakta/integration-job-uddannelse/ydelser/ as well as here: https://www.nyidanmark.dk/en-GB/Words%20and%20Concepts%20Front%20Page/US/Family/Public_benefits"/>
 
             </LinearLayout>
 
