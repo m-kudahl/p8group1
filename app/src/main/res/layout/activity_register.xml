@@ -53,7 +53,7 @@
             android:minHeight="48dp" />
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView"
+            android:id="@+id/citiesAutoComplete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="MUNICIPALITY"

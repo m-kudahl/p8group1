@@ -22,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         autocomplete = (AutoCompleteTextView)
-                findViewById(R.id.autoCompleteTextView);
+                findViewById(R.id.citiesAutoComplete);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this,android.R.layout.select_dialog_item, cities);
