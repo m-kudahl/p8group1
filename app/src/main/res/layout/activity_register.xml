@@ -2,18 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
     android:background="@color/contentBox"
     tools:context=".RegisterActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="246dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="245dp"
         android:background="@color/contentBox"
         android:gravity="center"
         android:orientation="vertical"
@@ -41,37 +43,30 @@
             android:inputType="textPassword"
             android:minHeight="48dp" />
 
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="FULL NAME"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/citiesAutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="MUNICIPALITY"
+            android:minHeight="48dp" />
+
         <Button
-            android:id="@+id/loginButton"
+            android:id="@+id/registerButton"
             style="@style/WhiteButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="auto"
-            android:text="Login" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/createaccountButton"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="Create Account"
-                android:textColor="#000000" />
-
-            <Button
-                android:id="@+id/forgotButton"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Forgot Password?"
-                android:textColor="#000000" />
-
-        </TableRow>
-
+            android:text="Register" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
