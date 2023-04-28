@@ -25,12 +25,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText nameText, emailText, passwordText;
+    EditText emailText, passwordText;
     Button regiButton, backButton;
 
     FirebaseAuth mAuth;
@@ -61,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
             regiButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myRef = database.getReference("message");
+
+                    myRef.setValue("Hello, World!");
                     String email, password;
                     email = String.valueOf(emailText.getText());
                     password = String.valueOf(passwordText.getText());
@@ -89,9 +95,6 @@ public class MainActivity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(MainActivity.this, "Account created.",
                                                 Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(getApplicationContext(), Login.class);
-                                        startActivity(intent);
-                                        finish();
                                     } else {
                                         // If sign in fails, display a message to the user.
                                         Log.w(TAG, "createUserWithEmail:failure", task.getException());
