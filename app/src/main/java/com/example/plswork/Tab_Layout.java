@@ -1,9 +1,12 @@
 package com.example.plswork;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
@@ -12,14 +15,15 @@ public class Tab_Layout extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     TabLayoutViewPage viewPagerAdapter;
-
+    CardView cardViewEducation;
 
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        setContentView(R.layout.tablayout);
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewPager);
         viewPagerAdapter = new TabLayoutViewPage(this);
