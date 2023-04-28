@@ -25,6 +25,7 @@ public class EssentialsTab extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_essentials_tab, container, false);
 
+
         cardViewEducation = view.findViewById(R.id.cardEducation);
         cardViewNemKonto = view.findViewById(R.id.cardNemKonto);
         cardViewMitID = view.findViewById(R.id.cardMitID);

@@ -6,62 +6,63 @@
     android:layout_height="?attr/actionBarSize"
     android:background="@color/navBar"
     android:elevation="4dp">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="56dp">
 
         <Button
             android:id="@+id/back_button"
-            android:layout_width="54dp"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="26dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="115dp"
+            android:layout_marginEnd="15dp"
             android:layout_toStartOf="@+id/language_button"
             android:layout_toEndOf="@+id/home_button"
-            android:background="@drawable/outline_arrow_back_black_24dp"
+            android:background="@drawable/back"
             android:contentDescription="back"
             android:scaleType="centerInside" />
 
         <Button
             android:id="@+id/home_button"
-            android:layout_width="50dp"
-            android:layout_height="45dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="6dp"
-            android:background="@drawable/outline_home_black_24dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="150dp"
+
+            android:background="@drawable/home"
             android:contentDescription="home"
             android:scaleType="centerInside" />
 
         <Button
             android:id="@+id/language_button"
-            android:layout_width="56dp"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentTop="true"
-            android:layout_gravity="end"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="15dp"
             android:layout_toStartOf="@+id/profile_button"
-            android:background="@drawable/outline_translate_black_24dp"
+            android:background="@drawable/translate"
             android:contentDescription="translate"
             android:scaleType="centerInside" />
 
         <Button
             android:id="@+id/profile_button"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_gravity="end"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="18dp"
-            android:background="@drawable/outline_person_black_24dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/person"
             android:contentDescription="profile"
             android:scaleType="centerInside" />
-    </RelativeLayout>
+    </LinearLayout>
 
 
 
