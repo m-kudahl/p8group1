@@ -4,16 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.view.View.OnClickListener;
 import android.content.Intent;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
     AutoCompleteTextView autocomplete;
 
     String[] cities = { "Randers", "Aalborg","Aarhus",
@@ -21,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
 
         autocomplete = (AutoCompleteTextView)
@@ -38,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
     }
