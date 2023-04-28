@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg"
-    tools:context=".MitIDpage">
+    tools:context=".MitIDpage"
+    android:id="@+id/MitIDPage">
 
     <include layout="@layout/appbar" />
 

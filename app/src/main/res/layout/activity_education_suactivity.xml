@@ -19,21 +19,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textViewEducationSU"
-        android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginBottom="2dp"
-        android:text="SU"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="45sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textViewEducationSU"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SU"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
 
 
     <ScrollView
@@ -93,7 +93,8 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
                 android:textStyle="italic"
-                android:text="https://www.su.dk/english/"
+                android:text="@string/link_EducationSUInfo"
+                android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -126,7 +127,8 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
                 android:textStyle="italic"
-                android:text="https://www.su.dk/english/su-as-a-foreign-citizen/equal-status-according-to-danish-rules/you-fall-within-section-2-2-or-3-of-the-act-on-integration-of-aliens-in-denmark/"
+                android:text="@string/link_EducationSUConditions"
+                android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
