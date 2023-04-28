@@ -16,11 +16,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link BusFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class BusFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
