@@ -7,42 +7,27 @@
     android:background="@color/bg"
     tools:context=".EducationHomeActivity">
 
+    <include layout="@layout/appbar"/>
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <TextView
+        android:id="@+id/textViewEducationHome"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="606dp"
+        android:layout_height="0dp"
+        android:text="Education"
+        android:textSize="50sp"
+        android:gravity="center"
         android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textViewEducationHome"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Education"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textSize="50sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintEnd_toStartOf="@id/scrollViewEducationHome"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <ScrollView
         android:id="@+id/scrollViewEducationHome"
         android:layout_width="match_parent"
-        android:layout_height="604dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:paddingTop="20dp"
         android:background="@color/bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +38,6 @@
             android:id="@+id/EducationHome"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"

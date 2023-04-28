@@ -20,6 +20,13 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        //Kode der åbner EducationActivity i stedet for MainActivity
+        Intent SecondActivityIntent = new Intent(
+                this, EducationHomeActivity.class
+        );
+        startActivity(SecondActivityIntent);
+        //Slutter her
+
 
         autocomplete = (AutoCompleteTextView)
                 findViewById(R.id.citiesAutoComplete);
