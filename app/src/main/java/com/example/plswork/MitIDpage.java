@@ -50,7 +50,7 @@ public class MitIDpage extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MitIDpage.this, EssentialsTab.class);
+                Intent intent = new Intent(MitIDpage.this, Tab_Layout.class);
                 startActivity(intent);
             }
         });
