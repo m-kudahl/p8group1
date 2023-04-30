@@ -22,10 +22,11 @@ public class MitIDpage extends AppCompatActivity {
         View includedLayout = findViewById(R.id.appbarMitID);
 
         // Get a reference to the specific TextView within the included layout
-        Button myHomeButton = includedLayout.findViewById(R.id.back_button);
+        Button myBackButton = includedLayout.findViewById(R.id.back_button);
 
         // Disable the TextView
-        myHomeButton.setEnabled(false);
+        myBackButton.setEnabled(false);
+        myBackButton.setVisibility(View.INVISIBLE);
 
         appleButton = findViewById(R.id.appleStoreButtonMitID);
         googleButton = findViewById(R.id.googleStoreButtonMitID);
