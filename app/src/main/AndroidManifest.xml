@@ -43,6 +43,12 @@
         <activity
             android:name=".MitIDpage"
             android:exported="true" />
+        <activity
+            android:name=".BenefitsPage"
+            android:exported="true" />
+        <activity
+            android:name=".NemKontoPage"
+            android:exported="true" />
 
     </application>
 
