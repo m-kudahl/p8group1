@@ -56,9 +56,9 @@
                 android:layout_height="144dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="You can varify your diplom to be able to study or work in Denmark within your prefession.
+                android:text="You can varify your diplom to be able to study or work in Denmark within your profession.
                         \nYour assessment can be applied either in digital or in pdf format.
-                        \n\nFollow the links to get more information about ihow to do it:"
+                        \n\nFollow the links to get information about the steps you have to prepare in order to apply, and to access the forms (for this you need MitID):"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 

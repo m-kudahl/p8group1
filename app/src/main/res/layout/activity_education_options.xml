@@ -56,11 +56,56 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:paddingBottom="40dp"
+                android:paddingBottom="10dp"
                 android:text="You can continue studying your higher education programme in Denmark or begin a new higher education in Denmark.
-                            \nTo do this you can:
-                            \n\n1. apply for a transfer from your Ukrainian higher education programme to a Danish higher education programme or
-                            \n\n2. apply for admission to a new full time higher education programme in Denmark."
+                            \nTo do this you can:"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/EducationOptionsText1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="1. apply for a transfer from your Ukrainian higher education programme to a Danish higher education programme or"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/EducationOptionsTextQ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="20dp"
+                android:text="  •  How do I apply for a transfer?"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/EducationOptionsText1.3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="2. apply for admission to a new full time higher education programme in Denmark."
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/EducationOptionsTextQ2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="40dp"
+                android:text="  •  How do I apply for admission?"
+                android:textStyle="italic"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -68,9 +113,10 @@
                 android:id="@+id/EducationOptionsText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="20dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="All the relavent information about education options can be find here:"
+                android:text="More information about education options and relevant links can be found here:"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"/>
@@ -82,7 +128,6 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
-                android:layout_marginBottom="195dp"
                 android:textStyle="italic"
                 android:text="@string/link_EducationOptions"
                 android:autoLink="all"
