@@ -44,6 +44,9 @@ public class EBoksPage extends AppCompatActivity {
             }
         });
 
+        //appbar buttons
+        AppBarUtility.setupHomeButton(this, R.id.appbarEBoks);
+        AppBarUtility.setUpBackButton(this);
 
     }
 }

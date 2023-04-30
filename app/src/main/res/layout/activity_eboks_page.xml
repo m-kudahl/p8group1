@@ -7,7 +7,8 @@
     android:background="@color/bg"
     tools:context=".EBoksPage">
 
-    <include layout="@layout/appbar" />
+    <include layout="@layout/appbar"
+        android:id="@+id/appbarEBoks"/>
 
     <TextView
         android:id="@+id/title_EBoks"

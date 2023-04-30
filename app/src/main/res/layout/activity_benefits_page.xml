@@ -7,7 +7,8 @@
     android:background="@color/bg"
     tools:context=".BenefitsPage">
 
-    <include layout="@layout/appbar" />
+    <include layout="@layout/appbar"
+        android:id="@+id/appbarBenefits"/>
 
     <TextView
         android:id="@+id/title_Benefits"

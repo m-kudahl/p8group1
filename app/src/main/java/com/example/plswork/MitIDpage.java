@@ -40,6 +40,7 @@ public class MitIDpage extends AppCompatActivity {
             }
         });
 
+        //appbar
         AppBarUtility.setupHomeButton(this, R.id.appbarMitID);
         AppBarUtility.setUpBackButton(this);
     }

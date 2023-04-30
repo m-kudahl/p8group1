@@ -25,7 +25,7 @@ public class AppBarUtility {
     }
     public static void setUpBackButton(Activity activity) {
 
-        View backButton = activity.findViewById(R.id.back_button)
+        View backButton = activity.findViewById(R.id.back_button);
         //create an on click listener:
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,7 +7,8 @@
     android:background="@color/bg"
     tools:context=".NemKontoPage">
 
-    <include layout="@layout/appbar" />
+    <include layout="@layout/appbar"
+        android:id="@+id/appbarNemKonto"/>
 
     <TextView
         android:id="@+id/title_NemKonto"

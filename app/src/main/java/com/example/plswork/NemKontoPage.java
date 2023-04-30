@@ -10,5 +10,12 @@ public class NemKontoPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nem_konto_page);
+
+
+        //appbar buttons
+        AppBarUtility.setupHomeButton(this, R.id.appbarNemKonto);
+        AppBarUtility.setUpBackButton(this);
     }
+
+
 }
