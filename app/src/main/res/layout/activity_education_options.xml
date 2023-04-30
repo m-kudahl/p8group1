@@ -125,7 +125,7 @@
                 android:paddingRight="5dp"
                 android:text="More information about education options and relevant links can be found here:"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="15sp"
                 android:textStyle="bold"/>
 
             <TextView

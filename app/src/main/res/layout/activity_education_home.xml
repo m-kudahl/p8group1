@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:text="Diplom verification"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="15sp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:textStyle="bold"/>
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:text="Education options"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="15sp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:textStyle="bold"/>
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:text="SU"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="15sp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:textStyle="bold"/>

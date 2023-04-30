@@ -58,7 +58,7 @@
                 android:textStyle="bold"
                 android:text="What is SU and SU-loan?"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
 
             <TextView
@@ -90,7 +90,7 @@
                 android:textStyle="bold"
                 android:text="How do I apply for SU or SU-loan?"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/EducationSUText3.2"
@@ -157,7 +157,7 @@
                 android:textStyle="bold"
                 android:text="Speical conditions for Ukrainian refugees"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/EducationSUText2.2"
