@@ -20,6 +20,7 @@ public class MitIDpage extends AppCompatActivity {
         appleButton = findViewById(R.id.appleStoreButtonMitID);
         googleButton = findViewById(R.id.googleStoreButtonMitID);
 
+        //link to apple store
         appleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,12 +31,26 @@ public class MitIDpage extends AppCompatActivity {
             }
         });
 
+        //link to google play store
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String url = "https://play.google.com/store/apps/details?id=com.eboks.activities&hl=da&gl=US&pli=1";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
+        //referring to the home button within the layout that I included
+
+        View includedLayout = findViewById(R.id.appbarMitID);
+        ImageButton homeButton = includedLayout.findViewById(R.id.home_button);
+
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MitIDpage.this, EssentialsTab.class);
                 startActivity(intent);
             }
         });

@@ -7,7 +7,8 @@
     android:background="@color/bg"
     tools:context=".MitIDpage">
 
-    <include layout="@layout/appbar" />
+    <include layout="@layout/appbar"
+        android:id="@+id/appbarMitID"/>
 
     <TextView
         android:id="@+id/title_MitID"
