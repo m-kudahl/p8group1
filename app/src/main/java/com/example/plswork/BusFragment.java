@@ -1,5 +1,7 @@
 package com.example.plswork;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -60,12 +62,12 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
             }
         } );
 
-        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
-            }
-        });
+        //WhichCardisRight.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view) {
+        //        gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
+        //    }
+        //});
         HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,6 +98,27 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
         Uri uri = Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
+
+    public void showAlertDialog(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Alert Dialog")
+                .setMessage("This is an alert dialog window in a fragment.")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the OK button is clicked
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
