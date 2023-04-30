@@ -3,6 +3,7 @@ package com.example.plswork;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -41,19 +42,7 @@ public class MitIDpage extends AppCompatActivity {
             }
         });
 
-        //referring to the home button within the layout that I included
-
-        View includedLayout = findViewById(R.id.appbarMitID);
-        //gotta make an appCompatButton here cause that is the type of the home button
-        AppCompatButton homeButton = includedLayout.findViewById(R.id.home_button);
-
-        homeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MitIDpage.this, Tab_Layout.class);
-                startActivity(intent);
-            }
-        });
+        HomeButtonUtility.setupHomeButton(this, R.id.appbarMitID);
     }
 
 }
