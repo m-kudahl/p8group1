@@ -43,6 +43,9 @@
         <activity
             android:name=".MitIDpage"
             android:exported="true" />
+        <activity
+            android:name=".EssentialsTab"
+            android:exported="true" />
 
     </application>
 
