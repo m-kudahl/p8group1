@@ -1,6 +1,7 @@
 package com.example.plswork;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -43,7 +44,8 @@ public class MitIDpage extends AppCompatActivity {
         //referring to the home button within the layout that I included
 
         View includedLayout = findViewById(R.id.appbarMitID);
-        ImageButton homeButton = includedLayout.findViewById(R.id.home_button);
+        //gotta make an appCompatButton here cause that is the type of the home button
+        AppCompatButton homeButton = includedLayout.findViewById(R.id.home_button);
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
