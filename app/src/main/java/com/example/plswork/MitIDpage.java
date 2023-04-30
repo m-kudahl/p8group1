@@ -1,9 +1,7 @@
 package com.example.plswork;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -42,7 +40,8 @@ public class MitIDpage extends AppCompatActivity {
             }
         });
 
-        HomeButtonUtility.setupHomeButton(this, R.id.appbarMitID);
+        AppBarUtility.setupHomeButton(this, R.id.appbarMitID);
+        AppBarUtility.setUpBackButton(this);
     }
 
 }

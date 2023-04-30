@@ -20,6 +20,7 @@
             android:layout_marginEnd="15dp"
             android:layout_toStartOf="@+id/language_button"
             android:layout_toEndOf="@+id/home_button"
+            android:onClick="goBack"
             android:background="@drawable/back"
             android:contentDescription="back"
             android:scaleType="centerInside" />

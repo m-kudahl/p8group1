@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.widget.AppCompatButton;
 
-public class HomeButtonUtility {
+public class AppBarUtility {
     //This method takes an input of the given activity as well as an integer which would be the app.bar.layout id (fx for MitID, etc.)
     public static void setupHomeButton(Activity activity, int appBarLayoutId) {
 
@@ -22,5 +22,18 @@ public class HomeButtonUtility {
                 activity.startActivity(intent);
             }
         });
+    }
+    public static void setUpBackButton(Activity activity) {
+
+        View backButton = activity.findViewById(R.id.back_button)
+        //create an on click listener:
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                activity.onBackPressed();
+            }
+        });
+
+
     }
 }
