@@ -40,36 +40,45 @@ public class LoginActivity extends AppCompatActivity {
 
         EditText editTextEmail = findViewById(R.id.editTextEmailAddress);
         EditText editTextPassword = findViewById(R.id.editTextPassword);
-        Button btn = (Button)findViewById(R.id.createaccountButton);
+        Button btn = (Button)findViewById(R.id.loginButton);
+        Button createBtn = (Button) findViewById(R.id.createaccountButton);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth = FirebaseAuth.getInstance();
+        createBtn.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                 startActivity(intent);
+             }
+        });
+
+                btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mAuth = FirebaseAuth.getInstance();
 
 // Get the email and password from the user
-                String email = editTextEmail.getText().toString();
-                String password = editTextPassword.getText().toString();
+                        String email = editTextEmail.getText().toString();
+                        String password = editTextPassword.getText().toString();
 
 // Call the signInWithEmailAndPassword() method to sign in the user
-                mAuth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-                                    Intent intent = new Intent(LoginActivity.this, Tab_Layout.class);
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-            }
-        });
+                        mAuth.signInWithEmailAndPassword(email, password)
+                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            // Sign in success, update UI with the signed-in user's information
+                                            Intent intent = new Intent(LoginActivity.this, Tab_Layout.class);
+                                            startActivity(intent);
+                                            finish();
+                                        } else {
+                                            // If sign in fails, display a message to the user.
+                                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                                    Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                    }
+                });
 
     }
 }

@@ -32,10 +32,19 @@ public class Tab_Layout extends AppCompatActivity {
         viewPagerAdapter = new TabLayoutViewPage(this);
         viewPager2.setAdapter(viewPagerAdapter);
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
-        Button toolbarProfileBtn = (Button) findViewById(R.id.profile_btn);
+        Button toolbarProfileBtn = (Button) findViewById(R.id.profile_button);
+        toolbarProfileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Tab_Layout.this, ProfilePage.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
