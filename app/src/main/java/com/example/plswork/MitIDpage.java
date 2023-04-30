@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import androidx.appcompat.widget.Toolbar;
 
 public class MitIDpage extends AppCompatActivity {
 
@@ -16,6 +17,10 @@ public class MitIDpage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mit_idpage);
 
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.inflateMenu(R.menu.main_menu);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle(null);
 
         appleButton = findViewById(R.id.appleStoreButtonMitID);
         googleButton = findViewById(R.id.googleStoreButtonMitID);
