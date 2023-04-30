@@ -10,7 +10,10 @@
     >
 
     <include layout="@layout/appbar"
-        android:id="@+id/appbarHomeActivity"/>
+        android:id="@+id/appbarHomeActivity"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tabLayout"
+        app:layout_constraintEnd_toEndOf="@id/tabLayout"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"

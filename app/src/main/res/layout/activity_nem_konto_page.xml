@@ -18,7 +18,7 @@
         android:textSize="45dp"
         android:gravity="center"
         android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/appbarNemKonto"
         app:layout_constraintEnd_toStartOf="@id/contentLayout"
         app:layout_constraintEnd_toEndOf="parent"/>
 
