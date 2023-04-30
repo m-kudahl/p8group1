@@ -17,11 +17,6 @@ public class EBoksPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eboks_page);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        myToolbar.inflateMenu(R.menu.main_menu);
-        setSupportActionBar(myToolbar);
-        getSupportActionBar().setTitle(null);
-
         appleButton = findViewById(R.id.appleStoreButtonEBoks);
         googleButton = findViewById(R.id.googleStoreButtonEBoks);
         appleButton.setOnClickListener(new View.OnClickListener() {
