@@ -6,8 +6,18 @@ public class User {
     private String fullName;
     private String municipality;
 
+    private String userId;
 
-    public User() {
+    public User(){
+
+    }
+
+    public User(String email, String fullName, String municipality, String userId) {
+        this.email = email;
+        this.fullName = fullName;
+        this.municipality = municipality;
+        this.userId = userId;
+
     }
 
     public void setUserEmail(String email){
@@ -17,6 +27,12 @@ public class User {
         return email;
     }
 
+    public void setUserId(String userId){
+        this.userId = userId;
+    }
+    public String getUserId(){
+        return userId;
+    }
     public void setUserFullName(String name){
         this.fullName = name;
     }
