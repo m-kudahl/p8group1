@@ -25,14 +25,11 @@
             android:name=".EducationHomeActivity"
             android:exported="false" />
         <activity
-            android:name=".Tab_Layout"
-            android:exported="true" />
-        <activity
             android:name=".MainTransport"
             android:exported="true" />
 
         <activity
-            android:name=".EssentialsTab"
+            android:name=".Tab_Layout"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
