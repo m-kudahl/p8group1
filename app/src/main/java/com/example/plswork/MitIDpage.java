@@ -40,6 +40,18 @@ public class MitIDpage extends AppCompatActivity {
             }
         });
 
+        //referring to the home button within the layout that I included
+
+        View includedLayout = findViewById(R.id.appbarMitID);
+        ImageButton homeButton = includedLayout.findViewById(R.id.home_button);
+
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MitIDpage.this, EssentialsTab.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

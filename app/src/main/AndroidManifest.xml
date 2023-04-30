@@ -31,8 +31,6 @@
             android:name=".MainTransport"
             android:exported="true" />
 
-
-
         <activity
             android:name=".RegisterActivity"
             android:exported="true">
