@@ -4,12 +4,15 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Tab_Layout extends AppCompatActivity {
     TabLayout tabLayout;
@@ -28,6 +31,12 @@ public class Tab_Layout extends AppCompatActivity {
         viewPager2 = findViewById(R.id.viewPager);
         viewPagerAdapter = new TabLayoutViewPage(this);
         viewPager2.setAdapter(viewPagerAdapter);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+
+        Button toolbarProfileBtn = (Button) findViewById(R.id.profile_btn);
+
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
