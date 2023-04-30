@@ -1,10 +1,13 @@
 package com.example.plswork;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -20,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class RegisterActivity extends AppCompatActivity {
     AutoCompleteTextView autocomplete;
@@ -81,6 +85,18 @@ public class RegisterActivity extends AppCompatActivity {
                                     String uid = currentUser.getUid();
                                     mDatabase = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users");
                                     writeNewUser(uid, fullName, email, municipality);
+                                    FirebaseMessaging.getInstance().subscribeToTopic(municipality)
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    String msg = "Subscribed";
+                                                    if (!task.isSuccessful()) {
+                                                        msg = "Subscribe failed";
+                                                    }
+                                                    Log.d(TAG, msg);
+                                                    Toast.makeText(RegisterActivity.this, msg, Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
 
                                     // Redirect the user to the login page
                                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
