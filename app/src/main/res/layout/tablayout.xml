@@ -8,6 +8,9 @@
     tools:context=".Tab_Layout"
 
     >
+    
+    <include layout="@layout/appbar"
+        android:id="@+id/appbarHomeActivity"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
