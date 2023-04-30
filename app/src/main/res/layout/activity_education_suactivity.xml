@@ -67,8 +67,62 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="“SU” and “SU-loan” is State Educational Grant and Loan Scheme. Society lends students a helping hand in covering living costs for a great variety of courses and studies.
-                            \n\nMore information here: "
+                android:text="“SU” and “SU-loan” is State Educational Grant and Loan Scheme. Society lends students a helping hand in covering living costs for a great variety of courses and studies."
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black"/>
+
+
+            <TextView
+                android:id="@+id/EducationSUText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:text="How do I apply for SU or SU-loan?"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/EducationSUText3.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="15dp"
+                android:text="If you want to apply for SU or a SU-loan, you must apply for SU in minSU. Log on to minSU from a computer insted af a mobile device - they do not recieve all applications completed via a mobile device. For this you need to log in with your MitID.
+                            \n\nIf you are not sure how to use MitID, check out the page within the Essentials category, or click this button:"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/buttonEducationSU"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="MitID"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"/>
+
+
+            <TextView
+                android:id="@+id/EducationSUText1.4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textAlignment="center"
+                android:text="More information here: "
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -78,12 +132,21 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:paddingBottom="15dp"
+                android:textAlignment="center"
                 android:textStyle="italic"
                 android:text="@string/link_EducationSUInfo"
                 android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black"/>
 
             <TextView
                 android:id="@+id/EducationSUText2"
@@ -107,50 +170,21 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/EducationSUText2.3"
+                android:id="@+id/EducationSUText4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:paddingBottom="15dp"
+                android:text="  •  How do I apply for SU as a Ukrainian refugee?"
                 android:textStyle="italic"
-                android:text="@string/link_EducationSUConditions"
-                android:autoLink="all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationSUText3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textStyle="bold"
-                android:text="How to apply for SU or SU-loan"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationSUText3.2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="15dp"
-                android:text="If you want to apply for SU or a SU-loan, you must apply for SU in minSU. Log on to minSU from a computer insted af a mobile device - they do not recieve all applications completed via a mobile device. For this you need to log in with your MitID.
-                            \nIf you are not sure how to use MitID, check out the page within the Essentials category, or click this button:"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/buttonEducationSU"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:text="MitID"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:textAlignment="center"
-                android:textColor="@color/buttonBlueText"/>
+
+
+
 
 
         </LinearLayout>
