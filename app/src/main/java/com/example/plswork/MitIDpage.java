@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MitIDpage extends AppCompatActivity {
 
@@ -15,6 +17,15 @@ public class MitIDpage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mit_idpage);
+
+        // Get a reference to the included layout
+        View includedLayout = findViewById(R.id.appbarMitID);
+
+        // Get a reference to the specific TextView within the included layout
+        Button myHomeButton = includedLayout.findViewById(R.id.back_button);
+
+        // Disable the TextView
+        myHomeButton.setEnabled(false);
 
         appleButton = findViewById(R.id.appleStoreButtonMitID);
         googleButton = findViewById(R.id.googleStoreButtonMitID);
