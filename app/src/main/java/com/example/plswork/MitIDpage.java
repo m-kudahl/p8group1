@@ -24,7 +24,7 @@ public class MitIDpage extends AppCompatActivity {
         appleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://apps.apple.com/dk/app/e-boks-dk/id482926022";
+                String url = "https://apps.apple.com/dk/app/mitid/id1555231176";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -34,7 +34,7 @@ public class MitIDpage extends AppCompatActivity {
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://play.google.com/store/apps/details?id=com.eboks.activities&hl=da&gl=US&pli=1";
+                String url = "https://play.google.com/store/apps/details?id=dk.mitid.app.android&hl=en&gl=US";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);

@@ -30,6 +30,7 @@ public class EBoksPage extends AppCompatActivity {
         });
 
         googleButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 String url = "https://play.google.com/store/apps/details?id=com.eboks.activities&hl=da&gl=US&pli=1";
