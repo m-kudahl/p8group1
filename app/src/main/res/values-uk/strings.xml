@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Youkraine</string>
+    <string name="prompt_email">"Електронна пошта "</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">"Увійдіть або зареєструйтеся "</string>
+    <string name="action_sign_in_short">Увійти</string>
+    <string name="welcome">"Ласкаво просимо! "</string>
+    <string name="invalid_username">"Недійсне ім'я користувача "</string>
+    <string name="invalid_password">"Пароль має містити >5 символів "</string>
+    <string name="login_failed">"Помилка логіну "</string>
+    <string name="action_settings">"Налаштування "</string>
+    <string name="TextViewMessages">"ПОВІДОМЛЕННЯ "</string>
+    <string name="textViewYourInformation">"ВАША ІНФОРМАЦІЯ "</string>
+    <string name="textViewName">"Ім'я: "</string>
+    <string name="textViewMunicipality">"Муніципалітет: "</string>
+    <string name="textViewEmail">"Електронна пошта: "</string>
+    <string name="textViewEditProfile">"Редагувати профіль "</string>
+    <string name="textViewDeleteProfile">"Видалити профіль "</string>
+    <string name="textViewLogOut">"Вийти "</string>
+</resources>
