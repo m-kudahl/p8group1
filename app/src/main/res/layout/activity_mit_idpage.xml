@@ -8,7 +8,8 @@
     tools:context=".MitIDpage"
     android:id="@+id/MitIDPage">
 
-    <include layout="@layout/appbar" />
+    <include layout="@layout/appbar"
+        android:id="@+id/appbarMitID"/>
 
     <TextView
         android:id="@+id/title_MitID"
@@ -18,7 +19,7 @@
         android:textSize="45dp"
         android:gravity="center"
         android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/appbarMitID"
         app:layout_constraintEnd_toStartOf="@id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"/>
 

@@ -33,6 +33,7 @@
             android:exported="true" />
         <activity android:name=".RegisterActivity"
             android:exported="true"/>
+
         <activity
             android:name=".Tab_Layout"
             android:exported="true">
@@ -54,6 +55,7 @@
         <activity
             android:name=".NemKontoPage"
             android:exported="true" />
+
     </application>
 
 </manifest>

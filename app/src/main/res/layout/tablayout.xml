@@ -8,7 +8,10 @@
     tools:context=".Tab_Layout"
 
     >
-<include layout="@layout/appbar"/>
+
+    <include layout="@layout/appbar"
+        android:id="@+id/appbarHomeActivity"/>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"

@@ -7,7 +7,8 @@
     android:background="@color/bg"
     tools:context=".EBoksPage">
 
-    <include layout="@layout/appbar" />
+    <include layout="@layout/appbar"
+        android:id="@+id/appbarEBoks"/>
 
     <TextView
         android:id="@+id/title_EBoks"
@@ -17,7 +18,7 @@
         android:textSize="45dp"
         android:gravity="center"
         android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/appbarEBoks"
         app:layout_constraintEnd_toStartOf="@id/contentLayout"
         app:layout_constraintEnd_toEndOf="parent"/>
 
