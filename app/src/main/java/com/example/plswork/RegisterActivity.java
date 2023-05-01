@@ -15,6 +15,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     String[] cities = { "Randers", "Aalborg","Aarhus",
             "Copenhagen"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

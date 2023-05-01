@@ -102,4 +102,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="welcome_to_denmark">Welcome to Denmark</string>
 </resources>
