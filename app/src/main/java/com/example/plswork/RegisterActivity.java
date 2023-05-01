@@ -50,12 +50,6 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
 
-        //Kode der åbner EducationActivity i stedet for MainActivity
-        Intent SecondActivityIntent = new Intent(
-                this, EducationHomeActivity.class
-        );
-        startActivity(SecondActivityIntent);
-        //Slutter her
 
 
         autocomplete = (AutoCompleteTextView)
@@ -78,10 +72,27 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Authenticate the user with Firebase Authentication
                 FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
                 String email = emailEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 String fullName = nameEditText.getText().toString();
                 String municipality = autocomplete.getText().toString();
+                if(municipality.isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Please select your municipality", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(password.isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Please write a password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(fullName.isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Please select your name", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(email.isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Please write an email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
