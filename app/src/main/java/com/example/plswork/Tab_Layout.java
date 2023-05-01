@@ -43,6 +43,7 @@ public class Tab_Layout extends AppCompatActivity {
         myBackButton.setEnabled(false);
         myBackButton.setVisibility(View.INVISIBLE);
 
+        // Disable and make the Button invisible
         myHomeButton.setEnabled(false);
         myHomeButton.setVisibility(View.INVISIBLE);
 
