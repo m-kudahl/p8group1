@@ -72,6 +72,7 @@ public class ProfilePage extends AppCompatActivity {
         String userUid = currentUser.getUid();
         dynamicTextView(userUid, name, "userFullName");
         dynamicTextView(userUid, email, "userEmail");
+        dynamicTextView(userUid, municipality, "userMunicipality");
 
 
 

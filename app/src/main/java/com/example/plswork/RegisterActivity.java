@@ -77,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = passwordEditText.getText().toString();
                 String fullName = nameEditText.getText().toString();
                 String municipality = autocomplete.getText().toString();
-                if(municipality.isEmpty()){
+                if (municipality.isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Please select your municipality", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -130,6 +130,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
     public void writeNewUser(String userId, String name, String email, String municipality) {
+        Log.d(TAG, "Municipality value in writeNewUser method: " + municipality);
         User user = new User(email, name, municipality, userId);
 
         mDatabase.child(user.getUserId()).setValue(user);
