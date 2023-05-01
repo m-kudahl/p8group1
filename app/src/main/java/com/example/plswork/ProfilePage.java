@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -20,6 +23,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.inappmessaging.FirebaseInAppMessaging;
+import com.google.firebase.installations.FirebaseInstallations;
+import com.google.firebase.installations.InstallationTokenResult;
 
 public class ProfilePage extends AppCompatActivity {
 
@@ -34,6 +40,22 @@ public class ProfilePage extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+
+
+        boolean forceRefresh = true;
+        FirebaseInstallations.getInstance().getToken(forceRefresh)
+                .addOnCompleteListener(new OnCompleteListener<InstallationTokenResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstallationTokenResult> task) {
+                        if (task.isSuccessful()) {
+                            String token = task.getResult().getToken();
+                            Log.d(TAG, "Firebase Installation Token: " + token);
+                        } else {
+                            Log.e(TAG, "Failed to get Firebase Installation Token: ", task.getException());
+                        }
+                    }
+                });
+
     }
 
     @Override
