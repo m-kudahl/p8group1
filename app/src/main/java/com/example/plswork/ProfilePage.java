@@ -23,12 +23,24 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfilePage extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser == null){
+            Intent intent = new Intent(ProfilePage.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         Button logOutBtn = (Button) findViewById(R.id.logOutBtn);
         TextView name = findViewById(R.id.textViewEditName);
@@ -38,7 +50,6 @@ public class ProfilePage extends AppCompatActivity {
         String userUid = currentUser.getUid();
         dynamicTextView(userUid, name, "userFullName");
         dynamicTextView(userUid, email, "userEmail");
-        dynamicTextView(userUid, municipality, "userMunicipality");
 
 
 
