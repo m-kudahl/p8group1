@@ -18,27 +18,11 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TrainFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class TrainFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
-    Button RejsekortTopUp;
-    Button WhichCardisRight;
-    Button HowDoIUseTravelCard;
-    Button GetTravelCard;
-    Button WhatCanYouDo;
-    Button HowDoYouPay;
-    Button WhatCanYouDoDSB;
-    Button HowDoYouPayDSB;
-    Button HowDoIBuyTickets;
-
-
-
-
+    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay, WhatCanYouDoDSB, HowDoYouPayDSB, HowDoIBuyTickets;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

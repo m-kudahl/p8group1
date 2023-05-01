@@ -22,12 +22,7 @@ import android.widget.Toast;
 public class BusFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
-    Button RejsekortTopUp;
-    Button WhichCardisRight;
-    Button HowDoIUseTravelCard;
-    Button GetTravelCard;
-    Button WhatCanYouDo;
-    Button HowDoYouPay;
+    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
