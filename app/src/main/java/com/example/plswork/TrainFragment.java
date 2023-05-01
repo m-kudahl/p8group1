@@ -1,5 +1,7 @@
 package com.example.plswork;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,27 +18,11 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TrainFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class TrainFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
-    Button RejsekortTopUp;
-    Button WhichCardisRight;
-    Button HowDoIUseTravelCard;
-    Button GetTravelCard;
-    Button WhatCanYouDo;
-    Button HowDoYouPay;
-    Button WhatCanYouDoDSB;
-    Button HowDoYouPayDSB;
-    Button HowDoIBuyTickets;
-
-
-
-
+    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay, WhatCanYouDoDSB, HowDoYouPayDSB, HowDoIBuyTickets;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,56 +54,39 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
         RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://www.rejsekort.dk/Hjaelp/Betaling");
+                Dialog_5();
             }
         } );
 
-        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
-            }
-        });
+
         HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du");
+                Dialog_2();
             }
         });
         GetTravelCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.rejsekort.dk/Bestil");
+                Dialog_3();
             }
         });
         WhatCanYouDo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/");
+                Dialog_4();
             }
         });
         HowDoYouPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/");
+                Dialog_6();
             }
         });
-        WhatCanYouDoDSB.setOnClickListener(new View.OnClickListener() {
+        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.dsb.dk/find-produkter-og-services/dsb-app/");
-            }
-        });
-        HowDoYouPayDSB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoUrl("https://www.dsb.dk/find-produkter-og-services/dsb-app/");
-            }
-        });
-        HowDoIBuyTickets.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoUrl("https://www.dsb.dk/kundeservice/las-mere-om-billetautomaterne2/");
+                Dialog_1();
             }
         });
     }
@@ -125,6 +94,196 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
     private void gotoUrl(String s) {
         Uri uri = Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
+
+    public void Dialog_1() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Which card is right for me?")
+                .setMessage("There are many different types of travel cards. If you have trouble deciding which one to get, you can use the Rejsekort tool to figure it out")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_2() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("How do I use my travel card?")
+                .setMessage("You must check in on the blue point in the bus, and then you must also check out at another blue point in the bus before leaving")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_3() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Get travel card")
+                .setMessage("Use the Rejsekort website to order a travel card")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        GetTravelCard.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.rejsekort.dk/Bestil");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_4() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("What can you do with the app?")
+                .setMessage("You can use the app to buy different types of tickets as well as a travel pass")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        WhatCanYouDo.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_5() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("How do I top up my travel card?")
+                .setMessage("You can either use the Rejsekort self-service or a rejsekort vending machine located at a train station. For more information visit Rejsekort.dk")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.rejsekort.dk/Hjaelp/Betaling");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_6() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("How do you pay with the app?")
+                .setMessage("First you must choose what kind of ticket or travel pass you wish to purchase, then you must select how many zones (minimum 2) you wish to travel. Enter the date and time of depature and then press 'fortsæt' and then 'godkend køb' For more information visit the website")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        HowDoYouPay.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_7() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("What can you do with the app?")
+                .setMessage("With the DSB app you can buy tickets, travel passes and plan a route. For more information go to the website")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        WhatCanYouDoDSB.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.dsb.dk/find-produkter-og-services/dsb-app/");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_8() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("How do you pay with the app?")
+                .setMessage("First you must select at route. Then you must choose ticket type and finally you can choose to reserve a seat. Lastly you must accept terms and conditions and then you choose a method of payment before entering the relevant payment information. For more information go to the website")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        HowDoYouPayDSB.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.dsb.dk/find-produkter-og-services/dsb-app/");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
     }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {

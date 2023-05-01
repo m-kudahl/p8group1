@@ -79,6 +79,7 @@
 
             <Button
                 android:id="@+id/WhichCardisRight"
+                android:onClick="Dialog_1"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -89,6 +90,7 @@
                 android:textColor="@color/buttonBlueText"/>
             <Button
                 android:id="@+id/HowDoIUseTravelCard"
+                android:onClick="Dialog_2"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -100,6 +102,7 @@
                 />
             <Button
                 android:id="@+id/RejsekortTopUp"
+                android:onClick="Dialog_5"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -110,6 +113,7 @@
                 android:text="HOW DO I TOP UP MY TRAVEL CARD?" />
             <Button
                 android:id="@+id/GetTravelCard"
+                android:onClick="Dialog_3"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -145,6 +149,7 @@
                 android:paddingTop="10dp"/>
             <Button
                 android:id="@+id/WhatCanYouDo"
+                android:onClick="Dialog_4"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -155,6 +160,7 @@
                 android:text="WHAT CAN YOU DO WITH THE APP?" />
             <Button
                 android:id="@+id/HowDoYouPay"
+                android:onClick="Dialog_6"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

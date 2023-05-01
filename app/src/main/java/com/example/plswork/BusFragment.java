@@ -1,5 +1,7 @@
 package com.example.plswork;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,12 +22,7 @@ import android.widget.Toast;
 public class BusFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
-    Button RejsekortTopUp;
-    Button WhichCardisRight;
-    Button HowDoIUseTravelCard;
-    Button GetTravelCard;
-    Button WhatCanYouDo;
-    Button HowDoYouPay;
+    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,38 +53,39 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
         RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://www.rejsekort.dk/Hjaelp/Betaling");
+                Dialog_5();
             }
         } );
 
-        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
-            }
-        });
+
         HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du");
+                Dialog_2();
             }
         });
         GetTravelCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.rejsekort.dk/Bestil");
+                Dialog_3();
             }
         });
         WhatCanYouDo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/");
+                Dialog_4();
             }
         });
         HowDoYouPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/");
+                Dialog_6();
+            }
+        });
+        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dialog_1();
             }
         });
     }
@@ -97,6 +95,147 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
+    public void Dialog_1() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Which card is right for me?")
+                .setMessage("There are many different types of travel cards. If you have trouble deciding which one to get, you can use the Rejsekort tool to figure it out")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_2() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("How do I use my travel card?")
+                .setMessage("You must check in on the blue point in the bus, and then you must also check out at another blue point in the bus before leaving")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_3() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Get travel card")
+                .setMessage("Use the Rejsekort website to order a travel card")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        GetTravelCard.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.rejsekort.dk/Bestil");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_4() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("What can you do with the app?")
+                .setMessage("You can use the app to buy different types of tickets as well as a travel pass")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        WhatCanYouDo.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_5() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("How do I top up my travel card?")
+                .setMessage("You can either use the Rejsekort self-service or a rejsekort vending machine located at a train station. For more information visit Rejsekort.dk")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.rejsekort.dk/Hjaelp/Betaling");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_6() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("How do you pay with the app?")
+                .setMessage("First you must choose what kind of ticket or travel pass you wish to purchase, then you must select how many zones (minimum 2) you wish to travel. Enter the date and time of depature and then press 'fortsæt' and then 'godkend køb' For more information visit the website")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        HowDoYouPay.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/");
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
         String text = parent.getItemAtPosition(i).toString();
