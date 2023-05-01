@@ -18,18 +18,6 @@ public class MitIDpage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mit_idpage);
 
-        //THIS IS A TEST TO DISABLE THE BACKBUTTON OR ANY OTHER BUTTON RLLY....
-
-        // Get a reference to the included layout
-        View includedLayout = findViewById(R.id.appbarMitID);
-
-        // Get a reference to the specific Button within the included layout
-        Button myBackButton = includedLayout.findViewById(R.id.back_button);
-
-        // Disable and make the Button invisible
-        myBackButton.setEnabled(false);
-        myBackButton.setVisibility(View.INVISIBLE);
-
         appleButton = findViewById(R.id.appleStoreButtonMitID);
         googleButton = findViewById(R.id.googleStoreButtonMitID);
 

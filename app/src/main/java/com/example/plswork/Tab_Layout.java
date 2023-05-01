@@ -32,6 +32,20 @@ public class Tab_Layout extends AppCompatActivity {
         viewPagerAdapter = new TabLayoutViewPage(this);
         viewPager2.setAdapter(viewPagerAdapter);
 
+        // Get a reference to the included layout
+        View includedLayout = findViewById(R.id.appbarHomeActivity);
+
+        // Get a reference to the specific Button within the included layout
+        Button myBackButton = includedLayout.findViewById(R.id.back_button);
+        Button myHomeButton = includedLayout.findViewById(R.id.home_button);
+
+        // Disable and make the Button invisible
+        myBackButton.setEnabled(false);
+        myBackButton.setVisibility(View.INVISIBLE);
+
+        myHomeButton.setEnabled(false);
+        myHomeButton.setVisibility(View.INVISIBLE);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
