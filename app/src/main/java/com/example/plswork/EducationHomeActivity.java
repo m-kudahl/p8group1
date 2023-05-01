@@ -10,6 +10,7 @@ import android.widget.Button;
 
 public class EducationHomeActivity extends AppCompatActivity {
 
+
     Button DiplomVerificationBtn, EducationOptionsBtn, SUBtn;
 
     @Override

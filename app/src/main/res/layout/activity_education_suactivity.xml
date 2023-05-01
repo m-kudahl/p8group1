@@ -7,39 +7,27 @@
     android:background="@color/bg"
     tools:context=".EducationSUActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <include layout="@layout/appbar"/>
+
+    <TextView
+        android:id="@+id/textViewEducationSU"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="606dp"
+        android:layout_height="0dp"
+        android:text="SU"
+        android:textSize="45sp"
+        android:gravity="center"
         android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textViewEducationSU"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="SU"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textSize="45sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.appcompat.widget.Toolbar>
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintEnd_toStartOf="@id/scrollViewEducationDiplom"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <ScrollView
         android:id="@+id/scrollViewEducationSU"
         android:layout_width="match_parent"
-        android:layout_height="604dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:paddingTop="20dp"
         android:background="@color/bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +38,6 @@
             android:id="@+id/EducationSU"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
@@ -71,7 +58,7 @@
                 android:textStyle="bold"
                 android:text="What is SU and SU-loan?"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
 
             <TextView
@@ -80,57 +67,19 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="“SU” and “SU-loan” is State Educational Grant and Loan Scheme. Society lends students a helping hand in covering living costs for a great variety of courses and studies.
-                            \n\nMore information here: "
+                android:text="“SU” and “SU-loan” is State Educational Grant and Loan Scheme. Society lends students a helping hand in covering living costs for a great variety of courses and studies."
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationSUText1.3"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="15dp"
-                android:textStyle="italic"
-                android:text="@string/link_EducationSUInfo"
-                android:autoLink="all"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black"/>
 
-            <TextView
-                android:id="@+id/EducationSUText2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textStyle="bold"
-                android:text="Speical conditions for Ukrainian refugees"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/EducationSUText2.2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="If you are a refugee from Ukraine, you may apply for equal status with Danish citizens, if you fall within Section 2(2) of the Act on Integration of Aliens in Denmark:"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/EducationSUText2.3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="15dp"
-                android:textStyle="italic"
-                android:text="@string/link_EducationSUConditions"
-                android:autoLink="all"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/EducationSUText3"
@@ -139,9 +88,9 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:textStyle="bold"
-                android:text="How to apply for SU or SU-loan"
+                android:text="How do I apply for SU or SU-loan?"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/EducationSUText3.2"
@@ -151,7 +100,7 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
                 android:text="If you want to apply for SU or a SU-loan, you must apply for SU in minSU. Log on to minSU from a computer insted af a mobile device - they do not recieve all applications completed via a mobile device. For this you need to log in with your MitID.
-                            \nIf you are not sure how to use MitID, check out the page within the Essentials category, or click this button:"
+                            \n\nIf you are not sure how to use MitID, check out the page within the Essentials category, or click this button:"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -164,6 +113,78 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"/>
+
+
+            <TextView
+                android:id="@+id/EducationSUText1.4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textAlignment="center"
+                android:text="More information here: "
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/EducationSUText1.3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:text="@string/link_EducationSUInfo"
+                android:autoLink="all"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/EducationSUText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:text="Speical conditions for Ukrainian refugees"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/EducationSUText2.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="If you are a refugee from Ukraine, you may apply for equal status with Danish citizens, if you fall within Section 2(2) of the Act on Integration of Aliens in Denmark:"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/EducationSUText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="  •  How do I apply for SU as a Ukrainian refugee?"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+
+
+
+
 
 
         </LinearLayout>
