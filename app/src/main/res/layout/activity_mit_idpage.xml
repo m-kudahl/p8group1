@@ -171,7 +171,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/mitid_logo" />
+                                android:src="@drawable/mitid_logo"
+                                android:padding="15dp"
+                               />
 
                             <!-- Third Column with TableLayout -->
                             <TableLayout
@@ -188,16 +190,19 @@
                                         android:layout_height="wrap_content"
                                         android:scaleType="centerInside"
                                         android:layout_weight="1"
-                                        android:src="@drawable/getongoogleplaystore" />
+                                        android:src="@drawable/getongoogleplaystore"
+                                        android:padding="8.5dp"/>
                                 </TableRow>
 
                                 <TableRow
                                     android:layout_weight="0.5">
+
                                     <ImageButton
                                         android:id="@+id/appleStoreButtonMitID"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
+                                        android:padding="13dp"
                                         android:scaleType="centerInside"
                                         android:src="@drawable/getonapplestore" />
                                 </TableRow>

@@ -52,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         //Kode der åbner EducationActivity i stedet for MainActivity
         Intent SecondActivityIntent = new Intent(
-                this, EducationHomeActivity.class
+               this, EducationHomeActivity.class
         );
         startActivity(SecondActivityIntent);
         //Slutter her
