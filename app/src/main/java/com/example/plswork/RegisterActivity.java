@@ -128,6 +128,9 @@ public class RegisterActivity extends AppCompatActivity {
                         });
             }
         });
+        //appbar buttons
+        AppBarUtility.setupHomeButton(this, R.id.appbarRegister);
+        AppBarUtility.setUpBackButton(this);
     }
     public void writeNewUser(String userId, String name, String email, String municipality) {
         Log.d(TAG, "Municipality value in writeNewUser method: " + municipality);

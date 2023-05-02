@@ -18,4 +18,17 @@
     <string name="textViewEditProfile">"Редагувати профіль "</string>
     <string name="textViewDeleteProfile">"Видалити профіль "</string>
     <string name="textViewLogOut">"Вийти "</string>
+    <string name="continue_without_signing_in">Продовжити без входу в обліковий запис.</string>
+    <string name="register_slash_sign_in">Зареєструватися / Увійти в обліковий запис.</string>
+    <string name="welcome_2_denmark">Ласкаво просимо до Данії.</string>
+    <string name="Welcome_To_YOUKRAINE_Text">Ласкаво просимо до \"Youkraine\"! Данська система може бути складною для орієнтування. Вона дуже цифрова, що може бути новим та викликаючим для деяких людей. Тому ми надаємо вам хороший огляд основних додатків та процесів, таких як MitID, E-Boks, допомоги та іншого. А також, різноманітні речі, з якими ви зіткнетесь щоденно. Це включає транспортну систему, систему охорони здоров\'я та інше.</string>
+    <string name="Sign_in_to_receive">Увійдіть, щоб отримати відповідну інформацію від вашої муніципалітету та налаштувати додаток під свої потреби</string>
+    <string name="e_mail">E-MAIL</string>
+    <string name="password">ПАРОЛЬ</string>
+    <string name="create_account">Створити акаунт</string>
+    <string name="login">Логін</string>
+    <string name="forgot_password">Забули пароль?</string>
+    <string name="full_name">ПОВНЕ ІМ\'Я</string>
+    <string name="register">зареєструватися</string>
+    <string name="municipality">Створити акаунт</string>
 </resources>

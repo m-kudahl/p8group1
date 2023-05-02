@@ -7,6 +7,10 @@
     android:background="@color/contentBox"
     tools:context=".RegisterActivity">
 
+    <include
+        android:id="@+id/appbarLogin"
+        layout="@layout/appbar" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="E-MAIL"
+            android:hint="@string/e_mail"
             android:inputType="textEmailAddress"
             android:minHeight="48dp" />
 
@@ -37,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="PASSWORD"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:minHeight="48dp" />
 
@@ -48,7 +52,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="auto"
-            android:text="Login" />
+            android:text="@string/login" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -59,7 +63,7 @@
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Create Account"
+                android:text="@string/create_account"
                 android:textColor="#000000" />
 
             <Button
@@ -67,7 +71,7 @@
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forgot Password?"
+                android:text="@string/forgot_password"
                 android:textColor="#000000" />
 
         </TableRow>

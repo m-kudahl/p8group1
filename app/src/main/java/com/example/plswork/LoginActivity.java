@@ -80,5 +80,8 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
+        //appbar buttons
+        AppBarUtility.setupHomeButton(this, R.id.appbarLogin);
+        AppBarUtility.setUpBackButton(this);
     }
 }
