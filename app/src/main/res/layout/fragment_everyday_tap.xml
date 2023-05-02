@@ -43,7 +43,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="0dp"
-            >
+            app:cardUseCompatPadding="true">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -82,6 +82,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
             >
 
             <RelativeLayout
@@ -120,6 +121,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
             >
 
             <RelativeLayout
