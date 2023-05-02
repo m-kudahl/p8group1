@@ -9,6 +9,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ClickableSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,18 +17,18 @@ public class EducationOptionsActivity extends AppCompatActivity {
 
     //TextView textView;
 
-    private TextView educationOptionsTextQ1;
+    private Button buttonEducationOptions1;
 
-    private TextView educationOptionsTextQ2;
+    private Button buttonEducationOptions2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education_options);
 
-        educationOptionsTextQ1 = findViewById(R.id.EducationOptionsTextQ1);
+        buttonEducationOptions1 = findViewById(R.id.buttonEducationOptions1);
 
-        educationOptionsTextQ1.setOnClickListener(new View.OnClickListener() {
+        buttonEducationOptions1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // create a dialog box or alert dialog to show the information
@@ -40,9 +41,9 @@ public class EducationOptionsActivity extends AppCompatActivity {
             }
         });
 
-        educationOptionsTextQ2 = findViewById(R.id.EducationOptionsTextQ2);
+        buttonEducationOptions2 = findViewById(R.id.buttonEducationOptions2);
 
-        educationOptionsTextQ2.setOnClickListener(new View.OnClickListener() {
+        buttonEducationOptions2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // create a dialog box or alert dialog to show the information
@@ -57,16 +58,5 @@ public class EducationOptionsActivity extends AppCompatActivity {
             }
         });
 
-
-        /*
-        String text;
-
-        SpannableString spannableString = new SpannableString(text);
-        ClickableSpan clickableSpan1 = new ClickableSpan() {
-            @Override
-            public void onClick(@NonNull View view) {
-                Toast.makeText(R.id.EducationOptionsTextQ1.this, )
-            }
-        }*/
     }
 }

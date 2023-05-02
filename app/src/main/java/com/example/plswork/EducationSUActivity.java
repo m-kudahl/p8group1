@@ -13,7 +13,7 @@ public class EducationSUActivity extends AppCompatActivity {
 
     Button SUMitIDBtn;
 
-    private TextView educationSUText4;
+    private Button buttonEducationSU2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,9 @@ public class EducationSUActivity extends AppCompatActivity {
             }
         });
 
-        educationSUText4 = findViewById(R.id.EducationSUText4);
+        buttonEducationSU2 = findViewById(R.id.buttonEducationSU2);
 
-        educationSUText4.setOnClickListener(new View.OnClickListener() {
+        buttonEducationSU2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // create a dialog box or alert dialog to show the information

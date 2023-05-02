@@ -108,7 +108,7 @@
                 android:id="@+id/buttonEducationSU"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="MitID"
+                android:text="Go to MitID"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
@@ -169,22 +169,16 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationSUText4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="  •  How do I apply for SU as a Ukrainian refugee?"
-                android:textStyle="italic"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-
-
-
-
-
+            <Button
+                android:id="@+id/buttonEducationSU2"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:text="How do I apply for SU as a Ukrainian refugee?"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText" />
 
 
         </LinearLayout>

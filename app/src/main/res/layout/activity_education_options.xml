@@ -73,17 +73,19 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationOptionsTextQ1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="20dp"
-                android:text="  •  How do I apply for a transfer?"
-                android:textStyle="italic"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+
+
+            <Button
+                android:id="@+id/buttonEducationOptions1"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/white"
+                android:text="How do I apply for a transfer?"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText" />
 
 
             <TextView
@@ -97,16 +99,16 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationOptionsTextQ2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="  •  How do I apply for admission?"
-                android:textStyle="italic"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+            <Button
+                android:id="@+id/buttonEducationOptions2"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:text="How do I apply for admission?"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText" />
 
             <View
                 android:layout_width="match_parent"

@@ -57,7 +57,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="You can varify your diplom to be able to study or work in Denmark within your profession.
-                        \nYour assessment can be applied either in digital or in pdf format."
+                        \nYour assessment can be applied either online or in PDF format."
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -94,28 +94,37 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationDiplomText4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="  •  What are the the required document to be included in the application?"
-                android:textColor="@color/black"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
-                android:textStyle="italic"/>
 
-            <TextView
-                android:id="@+id/EducationDiplomText5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="  •  How do I fill in the application?"
-                android:textColor="@color/black"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="30dp"
-                android:textStyle="italic"/>
+            <Button
+                android:id="@+id/buttonEducationDiplom1"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:text="What are the the required document to be included in the application?"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText" />
 
+            <Button
+                android:id="@+id/buttonEducationDiplom2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="How do I fill in the online application?"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@color/black"/>
 
             <TextView
                 android:id="@+id/EducationDiplomText3"
@@ -136,21 +145,22 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
+
                 android:textStyle="italic"
                 android:text="@string/link_EducationDiplomPDFApp"
                 android:autoLink="all"
                 android:textColor="@color/black" />
 
-            <TextView
-                android:id="@+id/EducationDiplomText6"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/buttonEducationDiplom3"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="  •  How do I fill in the application?"
-                android:textColor="@color/black"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="20dp"
-                android:textStyle="italic"/>
+                android:text="How do I fill in the PDF application?"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText"/>
 
 
         </LinearLayout>
