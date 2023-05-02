@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">lol</string>
+    <string name="how_do_i_buy_tickets">ЯК КУПИТИ КВИТКИ</string>
+    <string name="the_danish_electronic_ticket_less_travel_card_system">ДАТСЬКА ЕЛЕКТРОННА СИСТЕМА ПРОЇЗДНИХ БЕЗКВИТКІВ</string>
+    <string name="cash_card">ГОТІВКА/КАРТКА</string>
+    <string name="how_do_you_pay_with_the_app">ЯК ОПЛАТИТИ ЗА ДОПОМОГОЮ ДОДАТКУ?</string>
+    <string name="what_can_you_do_with_the_app">ЩО ВИ МОЖЕТЕ РОБИТИ З ДОДАТКОМ?</string>
+    <string name="midttrafik_app">ДОДАТОК MIDTTRAFIK</string>
+    <string name="applications_for_planning_and_ordering_tickets">ПРОГРАМИ ДЛЯ ПЛАНУВАННЯ ТА ЗАМОВЛЕННЯ КВИТКІВ</string>
+    <string name="applications">ПРОГРАМИ</string>
+    <string name="get_travel_card">ОТРИМАТИ ПРОЇЗДНУ КАРТУ</string>
+    <string name="how_do_i_top_up_my_travel_card">ЯК ПОПОВНИТИ МОЮ ПРОЇЗДНУ КАРТКУ?</string>
+    <string name="how_do_i_use_my_travel_card">ЯК КОРИСТУВАТИСЯ ПРОЇЗДОВОЮ КАРТКОЮ</string>
+    <string name="which_card_is_right_for_me">ЯКА КАРТКА ПІДХОДИТЬ МЕНІ?</string>
+    <string name="the_danish_electronic_ticket_less_tavel_card_system">ДАТСЬКА ЕЛЕКТРОННА СИСТЕМА ПРОЇЗДНИХ БЕЗКВИТКІВ</string>
+    <string name="travel_card">(КАРТКА НА ПРОЇЗД)</string>
+    <string name="rejsekort">REJSEKORT</string>
+    <string name="the_following_are_the_different_payment_options_for_travelling_with_bus_in_denmark">НИЖЧЕ ПЕРЕДАНО РІЗНІ ВАРІАНТИ ОПЛАТИ ЗА ПОДОРОЖ АВТОБУСОМ ДО ДАНІЇ</string>
+    <string name="select_your_region">ОБЕРІТЬ СВІЙ РЕГІОН</string>
+    <string name="the_following_are_the_different_payment_options_for_travelling_with_train_in_denmark">НИЖЧЕ ПЕРЕДАНО РІЗНІ ВАРІАНТИ ОПЛАТИ ЗА ПОЇЗД ДО ДАНІЇ</string>
+    <string name="dsb_app">ДОДАТОК DSB</string>
+    <string name="what_can_you_do_with_the_app_DSB">ЩО ВИ МОЖЕТЕ РОБИТИ З ДОДАТКОМ?</string>
+    <string name="how_do_you_pay_with_the_app_DSB">ЯК ОПЛАТИТИ ЗА ДОПОМОГОЮ ДОДАТКУ?</string>
+</resources>
