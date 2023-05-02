@@ -7,7 +7,8 @@
     android:background="@color/bg"
     tools:context=".EducationOptionsActivity">
 
-    <include layout="@layout/appbar"/>
+    <include layout="@layout/appbar"
+        android:id="@+id/my_toolbar"/>
 
     <TextView
         android:id="@+id/textViewEducationOptions"

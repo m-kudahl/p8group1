@@ -58,5 +58,9 @@ public class EducationOptionsActivity extends AppCompatActivity {
             }
         });
 
+        //appbar buttons
+        AppBarUtility.setupHomeButton(this, R.id.my_toolbar);
+        AppBarUtility.setUpBackButton(this);
+
     }
 }
