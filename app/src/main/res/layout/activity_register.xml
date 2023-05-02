@@ -9,6 +9,10 @@
     android:background="@color/contentBox"
     tools:context=".RegisterActivity">
 
+    <include
+        android:id="@+id/appbarRegister"
+        layout="@layout/appbar" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="E-MAIL"
+            android:hint="@string/e_mail"
             android:inputType="textEmailAddress"
             android:minHeight="48dp" />
 
@@ -39,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="PASSWORD"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:minHeight="48dp" />
 
@@ -48,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="FULL NAME"
+            android:hint="@string/full_name"
             android:inputType="text"
             android:minHeight="48dp" />
 
@@ -56,7 +60,7 @@
             android:id="@+id/citiesAutoComplete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="MUNICIPALITY"
+            android:hint="@string/municipality"
             android:minHeight="48dp" />
 
         <Button
@@ -66,7 +70,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="auto"
-            android:text="Register" />
+            android:text="@string/register" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
