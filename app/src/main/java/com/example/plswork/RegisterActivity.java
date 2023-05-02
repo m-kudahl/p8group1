@@ -99,10 +99,25 @@ public class RegisterActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     // Authentication successful, continue with adding data to database
-                                    FirebaseUser currentUser = mAuth.getCurrentUser();
-                                    String uid = currentUser.getUid();
-                                    mDatabase = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users");
-                                    writeNewUser(uid, fullName, email, municipality);
+                                    FirebaseMessaging.getInstance().getToken()
+                                            .addOnCompleteListener(new OnCompleteListener<String>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<String> task) {
+                                                    if (!task.isSuccessful()) {
+                                                        Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                                                        return;
+                                                    }
+
+                                                    // Get new FCM registration token
+                                                    String token = task.getResult();
+
+                                                    // Save the token to the Realtime Database
+                                                    FirebaseUser currentUser = mAuth.getCurrentUser();
+                                                    String uid = currentUser.getUid();
+                                                    mDatabase = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users");
+                                                    writeNewUser(uid, fullName, email, municipality, token);
+                                                }
+                                            });
                                     FirebaseMessaging.getInstance().subscribeToTopic(municipality)
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
@@ -129,10 +144,9 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-    public void writeNewUser(String userId, String name, String email, String municipality) {
-        Log.d(TAG, "Municipality value in writeNewUser method: " + municipality);
+    public void writeNewUser(String userId, String name, String email, String municipality, String token) {
         User user = new User(email, name, municipality, userId);
-
+        user.setUserToken(token);
         mDatabase.child(user.getUserId()).setValue(user);
 
 

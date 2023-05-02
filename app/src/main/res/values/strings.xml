@@ -35,4 +35,8 @@
     <string name="textViewEditProfile">Edit Profile</string>
     <string name="textViewDeleteProfile">Delete profile</string>
     <string name="textViewLogOut">Log out</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="municipality">MUNICIPALITY</string>
+    <string name="edit_profile">EDIT PROFILE</string>
+    <string name="edit_what_you_want_to_change">Edit what you want to change</string>
 </resources>

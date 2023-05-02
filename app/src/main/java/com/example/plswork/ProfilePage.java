@@ -68,14 +68,24 @@ public class ProfilePage extends AppCompatActivity {
         TextView name = findViewById(R.id.textViewEditName);
         TextView email = findViewById(R.id.textViewEditEmail);
         TextView municipality = findViewById(R.id.textViewEditMunicipality);
+        Button editProfile = findViewById(R.id.editProfileButton);
         FirebaseUser currentUser = mAuth.getCurrentUser();
         String userUid = currentUser.getUid();
         dynamicTextView(userUid, name, "userFullName");
         dynamicTextView(userUid, email, "userEmail");
         dynamicTextView(userUid, municipality, "userMunicipality");
 
+        AppBarUtility.setupHomeButton(this, R.id.my_toolbar);
+        AppBarUtility.setUpBackButton(this);
 
 
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfilePage.this, EditProfile.class);
+                startActivity(intent);
+            }
+        });
 
         logOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +106,7 @@ public class ProfilePage extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String text = snapshot.child(path).getValue(String.class);
                 yourView.setText(text);
+
 
             }
 

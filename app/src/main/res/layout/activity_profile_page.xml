@@ -136,15 +136,17 @@
                 android:orientation="horizontal">
 
             </LinearLayout>
+
             <Button
                 android:layout_width="120dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:textSize="11dp"
+                android:text="@string/textViewEditProfile"
                 android:textColor="@color/buttonBlueText"
-                android:text="@string/textViewEditProfile"/>
+                android:id="@+id/editProfileButton"
+                android:textSize="11dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

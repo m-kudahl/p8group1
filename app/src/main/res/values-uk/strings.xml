@@ -18,4 +18,8 @@
     <string name="textViewEditProfile">"Редагувати профіль "</string>
     <string name="textViewDeleteProfile">"Видалити профіль "</string>
     <string name="textViewLogOut">"Вийти "</string>
+    <string name="full_name">"ПОВНЕ ІМ'Я "</string>
+    <string name="municipality">"МУНІЦИПАЛІТ "</string>
+    <string name="edit_profile">" РЕДАГУВАТИ ПРОФІЛЬ"</string>
+    <string name="edit_what_you_want_to_change">" Відредагуйте те, що ви хочете змінити"</string>
 </resources>
