@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="30dp"
-
+                    android:scaleType="fitXY"
                     />
 
                 <TextView
@@ -96,7 +96,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="30dp"
-                    />
+                    android:scaleType="fitXY"
+                  />
 
                 <TextView
                     android:layout_marginBottom="5dp"
@@ -132,7 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="30dp"
-                     />
+                    android:scaleType="fitXY"/>
 
                 <TextView
                     android:layout_marginBottom="5dp"
