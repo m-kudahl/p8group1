@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/Transport"
                     android:layout_margin="5dp"
-                    android:text="Transport" />
+                    android:text="@string/transport" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/Helth"
                     android:layout_margin="5dp"
-                    android:text="Helth" />
+                    android:text="@string/helth" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -144,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/Work"
                     android:layout_margin="5dp"
-                    android:text="Work" />
+                    android:text="@string/work" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
