@@ -50,13 +50,6 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
 
-        //Kode der åbner EducationActivity i stedet for MainActivity
-        Intent SecondActivityIntent = new Intent(
-                this, EducationHomeActivity.class
-        );
-        startActivity(SecondActivityIntent);
-        //Slutter her
-
 
         autocomplete = (AutoCompleteTextView)
                 findViewById(R.id.citiesAutoComplete);
