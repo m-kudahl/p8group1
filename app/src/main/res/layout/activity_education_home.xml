@@ -14,7 +14,7 @@
         android:id="@+id/textViewEducationHome"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Education"
+        android:text="@string/educationHomeToolbarText"
         android:textSize="50sp"
         android:gravity="center"
         android:background="@color/white"
@@ -58,8 +58,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
-                android:text="Here is information for you If you are a refugee from Ukraine since 24th of February and consider studying in Denmark.
-                    \nOn this page you can get information about:"
+                android:text="@string/educationHomeText1"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -67,7 +66,7 @@
                 android:id="@+id/EducationHomeText1.2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Diplom verification"
+                android:text="@string/educationHomeBold1"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingLeft="5dp"
@@ -78,7 +77,7 @@
                 android:id="@+id/EducationHomeText1.3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="how and if you can verify your current education"
+                android:text="@string/educationHomeText2"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:paddingLeft="5dp"
@@ -89,7 +88,7 @@
                 android:id="@+id/EducationHomeText1.4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Education options"
+                android:text="@string/educationHomeBold2"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingLeft="5dp"
@@ -100,7 +99,7 @@
                 android:id="@+id/EducationHomeText1.5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="what are your options for studying in Denmark"
+                android:text="@string/educationHomeText3"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:paddingLeft="5dp"
@@ -111,7 +110,7 @@
                 android:id="@+id/EducationHomeText1.6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SU"
+                android:text="@string/educationHomeBold3"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingLeft="5dp"
@@ -122,7 +121,7 @@
                 android:id="@+id/EducationHomeText1.7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="how to check if you can receive SU while studying in Denmark"
+                android:text="@string/educationHomeText4"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:paddingLeft="5dp"
@@ -135,7 +134,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:backgroundTint="@color/white"
-                android:text="Diplom verification"
+                android:text="@string/educationHomeBtn1"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText" />
 
@@ -146,7 +145,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/white"
-                android:text="Education Options"
+                android:text="@string/educationHomeBtn2"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText" />
 
@@ -158,7 +157,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="60dp"
                 android:backgroundTint="@color/white"
-                android:text="SU"
+                android:text="@string/educationHomeBtn3"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText" />
 
