@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd95f0e-895f-4bc5-98b2-37f4f724b72d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plswork/EducationDiplomActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plswork/EducationDiplomActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plswork/EducationOptionsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plswork/EducationOptionsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plswork/EducationSUActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plswork/EducationSUActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values-uk/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-uk/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6cd95f0e-895f-4bc5-98b2-37f4f724b72d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
