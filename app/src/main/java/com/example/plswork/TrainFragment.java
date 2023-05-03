@@ -132,7 +132,7 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du";
+                        String url = "https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du?sc_lang=en";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
@@ -153,7 +153,7 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Bestil";
+                        String url = "https://www.rejsekort.dk/Bestil?sc_lang=en";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
@@ -175,7 +175,7 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/";
+                        String url = "https://www.midttrafik.dk/english/tickets/midttrafik-app/";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
@@ -197,7 +197,7 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Hjaelp/Betaling";
+                        String url = "https://www.rejsekort.dk/Hjaelp/Betaling?sc_lang=en";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
@@ -219,7 +219,7 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/";
+                        String url = "https://www.midttrafik.dk/english/tickets/midttrafik-app/";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
