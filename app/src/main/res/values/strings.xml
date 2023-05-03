@@ -29,6 +29,27 @@
     <string name="title_activity_landing" translatable="false">LandingActivity</string>
 
     <string name="action_settings">Settings</string>
+    <string name="how_do_i_buy_tickets">HOW DO I BUY TICKETS</string>
+    <string name="the_danish_electronic_ticket_less_travel_card_system">THE DANISH ELECTRONIC TICKET-LESS TRAVEL CARD SYSTEM</string>
+    <string name="cash_card">CASH/CARD</string>
+    <string name="how_do_you_pay_with_the_app">HOW DO YOU PAY WITH THE APP?</string>
+    <string name="what_can_you_do_with_the_app">WHAT CAN YOU DO WITH THE APP?</string>
+    <string name="midttrafik_app">MIDTTRAFIK APP</string>
+    <string name="applications_for_planning_and_ordering_tickets">APPLICATIONS FOR PLANNING AND ORDERING TICKETS</string>
+    <string name="applications">APPLICATIONS</string>
+    <string name="get_travel_card">GET TRAVEL CARD</string>
+    <string name="how_do_i_top_up_my_travel_card">HOW DO I TOP UP MY TRAVEL CARD?</string>
+    <string name="how_do_i_use_my_travel_card">HOW DO I USE MY TRAVEL CARD</string>
+    <string name="which_card_is_right_for_me">WHICH CARD IS RIGHT FOR ME?</string>
+    <string name="the_danish_electronic_ticket_less_tavel_card_system">THE DANISH ELECTRONIC TICKET-LESS TAVEL CARD SYSTEM</string>
+    <string name="travel_card">(TRAVEL CARD)</string>
+    <string name="rejsekort">REJSEKORT</string>
+    <string name="the_following_are_the_different_payment_options_for_travelling_with_bus_in_denmark">THE FOLLOWING ARE THE DIFFERENT PAYMENT OPTIONS FOR TRAVELLING WITH BUS IN DENMARK</string>
+    <string name="select_your_region">SELECT YOUR REGION</string>
+    <string name="the_following_are_the_different_payment_options_for_travelling_with_train_in_denmark">THE FOLLOWING ARE THE DIFFERENT PAYMENT OPTIONS FOR TRAVELLING WITH TRAIN IN DENMARK</string>
+    <string name="dsb_app">DSB APP</string>
+    <string name="what_can_you_do_with_the_app_DSB">WHAT CAN YOU DO WITH THE APP?</string>
+    <string name="how_do_you_pay_with_the_app_DSB">HOW DO YOU PAY WITH THE APP?</string>
 
     <!-- EDUCATION STRINGS -->
     <string name="educationHomeToolbarText">Education</string>
