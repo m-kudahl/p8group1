@@ -76,7 +76,6 @@
     <string name="Welcome">"Ласкаво просимо на «YouUkraine!» У датській системі може бути важко орієнтуватися. Він дуже оцифрований, що може бути новим і складним для деяких людей. Тому ми надаємо вам хороший огляд основних програм і процесів, таких як MitID, E-Boks, переваги тощо. А також речі, з якими ви стикаєтеся щодня. Це включає транспортну систему, систему охорони здоров’я тощо...... "</string>
     <string name="reset_password">"Скинути пароль "</string>
     <string name="reset_password_enter_mail">"Введіть свою електронну адресу, щоб отримати посилання для скидання "</string>
-    <string name="app_name">lol</string>
     <string name="how_do_i_buy_tickets">ЯК КУПИТИ КВИТКИ</string>
     <string name="the_danish_electronic_ticket_less_travel_card_system">ДАТСЬКА ЕЛЕКТРОННА СИСТЕМА ПРОЇЗДНИХ БЕЗКВИТКІВ</string>
     <string name="cash_card">ГОТІВКА/КАРТКА</string>
@@ -98,4 +97,12 @@
     <string name="dsb_app">ДОДАТОК DSB</string>
     <string name="what_can_you_do_with_the_app_DSB">ЩО ВИ МОЖЕТЕ РОБИТИ З ДОДАТКОМ?</string>
     <string name="how_do_you_pay_with_the_app_DSB">ЯК ОПЛАТИТИ ЗА ДОПОМОГОЮ ДОДАТКУ?</string>
+    <string name="delete_account">"Видалити аккаунт? "</string>
+    <string name="are_you_sure_you_want_to_delete_your_account">"Ви впевнені, що хочете видалити свій обліковий запис? "</string>
+    <string name="yes">"Так "</string>
+    <string name="account_deleted">"Обліковий запис видалено "</string>
+    <string name="no">Немає</string>
+    <string name="niet">Немає</string>
+    <string name="enter_your_email_to_receive_reset_link">"Введіть свою електронну адресу, щоб отримати посилання для скидання "</string>
+    <string name="reset_password_email_msg">"Введіть свою електронну адресу, щоб отримати посилання для скидання "</string>
 </resources>

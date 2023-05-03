@@ -125,5 +125,13 @@
     <string name="edit_what_you_want_to_change">Edit what you want to change</string>
     <string name="reset_password">Reset password</string>
     <string name="reset_password_enter_mail">Enter your email to receive reset link</string>
+    <string name="delete_account">Delete account?</string>
+    <string name="are_you_sure_you_want_to_delete_your_account">Are you sure you want to delete your account?</string>
+    <string name="yes">Yes</string>
+    <string name="account_deleted">Account deleted</string>
+    <string name="no">No</string>
+    <string name="niet">No</string>
+    <string name="enter_your_email_to_receive_reset_link">Enter your email to receive reset link</string>
+    <string name="reset_password_email_msg">Enter your email to receive reset link</string>
 
 </resources>
