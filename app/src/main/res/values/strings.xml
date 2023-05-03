@@ -27,6 +27,15 @@
     <string name="title_activity_landing" translatable="false">LandingActivity</string>
 
     <string name="action_settings">Settings</string>
+    <string name="Welcome">Welcome to “Youkraine!” The Danish system can be hard to navigate. It is very digitalised, which might be new and challenging to some people. Therefore, we provide you with a good overview of essential applications and processes such as MitID, E-Boks, benefits and more. As well as, stuff you will encounter on an everyday basis. This includes the likes of the transportation system, health system and more........</string>
+    <string name="helth">Helth</string>
+    <string name="transport">Transport</string>
+    <string name="work">Work</string>
+    <string name="mitid">MitID</string>
+    <string name="nemkonto">Nemkonto</string>
+    <string name="e_boks">E-boks</string>
+    <string name="benefits">Benefits</string>
+    <string name="education">Education</string>
     <string name="TextViewMessages">MESSAGES</string>
     <string name="textViewYourInformation">YOUR INFORMATION</string>
     <string name="textViewName">Name:</string>

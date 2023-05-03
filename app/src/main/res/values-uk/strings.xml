@@ -33,4 +33,13 @@
     <string name="full_name">ПОВНЕ ІМ\'Я</string>
     <string name="register">зареєструватися</string>
     <string name="municipality">Створити акаунт</string>
+    <string name="welcome">Ласкаво просимо!</string>
+    <string name="helth">Здоров\'я</string>
+    <string name="transport">Транспорт</string>
+    <string name="work">Робота</string>
+    <string name="mitid">MitID</string>
+    <string name="nemkonto">Банківський рахунок</string>
+    <string name="e_boks">E-boks</string>
+    <string name="benefits">"Виплати "</string>
+    <string name="education">Освіта</string>
 </resources>
