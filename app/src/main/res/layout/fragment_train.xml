@@ -41,7 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/RegionSpinner_values"
-                android:textColor="@color/black"/>
+                android:minHeight="48dp"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -169,6 +170,17 @@
                 android:textSize="15dp"/>
 
             <Button
+                android:id="@+id/WhatIsDSB"
+                android:onClick="Dialog_10"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="What is DSB?"/>
+            <Button
                 android:id="@+id/WhatCanYouDoDSB"
                 android:onClick="Dialog_7"
                 android:layout_width="250dp"
@@ -208,6 +220,18 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"/>
             <Button
+                android:id="@+id/WhatIsMidttrafik"
+                android:onClick="Dialog_11"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="What is Midttrafik?" />
+
+            <Button
                 android:id="@+id/WhatCanYouDo"
                 android:onClick="Dialog_4"
                 android:layout_width="250dp"
@@ -241,18 +265,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/cash_card"
+                android:text="CASH"
                 android:textColor="@color/blueText"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
                 android:textSize="15dp"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
+                android:layout_marginStart="40dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/the_danish_electronic_ticket_less_travel_card_system"
-                android:textSize="10dp"
+                android:text="You CAN’T pay with cash at the trains. You should always have bought a ticket beforehand when you board the train, otherwise you get a fine (750,-). "
+                android:textSize="13dp"
                 android:textColor="@color/black"
                 android:paddingBottom="15dp"/>
 
