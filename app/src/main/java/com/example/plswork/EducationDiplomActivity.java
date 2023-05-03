@@ -5,24 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class EducationDiplomActivity extends AppCompatActivity {
 
-    private TextView educationDiplomText4;
+    private Button buttonEducationDiplom1;
 
-    private TextView educationDiplomText5;
+    private Button buttonEducationDiplom2;
 
-    private TextView educationDiplomText6;
+    private TextView buttonEducationDiplom3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education_diplom);
 
-        educationDiplomText4 = findViewById(R.id.EducationDiplomText4);
+        buttonEducationDiplom1 = findViewById(R.id.buttonEducationDiplom1);
 
-        educationDiplomText4.setOnClickListener(new View.OnClickListener() {
+        buttonEducationDiplom1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // create a dialog box or alert dialog to show the information
@@ -42,14 +43,14 @@ public class EducationDiplomActivity extends AppCompatActivity {
             }
         });
 
-        educationDiplomText5 = findViewById(R.id.EducationDiplomText5);
+        buttonEducationDiplom2 = findViewById(R.id.buttonEducationDiplom2);
 
-        educationDiplomText5.setOnClickListener(new View.OnClickListener() {
+        buttonEducationDiplom2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // create a dialog box or alert dialog to show the information
                 AlertDialog.Builder builder = new AlertDialog.Builder(EducationDiplomActivity.this);
-                builder.setTitle("How do I fill in the application?");
+                builder.setTitle("How do I fill in the online application?");
                 builder.setMessage("The form has five steps:" +
                         "\n\n1. You as an applicant: Name, address etc. Most of the fields are filled in automatically." +
                         "\n\n2. The purpose of your application. You will also be asked if you want the assessment in Danish or English. You can only get the assessment in one language. We recommend Danish if you are going to apply for jobs or education in Denmark." +
@@ -63,14 +64,14 @@ public class EducationDiplomActivity extends AppCompatActivity {
         });
 
 
-        educationDiplomText6 = findViewById(R.id.EducationDiplomText6);
+        buttonEducationDiplom3 = findViewById(R.id.buttonEducationDiplom3);
 
-        educationDiplomText6.setOnClickListener(new View.OnClickListener() {
+        buttonEducationDiplom3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // create a dialog box or alert dialog to show the information
                 AlertDialog.Builder builder = new AlertDialog.Builder(EducationDiplomActivity.this);
-                builder.setTitle("How do I fill in the application?");
+                builder.setTitle("How do I fill in the PDF application?");
                 builder.setMessage("The form has four steps:" +
                         "\n\n1. Fill in the application form. Fields marked * are required. " +
                         "\n\n2. Sign the form." +
@@ -84,5 +85,9 @@ public class EducationDiplomActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+
+        //appbar buttons
+        AppBarUtility.setupHomeButton(this, R.id.my_toolbar);
+        AppBarUtility.setUpBackButton(this);
     }
 }

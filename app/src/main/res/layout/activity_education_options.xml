@@ -7,13 +7,14 @@
     android:background="@color/bg"
     tools:context=".EducationOptionsActivity">
 
-    <include layout="@layout/appbar"/>
+    <include layout="@layout/appbar"
+        android:id="@+id/my_toolbar"/>
 
     <TextView
         android:id="@+id/textViewEducationOptions"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Education options"
+        android:text="@string/educationOptionsToolbarText"
         android:textSize="45sp"
         android:gravity="center"
         android:background="@color/white"
@@ -57,8 +58,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="10dp"
-                android:text="You can continue studying your higher education programme in Denmark or begin a new higher education in Denmark.
-                            \nTo do this you can:"
+                android:text="@string/educationOptionsText1"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -69,21 +69,23 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
-                android:text="1. apply for a transfer from your Ukrainian higher education programme to a Danish higher education programme or"
+                android:text="@string/educationOptionsText2"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationOptionsTextQ1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="20dp"
-                android:text="  •  How do I apply for a transfer?"
-                android:textStyle="italic"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+
+
+            <Button
+                android:id="@+id/buttonEducationOptions1"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/educationOptionsBtn1"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText" />
 
 
             <TextView
@@ -93,20 +95,20 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
-                android:text="2. apply for admission to a new full time higher education programme in Denmark."
+                android:text="@string/educationOptionsText3"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationOptionsTextQ2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="  •  How do I apply for admission?"
-                android:textStyle="italic"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+            <Button
+                android:id="@+id/buttonEducationOptions2"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:text="@string/educationOptionsBtn2"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText" />
 
             <View
                 android:layout_width="match_parent"
@@ -123,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="More information about education options and relevant links can be found here:"
+                android:text="@string/educationOptionsText4"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"/>

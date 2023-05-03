@@ -7,13 +7,14 @@
     android:background="@color/bg"
     tools:context=".EducationSUActivity">
 
-    <include layout="@layout/appbar"/>
+    <include layout="@layout/appbar"
+        android:id="@+id/my_toolbar"/>
 
     <TextView
         android:id="@+id/textViewEducationSU"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="SU"
+        android:text="@string/educationSUToolbarText"
         android:textSize="45sp"
         android:gravity="center"
         android:background="@color/white"
@@ -56,7 +57,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:textStyle="bold"
-                android:text="What is SU and SU-loan?"
+                android:text="@string/educationSUBold1"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -67,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="“SU” and “SU-loan” is State Educational Grant and Loan Scheme. Society lends students a helping hand in covering living costs for a great variety of courses and studies."
+                android:text="@string/educationSUText1"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -88,7 +89,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:textStyle="bold"
-                android:text="How do I apply for SU or SU-loan?"
+                android:text="@string/educationSUBold2"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -99,8 +100,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="15dp"
-                android:text="If you want to apply for SU or a SU-loan, you must apply for SU in minSU. Log on to minSU from a computer insted af a mobile device - they do not recieve all applications completed via a mobile device. For this you need to log in with your MitID.
-                            \n\nIf you are not sure how to use MitID, check out the page within the Essentials category, or click this button:"
+                android:text="@string/educationSUText2"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -108,7 +108,7 @@
                 android:id="@+id/buttonEducationSU"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="MitID"
+                android:text="@string/educationSUBtn1"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
@@ -122,7 +122,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:textAlignment="center"
-                android:text="More information here: "
+                android:text="@string/educationSUText3"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -155,7 +155,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:textStyle="bold"
-                android:text="Speical conditions for Ukrainian refugees"
+                android:text="@string/educationSUBold3"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -165,26 +165,20 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="If you are a refugee from Ukraine, you may apply for equal status with Danish citizens, if you fall within Section 2(2) of the Act on Integration of Aliens in Denmark:"
+                android:text="@string/educationSUText4"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/EducationSUText4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="  •  How do I apply for SU as a Ukrainian refugee?"
-                android:textStyle="italic"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-
-
-
-
-
+            <Button
+                android:id="@+id/buttonEducationSU2"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:text="@string/educationSUBtn2"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textColor="@color/buttonBlueText" />
 
 
         </LinearLayout>
