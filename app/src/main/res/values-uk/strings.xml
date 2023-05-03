@@ -5,7 +5,6 @@
     <string name="prompt_password">Пароль</string>
     <string name="action_sign_in">"Увійдіть або зареєструйтеся "</string>
     <string name="action_sign_in_short">Увійти</string>
-    <string name="welcome">"Ласкаво просимо! "</string>
     <string name="invalid_username">"Недійсне ім'я користувача "</string>
     <string name="invalid_password">"Пароль має містити >5 символів "</string>
     <string name="login_failed">"Помилка логіну "</string>
@@ -74,4 +73,7 @@
     <string name="educationSUText4">Якщо ви є біженцем з України, ви можете подати заяву на отримання рівного статусу з громадянами Данії, якщо на вас поширюється дія розділу 2(2) Закону про інтеграцію іноземців у Данії:</string>
     <string name="educationSUBtn1">" Перейдіть до MitID"</string>
     <string name="educationSUBtn2">" Як я можу подати документи на SU як український біженець?"</string>
+    <string name="Welcome">"Ласкаво просимо на «YouUkraine!» У датській системі може бути важко орієнтуватися. Він дуже оцифрований, що може бути новим і складним для деяких людей. Тому ми надаємо вам хороший огляд основних програм і процесів, таких як MitID, E-Boks, переваги тощо. А також речі, з якими ви стикаєтеся щодня. Це включає транспортну систему, систему охорони здоров’я тощо...... "</string>
+    <string name="reset_password">"Скинути пароль "</string>
+    <string name="reset_password_enter_mail">"Введіть свою електронну адресу, щоб отримати посилання для скидання "</string>
 </resources>
