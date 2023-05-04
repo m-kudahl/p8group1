@@ -200,7 +200,7 @@
     <string name="benefitsSubtitle1">What are public benefits in Denmark?</string>
     <string name="benefitsContent1">Denmark has a strong social safety net. Depending on your current situation, you may be able to apply for various social benefits. As a refugee, there are various factors that play a part in how much, if and what you will receive. Here you will get an overview of these.</string>
     <string name="benefitsContent2">For more information visit refugees.dk website, which has an excellent overview of the various factors that determine YOUR benefit:</string>
-    <string name="benefitsLink1">http://refugees.dk/fakta/integration-job-uddannelse/ydelser/</string>
+    <string name="benefitsLink1" translatable="false">http://refugees.dk/fakta/integration-job-uddannelse/ydelser/</string>
     <string name="benefitsSubtitle2">How do I receive public benefits?</string>
     <string name="benefitsContent3">To receive benefits, you must first have a NemKonto as well as MitID/NemID.</string>
     <string name="eboksTitle">E-Boks</string>
@@ -214,32 +214,32 @@
     <string name="eboksContent5">• If you have a MitID, you can simply go to this page and sign up:</string>
     <string name="eboksSubtitle3">How do I use E-Boks?</string>
     <string name="eboksContent6">In order to use E-Boks you can login on their website or for convinience, you can download the E-Boks application on your phone.</string>
-    <string name="nemkontoTitle">NemKonto</string>
+    <string name="nemkontoTitle" translatable="false">NemKonto</string>
     <string name="nemkontoSubtitle1">What is a NemKonto?</string>
     <string name="nemkontoContent1">In Denmark, a NemKonto is an ordinary bank account used to receive payments from the government.</string>
     <string name="nemkontoContent2">For more information visit the NemKonto website:</string>
-    <string name="nemkontoLink1">https://www.nemkonto.dk/da/Servicemenu/Engelsk</string>
+    <string name="nemkontoLink1" translatable="false">https://www.nemkonto.dk/da/Servicemenu/Engelsk</string>
     <string name="nemkontoSubtitle2">How do I get a NemKonto?</string>
     <string name="nemkontoContent3">If you have MitID, you can assign yourself a NemKonto by using the self-service option on NemKonto\'s website.</string>
     <string name="nemkontoContent4">If you do not have MitID, you can assign a NemKonto by contacting your bank and informing them which of your accounts as your NemKonto.</string>
     <string name="nemkontoContent5">For more information visit the following website:</string>
-    <string name="nemkontoLink2">https://www.nemkonto.dk/da/Servicemenu/Engelsk/NemKonto-easy-account-for-citizens</string>
+    <string name="nemkontoLink2" translatable="false">https://www.nemkonto.dk/da/Servicemenu/Engelsk/NemKonto-easy-account-for-citizens</string>
     <string name="nemkontoContent6">• What if I change my bank account?</string>
     <string name="nemkontoSubtitle3">How do I use NemKonto?</string>
     <string name="nemkontoContent7">• What does it cost to set up a NemKonto?</string>
     <string name="nemkontoContent8">• Can I receive public payments to another account besides my NemKonto?</string>
     <string name="nemkontoContent9">• Where can I get more information?</string>
-    <string name="mitidTitle">Mit ID</string>
+    <string name="mitidTitle" translatable="false">Mit ID</string>
     <string name="mitidSubtitle1">What is MitID?</string>
     <string name="mitidContent1">MitID is the Danish national eID, MitID, is every resident\'s personal key to digital services in Denmark, including self-service solutions provided by the public sector.</string>
     <string name="mitidContent2">For more information visit the MitID website:</string>
-    <string name="mitidLink1">https://lifeindenmark.borger.dk/apps-and-digital-services/mitid</string>
+    <string name="mitidLink1" translatable="false">https://lifeindenmark.borger.dk/apps-and-digital-services/mitid</string>
     <string name="mitidSubtitle2">How do I get MitID?</string>
     <string name="mitidContent3">If you have just arrived in Denmark, you can get MitID in 2 different ways:</string>
     <string name="mitidContent4">1. By scanning your passport or ID card in the MitID app.</string>
     <string name="mitidContent5">2. By contacting your local Citizen Service.</string>
     <string name="mitidContent6">For more information visit the following website:</string>
-    <string name="mitidLink2">https://www.mitid.dk/en-gb/get-started-with-mitid/</string>
+    <string name="mitidLink2" translatable="false">https://www.mitid.dk/en-gb/get-started-with-mitid/</string>
     <string name="mitidContent7">To use MitID you have to download the MitID-app to your phone.</string>
     <string name="mitidSubtitle3">How do I use MitID?</string>
     <string name="mitidContent8">In order to use MitID, you must have downloaded the application to your phone.</string>
