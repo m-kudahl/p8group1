@@ -33,38 +33,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="SELECT YOUR REGION"
-                android:textColor="@color/black"/>
+                android:text="@string/select_your_region"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"/>
 
             <Spinner
                 android:id="@+id/RegionSpinner"
-                android:layout_width="match_parent"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:entries="@array/RegionSpinner_values"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="THE FOLLOWING ARE THE DIFFERENT PAYMENT OPTIONS FOR TRAVELLING WITH TRAIN IN DENMARK"
-                android:textSize="10dp"
+                android:text="@string/the_following_are_the_different_payment_options_for_travelling_with_train_in_denmark"
+                android:textSize="11dp"
                 android:paddingBottom="15dp"
                 android:paddingTop="10dp"
                 android:textColor="@color/black"/>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/black"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="REJSEKORT"
+                android:text="@string/rejsekort"
+                android:textSize="25dp"
                 android:textColor="@color/blueText" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="(TRAVEL CARD)"
+                android:text="@string/travel_card"
                 android:textColor="@color/blueText"
                 android:textSize="10dp"
                 android:paddingBottom="10dp" />
@@ -73,9 +85,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="THE DANISH ELECTRONIC TICKET-LESS TAVEL CARD SYSTEM"
-                android:textSize="10dp"
-                android:textColor="@color/black"/>
+                android:text="@string/the_danish_electronic_ticket_less_tavel_card_system"
+                android:textSize="11dp"
+                android:textColor="@color/black"
+                android:paddingBottom="15dp"/>
 
             <Button
                 android:id="@+id/WhichCardisRight"
@@ -85,7 +98,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/white"
-                android:text="WHICH CARD IS RIGHT FOR ME?"
+                android:text="@string/which_card_is_right_for_me"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"/>
             <Button
@@ -98,7 +111,7 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="HOW DO I USE MY TRAVEL CARD"
+                android:text="@string/how_do_i_use_my_travel_card"
                 />
             <Button
                 android:id="@+id/RejsekortTopUp"
@@ -110,7 +123,7 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="HOW DO I TOP UP MY TRAVEL CARD?" />
+                android:text="@string/how_do_i_top_up_my_travel_card" />
             <Button
                 android:id="@+id/GetTravelCard"
                 android:onClick="Dialog_3"
@@ -121,32 +134,55 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="GET TRAVEL CARD"
-                android:textSize="20dp" />
+                android:text="@string/get_travel_card" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/black"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="APPLICATIONS"
+                android:text="@string/applications"
                 android:textColor="@color/blueText"
+                android:textSize="25dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="APPLICATIONS FOR PLANNING AND ORDERING TICKETS"
-                android:textSize="10dp"
-                android:textColor="@color/black"/>
+                android:text="@string/applications_for_planning_and_ordering_tickets"
+                android:textSize="11dp"
+                android:textColor="@color/black"
+                android:paddingBottom="15dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="DSB APP"
+                android:text="@string/dsb_app"
                 android:textColor="@color/blueText"
-                android:paddingTop="10dp"/>
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textSize="15dp"/>
 
+            <Button
+                android:id="@+id/WhatIsDSB"
+                android:onClick="Dialog_10"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="@string/train_dialog10_title"/>
             <Button
                 android:id="@+id/WhatCanYouDoDSB"
                 android:onClick="Dialog_7"
@@ -157,7 +193,7 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="WHAT CAN YOU DO WITH THE APP?" />
+                android:text="@string/what_can_you_do_with_the_app_DSB" />
             <Button
                 android:id="@+id/HowDoYouPayDSB"
                 android:onClick="Dialog_8"
@@ -168,13 +204,36 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="HOW DO YOU PAY WITH THE APP?" />
+                android:text="@string/how_do_you_pay_with_the_app_DSB" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/black"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="MIDTTRAFIK APP"
-                android:textColor="@color/blueText"/>
+                android:text="@string/midttrafik_app"
+                android:textColor="@color/blueText"
+                android:textSize="15dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"/>
+            <Button
+                android:id="@+id/WhatIsMidttrafik"
+                android:onClick="Dialog_11"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="@string/train_dialog11_title" />
+
             <Button
                 android:id="@+id/WhatCanYouDo"
                 android:onClick="Dialog_4"
@@ -185,7 +244,7 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="WHAT CAN YOU DO WITH THE APP?" />
+                android:text="@string/what_can_you_do_with_the_app" />
             <Button
                 android:id="@+id/HowDoYouPay"
                 android:onClick="Dialog_6"
@@ -196,23 +255,34 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="HOW DO YOU PAY WITH THE APP?" />
+                android:text="@string/how_do_you_pay_with_the_app" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/black"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="CASH/CARD"
+                android:text="@string/cash"
                 android:textColor="@color/blueText"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp"
+                android:textSize="15dp"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
+                android:layout_marginStart="40dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="THE DANISH ELECTRONIC TICKET-LESS TAVEL CARD SYSTEM"
-                android:textSize="10dp"
-                android:textColor="@color/black"/>
+                android:text="@string/no_cash"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                android:paddingBottom="15dp"/>
 
             <Button
                 android:id="@+id/HowDoIBuyTickets"
@@ -222,9 +292,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/white"
-                android:text="HOW DO I BUY TICKETS"
+                android:text="@string/how_do_i_buy_tickets"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText" />
+
 
 
 

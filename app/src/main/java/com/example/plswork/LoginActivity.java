@@ -58,10 +58,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText resetMail = new EditText(v.getContext());
                 AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
-                passwordResetDialog.setTitle("Reset password?");
-                passwordResetDialog.setMessage("Enter your email to receive reset link");
+                passwordResetDialog.setTitle(R.string.reset_password);
+                passwordResetDialog.setMessage(R.string.enter_your_email_to_receive_reset_link);
                 passwordResetDialog.setView(resetMail);
-                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                passwordResetDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //send reset link to user
@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                         });
                     }
                 });
-                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                passwordResetDialog.setNegativeButton(R.string.no , new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //close the dialog

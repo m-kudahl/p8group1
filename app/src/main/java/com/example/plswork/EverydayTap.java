@@ -44,7 +44,7 @@ public class EverydayTap extends Fragment {
         cardViewHelth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), EducationHomeActivity.class));
+                startActivity(new Intent(getContext(), Tab_Layout.class));
             }
 
         });
@@ -52,7 +52,7 @@ public class EverydayTap extends Fragment {
         cardViewWork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), EducationOptionsActivity.class));
+                startActivity(new Intent(getContext(), Tab_Layout.class));
             }
 
         });

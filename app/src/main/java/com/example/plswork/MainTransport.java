@@ -44,5 +44,8 @@ public class MainTransport extends AppCompatActivity {
                 tabLayout.getTabAt(position).select();
             }
         });
+
+        AppBarUtility.setupHomeButton(this, R.id.MainTransport);
+        AppBarUtility.setUpBackButton(this);
     }
 }

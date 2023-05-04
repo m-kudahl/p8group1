@@ -22,7 +22,7 @@ import android.widget.Toast;
 public class TrainFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
-    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay, WhatCanYouDoDSB, HowDoYouPayDSB, HowDoIBuyTickets;
+    Button WhatIsDSB, WhatIsMidttrafik, RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay, WhatCanYouDoDSB, HowDoYouPayDSB, HowDoIBuyTickets;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,6 +50,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
         WhatCanYouDoDSB = (Button) getView().findViewById(R.id.WhatCanYouDoDSB);
         HowDoYouPayDSB = (Button) getView().findViewById(R.id.HowDoYouPayDSB);
         HowDoIBuyTickets = (Button) getView().findViewById(R.id.HowDoIBuyTickets);
+        WhatIsMidttrafik = (Button) getView().findViewById(R.id.WhatIsMidttrafik);
+        WhatIsDSB = (Button) getView().findViewById(R.id.WhatIsDSB);
 
         RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,8 +59,6 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 Dialog_5();
             }
         } );
-
-
         HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,26 +89,41 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 Dialog_1();
             }
         });
+        WhatCanYouDoDSB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { Dialog_7(); }
+        });
+        HowDoYouPayDSB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { Dialog_8(); }
+        });
+        HowDoIBuyTickets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { Dialog_9(); }
+        });
+        WhatIsDSB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { Dialog_10(); }
+        });
+        WhatIsMidttrafik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { Dialog_11(); }
+        });
     }
 
-    private void gotoUrl(String s) {
-        Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW,uri));
-    }
+
 
     public void Dialog_1() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Which card is right for me?")
-                .setMessage("There are many different types of travel cards. If you have trouble deciding which one to get, you can use the Rejsekort tool to figure it out")
+        builder.setTitle(R.string.train_dialog1_title)
+                .setMessage(R.string.train_dialog1_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
-                            }
-                        });
+                        String url = "https://www.rejsekort.dk/en/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -119,19 +134,18 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 })
                 .show();
     }
+
     public void Dialog_2() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do I use my travel card?")
-                .setMessage("You must check in on the blue point in the bus, and then you must also check out at another blue point in the bus before leaving")
+        builder.setTitle(R.string.train_dialog2_title)
+                .setMessage(R.string.train_dialog2_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du");
-                            }
-                        });
+                        String url = "https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du?sc_lang=en";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -144,17 +158,15 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
     }
     public void Dialog_3() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Get travel card")
-                .setMessage("Use the Rejsekort website to order a travel card")
+        builder.setTitle(R.string.train_dialog3_title)
+                .setMessage(R.string.train_dialog3_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        GetTravelCard.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.rejsekort.dk/Bestil");
-                            }
-                        });
+                        String url = "https://www.rejsekort.dk/Bestil?sc_lang=en";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -168,17 +180,15 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_4() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("What can you do with the app?")
-                .setMessage("You can use the app to buy different types of tickets as well as a travel pass")
+        builder.setTitle(R.string.train_dialog4_title)
+                .setMessage(R.string.train_dialog4_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        WhatCanYouDo.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/");
-                            }
-                        });
+                        String url = "https://www.midttrafik.dk/english/tickets/midttrafik-app/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -192,17 +202,15 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_5() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do I top up my travel card?")
-                .setMessage("You can either use the Rejsekort self-service or a rejsekort vending machine located at a train station. For more information visit Rejsekort.dk")
+        builder.setTitle(R.string.train_dialog5_title)
+                .setMessage(R.string.train_dialog5_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.rejsekort.dk/Hjaelp/Betaling");
-                            }
-                        });
+                        String url = "https://www.rejsekort.dk/Hjaelp/Betaling?sc_lang=en";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -216,17 +224,15 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_6() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do you pay with the app?")
-                .setMessage("First you must choose what kind of ticket or travel pass you wish to purchase, then you must select how many zones (minimum 2) you wish to travel. Enter the date and time of depature and then press 'fortsæt' and then 'godkend køb' For more information visit the website")
+        builder.setTitle(R.string.train_dialog6_title)
+                .setMessage(R.string.train_dialog6_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        HowDoYouPay.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/");
-                            }
-                        });
+                        String url = "https://www.midttrafik.dk/english/tickets/midttrafik-app/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -240,17 +246,15 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_7() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("What can you do with the app?")
-                .setMessage("With the DSB app you can buy tickets, travel passes and plan a route. For more information go to the website")
+        builder.setTitle(R.string.train_dialog7_title)
+                .setMessage(R.string.train_dialog7_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        WhatCanYouDoDSB.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.dsb.dk/find-produkter-og-services/dsb-app/");
-                            }
-                        });
+                        String url = "https://www.dsb.dk/find-produkter-og-services/dsb-app/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -264,17 +268,78 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_8() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do you pay with the app?")
-                .setMessage("First you must select at route. Then you must choose ticket type and finally you can choose to reserve a seat. Lastly you must accept terms and conditions and then you choose a method of payment before entering the relevant payment information. For more information go to the website")
+        builder.setTitle(R.string.train_dialog8_title)
+                .setMessage(R.string.train_dialog8_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        HowDoYouPayDSB.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.dsb.dk/find-produkter-og-services/dsb-app/");
-                            }
-                        });
+                        String url = "https://www.dsb.dk/find-produkter-og-services/dsb-app/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_9() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(R.string.train_dialog9_title)
+                .setMessage(R.string.train_dialog9_message)
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://www.dsb.dk/kundeservice/las-mere-om-billetautomaterne2/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_10() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(R.string.train_dialog10_title)
+                .setMessage(R.string.train_dialog10_message)
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://www.dsb.dk/en/about-dsb/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_11() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(R.string.train_dialog11_title)
+                .setMessage(R.string.train_dialog11_message)
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://www.midttrafik.dk/english/customer-service/travel-rules-for-midttrafik/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

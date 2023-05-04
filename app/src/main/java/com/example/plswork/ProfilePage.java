@@ -128,9 +128,9 @@ public class ProfilePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder deleteAccountDialog = new AlertDialog.Builder(v.getContext());
-                deleteAccountDialog.setTitle("Delete account?");
-                deleteAccountDialog.setMessage("Are you sure you want to delete your account?");
-                deleteAccountDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                deleteAccountDialog.setTitle(R.string.delete_account);
+                deleteAccountDialog.setMessage(R.string.are_you_sure_you_want_to_delete_your_account);
+                deleteAccountDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String userUid = currentUser.getUid();
@@ -143,7 +143,7 @@ public class ProfilePage extends AppCompatActivity {
                                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                         @Override
                                                         public void onSuccess(Void unused) {
-                                                            Toast.makeText(ProfilePage.this, "Account deleted", Toast.LENGTH_SHORT).show();
+                                                            Toast.makeText(ProfilePage.this, "Account Deleted", Toast.LENGTH_SHORT).show();
 
                                                         }
                                                     }).addOnFailureListener(new OnFailureListener() {
@@ -167,7 +167,7 @@ public class ProfilePage extends AppCompatActivity {
 
                     }
                 });
-                deleteAccountDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                deleteAccountDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //close dialog

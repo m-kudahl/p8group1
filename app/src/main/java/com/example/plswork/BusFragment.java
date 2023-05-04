@@ -22,7 +22,7 @@ import android.widget.Toast;
 public class BusFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
-    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay;
+    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay, HowDoIBuyTickets;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,12 +43,14 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
         RejsekortTopUp = (Button) getView().findViewById(R.id.RejsekortTopUp);
         WhichCardisRight = (Button) getView().findViewById(R.id.WhichCardisRight);
         HowDoIUseTravelCard = (Button) getView().findViewById(R.id.HowDoIUseTravelCard);
         GetTravelCard = (Button) getView().findViewById(R.id.GetTravelCard);
         WhatCanYouDo = (Button) getView().findViewById(R.id.WhatCanYouDo);
         HowDoYouPay = (Button) getView().findViewById(R.id.HowDoYouPay);
+        HowDoIBuyTickets = (Button) getView().findViewById(R.id.HowDoIBuyTickets);
 
         RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,8 +58,6 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 Dialog_5();
             }
         } );
-
-
         HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,10 +84,15 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
         });
         WhichCardisRight.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View view) { Dialog_1(); }
+        });
+        HowDoIBuyTickets.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
-                Dialog_1();
+                Dialog_9();
             }
         });
+
     }
 
     private void gotoUrl(String s) {
@@ -102,12 +107,10 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        WhichCardisRight.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet");
-                            }
-                        });
+                        String url = "https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -118,6 +121,7 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 })
                 .show();
     }
+
     public void Dialog_2() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("How do I use my travel card?")
@@ -125,12 +129,10 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        HowDoIUseTravelCard.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du");
-                            }
-                        });
+                        String url = "https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -148,12 +150,10 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        GetTravelCard.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.rejsekort.dk/Bestil");
-                            }
-                        });
+                        String url = "https://www.rejsekort.dk/Bestil";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -172,12 +172,10 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        WhatCanYouDo.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/");
-                            }
-                        });
+                        String url = "https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -196,12 +194,10 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.rejsekort.dk/Hjaelp/Betaling");
-                            }
-                        });
+                        String url = "https://www.rejsekort.dk/Hjaelp/Betaling";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -220,12 +216,31 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        HowDoYouPay.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                gotoUrl("https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/");
-                            }
-                        });
+                        String url = "https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_9() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("How do I buy tickets?")
+                .setMessage("In Denmark you can pay cash for a bus ticket by informing the bus driver that you wish to buy a ticket. You cannot pay with credit card, but both coins and banknotes are accepted. The price may vary depending your age as children and seniors get a discount on certain types of tickets. Furthermore, airport busses and night busses may have different prices altogether. A comprehensive overview can be found at Midttrafik's website.")
+                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://www.midttrafik.dk/english/prices/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

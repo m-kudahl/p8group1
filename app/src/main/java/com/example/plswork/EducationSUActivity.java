@@ -13,7 +13,7 @@ public class EducationSUActivity extends AppCompatActivity {
 
     Button SUMitIDBtn;
 
-    private TextView educationSUText4;
+    private Button buttonEducationSU2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +28,24 @@ public class EducationSUActivity extends AppCompatActivity {
             }
         });
 
-        educationSUText4 = findViewById(R.id.EducationSUText4);
+        buttonEducationSU2 = findViewById(R.id.buttonEducationSU2);
 
-        educationSUText4.setOnClickListener(new View.OnClickListener() {
+        buttonEducationSU2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // create a dialog box or alert dialog to show the information
                 AlertDialog.Builder builder = new AlertDialog.Builder(EducationSUActivity.this);
-                builder.setTitle("How do I apply for SU as a Ukrainian refugee?");
-                builder.setMessage("If you are a refugee from Ukraine, you may apply for equal status with Danish citizens, if you fall within Section 2(2) of the Act on Integration of Aliens in Denmark" +
-                        "\n\nPlease be aware that if you want to apply for equal status with Danish citizens because you fall within Section 2(4) (other aliens granted family reunification) of the Act on Integration of Aliens in Denmark, you must have obtained the right to reside in Denmark according to this rule on 1 July 2019 or later.");
+                builder.setTitle(R.string.educatioSUPopUp1);
+                builder.setMessage(getString(R.string.educatioSUPopUp12) +
+                        getString(R.string.educatioSUPopUp13));
                 builder.setPositiveButton("OK", null);
                 builder.show();
             }
         });
 
+        //appbar buttons
+        AppBarUtility.setupHomeButton(this, R.id.my_toolbar);
+        AppBarUtility.setUpBackButton(this);
 
     }
 }
