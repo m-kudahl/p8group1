@@ -43,6 +43,7 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
         RejsekortTopUp = (Button) getView().findViewById(R.id.RejsekortTopUp);
         WhichCardisRight = (Button) getView().findViewById(R.id.WhichCardisRight);
         HowDoIUseTravelCard = (Button) getView().findViewById(R.id.HowDoIUseTravelCard);

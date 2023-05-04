@@ -34,14 +34,16 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/select_your_region"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:paddingBottom="20dp"/>
 
             <Spinner
                 android:id="@+id/RegionSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/RegionSpinner_values"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:background="@drawable/border"/>
 
             <TextView
                 android:layout_width="match_parent"
