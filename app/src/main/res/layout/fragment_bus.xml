@@ -43,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/RegionSpinner_values"
                 android:textColor="@color/black"
-                android:background="@drawable/border"/>
+                android:background="@drawable/border"
+                android:textAlignment="center"/>
 
             <TextView
                 android:layout_width="match_parent"
