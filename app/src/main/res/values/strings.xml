@@ -247,5 +247,6 @@
     <string name="default_notification_channel_id">Youkraine_Notifications</string>
     <string name="please_grant_permission_to_show_notification_to_receive_news_from_your_municipality">Please grant permission to show notification, to receive news from your municipality</string>
     <string name="notification_permission">Notification Permission</string>
+    <string name="link_EducationDiplomOnlineApp">https://ufm.dk/en/education/recognition-and-transparency/get-assessment/form-standard</string>
 
 </resources>

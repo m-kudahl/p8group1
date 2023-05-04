@@ -6,10 +6,7 @@ public class Notification {
 
     private String timestamp;
 
-    public Notification() {
-        // Required empty public constructor
-    }
-
+    //a notification class with a constructor and some setters and getters
     public Notification(String title, String message, String timestamp) {
         this.title = title;
         this.message = message;
