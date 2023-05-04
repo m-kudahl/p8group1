@@ -22,7 +22,7 @@ import android.widget.Toast;
 public class BusFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
-    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay, HowDoIBuyTickets;
+    Button RejsekortTopUp, WhichCardisRight, HowDoIUseTravelCard, GetTravelCard, WhatCanYouDo, HowDoYouPay, HowDoIBuyTickets, WhatIsMidttrafikBus;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,6 +50,7 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
         WhatCanYouDo = (Button) getView().findViewById(R.id.WhatCanYouDo);
         HowDoYouPay = (Button) getView().findViewById(R.id.HowDoYouPay);
         HowDoIBuyTickets = (Button) getView().findViewById(R.id.HowDoIBuyTickets);
+        WhatIsMidttrafikBus = (Button) getView().findViewById(R.id.WhatIsMidttrafikBus);
 
         RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +93,14 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
             }
         });
 
+        WhatIsMidttrafikBus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dialog_10();
+            }
+        });
+
+
     }
 
     private void gotoUrl(String s) {
@@ -101,18 +110,18 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
 
     public void Dialog_1() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Which card is right for me?")
-                .setMessage("There are many different types of travel cards. If you have trouble deciding which one to get, you can use the Rejsekort tool to figure it out")
-                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.which_card_is_right_for_me)
+                .setMessage(R.string.Bus_which_card_is_right_for_me_MESSAGE)
+                .setPositiveButton(R.string.Dialog_go_to, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet";
+                        String url = "https://www.rejsekort.dk/en/Screening/Bestil-et-kort ";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.Dialog_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Do something when the Cancel button is clicked
@@ -123,61 +132,18 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
 
     public void Dialog_2() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do I use my travel card?")
-                .setMessage("You must check in on the blue point in the bus, and then you must also check out at another blue point in the bus before leaving")
-                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.how_do_i_use_my_travel_card)
+                .setMessage(R.string.Bus_how_do_i_use_my_travel_card_MESSAGE)
+                .setPositiveButton(R.string.Dialog_go_to, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du";
+                        String url = "https://www.rejsekort.dk/Hjaelp/Saadan-rejser-du?sc_lang=en";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Do something when the Cancel button is clicked
-                    }
-                })
-                .show();
-    }
-    public void Dialog_3() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Get travel card")
-                .setMessage("Use the Rejsekort website to order a travel card")
-                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Bestil";
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(url));
-                        startActivity(intent);
-                    }
-                })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Do something when the Cancel button is clicked
-                    }
-                })
-                .show();
-    }
-
-    public void Dialog_4() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("What can you do with the app?")
-                .setMessage("You can use the app to buy different types of tickets as well as a travel pass")
-                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/";
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(url));
-                        startActivity(intent);
-                    }
-                })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.Dialog_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Do something when the Cancel button is clicked
@@ -188,18 +154,18 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
 
     public void Dialog_5() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do I top up my travel card?")
-                .setMessage("You can either use the Rejsekort self-service or a rejsekort vending machine located at a train station. For more information visit Rejsekort.dk")
-                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.how_do_i_top_up_my_travel_card)
+                .setMessage(R.string.Bus_how_do_i_top_up_my_travel_card_MESSAGE)
+                .setPositiveButton(R.string.Dialog_go_to, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Hjaelp/Betaling";
+                        String url = "https://www.rejsekort.dk/en/hjaelp/betaling ";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.Dialog_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Do something when the Cancel button is clicked
@@ -208,11 +174,78 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                 .show();
     }
 
+    public void Dialog_3() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(R.string.get_travel_card)
+                .setMessage(R.string.BUS_get_travel_card_MESSAGE)
+                .setPositiveButton(R.string.Dialog_go_to, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://www.rejsekort.dk/Bestil";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton(R.string.Dialog_cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+    public void Dialog_10() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(R.string.what_is_midttrafik)
+                .setMessage(R.string.what_is_midttrafik_MESSAGE)
+                .setPositiveButton(R.string.Dialog_go_to, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton(R.string.Dialog_cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+    public void Dialog_4() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(R.string.what_can_you_do_with_the_app)
+                .setMessage(R.string.what_can_you_do_with_the_app_Midttrafik_MESSAGE)
+                .setPositiveButton(R.string.Dialog_go_to, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String url = "https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton(R.string.Dialog_cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when the Cancel button is clicked
+                    }
+                })
+                .show();
+    }
+
+
+
     public void Dialog_6() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do you pay with the app?")
-                .setMessage("First you must choose what kind of ticket or travel pass you wish to purchase, then you must select how many zones (minimum 2) you wish to travel. Enter the date and time of depature and then press 'fortsæt' and then 'godkend køb' For more information visit the website")
-                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.how_do_you_pay_with_the_app)
+                .setMessage(R.string.how_do_you_pay_with_the_app_Midttrafik_MESSAGE)
+                .setPositiveButton(R.string.Dialog_go_to, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String url = "https://www.midttrafik.dk/billetter-og-priser/midttrafik-app/sadan-gor-du/";
@@ -221,7 +254,7 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.Dialog_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Do something when the Cancel button is clicked
@@ -231,9 +264,9 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
     }
     public void Dialog_9() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do I buy tickets?")
-                .setMessage("In Denmark you can pay cash for a bus ticket by informing the bus driver that you wish to buy a ticket. You cannot pay with credit card, but both coins and banknotes are accepted. The price may vary depending your age as children and seniors get a discount on certain types of tickets. Furthermore, airport busses and night busses may have different prices altogether. A comprehensive overview can be found at Midttrafik's website.")
-                .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.how_do_i_buy_tickets)
+                .setMessage(R.string.how_do_i_buy_tickets_Midttrafik_MESSAGE)
+                .setPositiveButton(R.string.Dialog_go_to, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String url = "https://www.midttrafik.dk/english/prices/";
@@ -242,7 +275,7 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.Dialog_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Do something when the Cancel button is clicked
