@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context=".MainTransport">
 
+    <include layout="@layout/appbar"
+        android:id="@+id/MainTransport"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout_transport"
