@@ -14,7 +14,7 @@
         android:id="@+id/title_NemKonto"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="NemKonto"
+        android:text="@string/nemkontoTitle"
         android:textSize="45dp"
         android:gravity="center"
         android:background="@color/white"
@@ -57,7 +57,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="What is a NemKonto?"
+                    android:text="@string/nemkontoSubtitle1"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -68,14 +68,14 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginRight="20dp"
-                    android:text="In Denmark, a NemKonto is an ordinary bank account used to receive payments from the government."/>
+                    android:text="@string/nemkontoContent1"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
-                    android:text="For more information visit the NemKonto website:"/>
+                    android:text="@string/nemkontoContent2"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
                     android:autoLink="all"
-                    android:text="https://www.nemkonto.dk/da/Servicemenu/Engelsk"/>
+                    android:text="@string/nemkontoLink1"/>
 
 
             </LinearLayout>
@@ -111,7 +111,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:text="How do I get a NemKonto?"
+                    android:text="@string/nemkontoSubtitle2"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -120,14 +120,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="If you have MitID, you can assign yourself a NemKonto by using the self-service option on NemKonto's website."/>
+                    android:text="@string/nemkontoContent3"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="If you do not have MitID, you can assign a NemKonto by contacting your bank and informing them which of your accounts as your NemKonto."/>
+                    android:text="@string/nemkontoContent4"/>
 
 
                 <TextView
@@ -136,7 +136,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:autoLink="all"
-                    android:text="For more information visit the following website:"/>
+                    android:text="@string/nemkontoContent5"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -144,7 +144,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
                     android:autoLink="all"
-                    android:text="https://www.nemkonto.dk/da/Servicemenu/Engelsk/NemKonto-easy-account-for-citizens"/>
+                    android:text="@string/nemkontoLink2"/>
 
 
             </LinearLayout>
@@ -172,31 +172,31 @@
                     android:textSize="18sp"
                     android:layout_marginRight="20dp"
                     android:textStyle="bold"
-                    android:text="How do I use NemKonto?"/>
+                    android:text="@string/nemkontoSubtitle3"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="• What if I change my bank account?"/>
+                    android:text="@string/nemkontoContent6"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="• What does it cost to set up a NemKonto?"/>
+                    android:text="@string/nemkontoContent7"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="• Can I receive public payments to another account besides my NemKonto?"/>
+                    android:text="@string/nemkontoContent8"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="• Where can I get more information?"/>
+                    android:text="@string/nemkontoContent9"/>
 
             </LinearLayout>
 
