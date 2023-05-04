@@ -33,6 +33,7 @@ import com.google.firebase.installations.FirebaseInstallations;
 import com.google.firebase.installations.InstallationTokenResult;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ProfilePage extends AppCompatActivity {
@@ -41,7 +42,7 @@ public class ProfilePage extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private List<Notification> notifications;
-    private NotificationRecyclerView adapter;
+    private NotificationRecyclerView notificationRecyclerView;
     private FirebaseAuth mAuth;
     @Override
     public void onStart() {
@@ -89,9 +90,9 @@ public class ProfilePage extends AppCompatActivity {
 
         // Initialize the notifications list and adapter
         notifications = new ArrayList<>();
-        adapter = new NotificationRecyclerView(notifications);
+        notificationRecyclerView = new NotificationRecyclerView(notifications);
         //the setAdapter(adapter) tells the recyclerView that we want to populate it with an arraylist of nofitications
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(notificationRecyclerView);
 
         // Call method to fetch data from database
         fetchNotificationsFromDatabase();
@@ -193,12 +194,17 @@ public class ProfilePage extends AppCompatActivity {
         // Use a query to order the notifications by timestamp in descending order
         Query query = databaseRef.orderByChild("timestamp");
 
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+        ValueEventListener valueEventListener = new ValueEventListener() {
+
+        //listen for any new notifications or changes
+
+            //the datasnapshot is an object containing the data of the notifications
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Clear the list of notifications to avoid duplicates
                 notifications.clear();
 
+                //loop over all the notifications the user has and create a notification class
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     // Get the Notification object from the snapshot
                     Notification notification = snapshot.getValue(Notification.class);
@@ -208,31 +214,53 @@ public class ProfilePage extends AppCompatActivity {
                         notifications.add(notification);
                     }
                 }
+                //reverse the order of the list, so the newest notification is displayed first in the recyclerView
+                Collections.reverse(notifications);
 
-                // Notify the adapter of the data change
-                if (adapter != null) {
-                    adapter.notifyDataSetChanged();
+
+                // Notify the recyclerView of the data change
+                if (notificationRecyclerView != null) {
+                    notificationRecyclerView.notifyDataSetChanged();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "loadNotifications:onCancelled", databaseError.toException());
+                Log.w(TAG, "Failed loading notifications", databaseError.toException());
             }
-        });
+
+        };
+        //listen for any new notifications or changes
+
+        query.addListenerForSingleValueEvent(valueEventListener);
+
     }
 
-        @Override
-        protected void onDestroy () {
-            super.onDestroy();
-            FirebaseUser currentUser = mAuth.getCurrentUser();
-            String userUid = currentUser.getUid();
-            // Remove the event listener to avoid memory leaks
-            DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users" + userUid + "messages");
-            Query query = databaseRef.orderByChild("timestamp");
+    //when this activity is ended we want to cut the connection to the database, so we use the onDestroy method
+    //to stop looking for changes in the database to update UI
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        String userUid = currentUser.getUid();
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid + "/messages");
+        Query query = databaseRef.orderByChild("timestamp");
+        ValueEventListener valueEventListener = new ValueEventListener() {
 
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // No need to do anything here
+            }
 
-        }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed loading notifications", databaseError.toException());
+            }
+
+        };
+        query.removeEventListener(valueEventListener);
+    }
+
 
     public void dynamicTextView(String uid, TextView yourView, String path){
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/");

@@ -6,6 +6,11 @@ public class Notification {
 
     private String timestamp;
 
+
+    public  Notification(){
+
+    }
+
     //a notification class with a constructor and some setters and getters
     public Notification(String title, String message, String timestamp) {
         this.title = title;
