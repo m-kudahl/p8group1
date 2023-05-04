@@ -15,7 +15,7 @@
         android:id="@+id/title_MitID"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Mit ID"
+        android:text="@string/mitidTitle"
         android:textSize="45dp"
         android:gravity="center"
         android:background="@color/white"
@@ -64,7 +64,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
-                        android:text="What is MitID?"
+                        android:text="@string/mitidSubtitle1"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
 
@@ -74,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="20dp"
-                        android:text="MitID is the Danish national eID, MitID, is every resident's personal key to digital services in Denmark, including self-service solutions provided by the public sector."/>
+                        android:text="@string/mitidContent1"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="20dp"
-                        android:text="For more information visit the MitID website:"/>
+                        android:text="@string/mitidContent2"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="20dp"
                         android:autoLink="all"
-                        android:text="https://lifeindenmark.borger.dk/apps-and-digital-services/mitid"/>
+                        android:text="@string/mitidLink1"/>
 
 
                 </LinearLayout>
@@ -117,40 +117,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:layout_marginTop="20dp"
-                        android:text="How do I get MitID?"
+                        android:text="@string/mitidSubtitle2"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="If you have just arrived in Denmark, you can get MitID in 2 different ways:"/>
+                        android:text="@string/mitidContent3"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="1. By scanning your passport or ID card in the MitID app."/>
+                        android:text="@string/mitidContent4"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="2. By contacting your local Citizen Service."/>
+                        android:text="@string/mitidContent5"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:autoLink="all"
-                        android:text="For more information visit the following website:"/>
+                        android:text="@string/mitidContent6"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:autoLink="all"
-                        android:text="https://www.mitid.dk/en-gb/get-started-with-mitid/"/>
+                        android:text="@string/mitidLink2"/>
 
                     <TableLayout
                         android:layout_width="match_parent"
@@ -162,7 +162,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="To use MitID you have to download the MitID-app to your phone."/>
+                                android:text="@string/mitidContent7"/>
 
                             <!-- Second Column with ImageButton -->
                             <ImageButton
@@ -238,7 +238,7 @@
                         android:textSize="18sp"
                         android:layout_marginRight="20dp"
                         android:textStyle="bold"
-                        android:text="How do I use MitID?"/>
+                        android:text="@string/mitidSubtitle3"/>
 
                     <TableLayout
                         android:layout_width="match_parent"
@@ -249,7 +249,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:layout_marginLeft="10dp"
-                                android:text="In order to use MitID, you must....."/>
+                                android:text="@string/mitidContent8"/>
 
                             <TableLayout
                                 android:layout_width="0dp"
@@ -262,7 +262,7 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="Already have MitID?"
+                                        android:text="@string/mitidContent9"
                                         android:layout_weight="1" />
                                 </TableRow>
 
@@ -273,7 +273,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
-                                        android:text="Check off here."
+                                        android:text="@string/mitidCheckboxText"
                                         android:src="@drawable/getonapplestore" />
                                 </TableRow>
                             </TableLayout>

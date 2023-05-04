@@ -14,7 +14,7 @@
         android:id="@+id/title_EBoks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="E-Boks"
+        android:text="@string/eboksTitle"
         android:textSize="45dp"
         android:gravity="center"
         android:background="@color/white"
@@ -57,7 +57,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="What is E-Boks?"
+                    android:text="@string/eboksSubtitle1"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -68,14 +68,14 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginRight="20dp"
-                    android:text="E-Boks is the most widely used digital mailbox in Denmark. Here you will receive e-mail from public authorities, your bank, insurance company and much more."/>
+                    android:text="@string/eboksContent1"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
-                    android:text="For more information visit the E-Boks website:"/>
+                    android:text="@string/eboksContent2"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
                     android:autoLink="all"
-                    android:text="https://www.nemkonto.dk/da/Servicemenu/Engelsk"/>
+                    android:text="@string/eboksLink1"/>
 
 
             </LinearLayout>
@@ -111,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
-                    android:text="How do I get an E-Boks?"
+                    android:text="@string/eboksSubtitle2"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -120,19 +120,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="In order to get an E-Boks, you should do one of two things."/>
+                    android:text="@string/eboksContent3"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="• Go to Borger Service, where you can receive help."/>
+                    android:text="@string/eboksContent4"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="• If you have a MitID, you can simply go to this page and sign up:"/>
+                    android:text="@string/eboksContent5"/>
 
             </LinearLayout>
 
@@ -159,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
-                    android:text="How do I use E-Boks?"
+                    android:text="@string/eboksSubtitle3"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -175,7 +175,7 @@
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
                             android:layout_weight="1"
-                            android:text="In order to use E-Boks you can login on their website or for convinience, you can download the E-Boks application on your phone."/>
+                            android:text="@string/eboksContent6"/>
 
                         <!-- Second Column with ImageButtons -->
 
