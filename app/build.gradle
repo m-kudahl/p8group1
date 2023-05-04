@@ -11,6 +11,7 @@ android {
         applicationId "com.example.plswork"
         minSdk 24
         targetSdk 33
+        compileSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -56,6 +57,8 @@ android {
         implementation 'com.google.firebase:firebase-appcheck-playintegrity'
         implementation 'com.google.firebase:firebase-inappmessaging-display'
         implementation 'com.google.firebase:firebase-inappmessaging-display:20.2.0'
+
+
 
 
 

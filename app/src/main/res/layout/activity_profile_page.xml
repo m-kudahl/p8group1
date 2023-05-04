@@ -24,11 +24,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_margin="20dp"
+            android:orientation="vertical"
             android:background="@color/contentBox">
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/messageScrollView">
+
 
                 <TextView
                     android:id="@+id/textViewMessages"
@@ -39,7 +37,17 @@
                     android:textStyle="bold"
                     android:layout_gravity="center|top"
                     android:text="@string/TextViewMessages" />
-            </ScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                app:layoutManager="LinearLayoutManager" />
+
+
+
         </LinearLayout>
 
         <LinearLayout

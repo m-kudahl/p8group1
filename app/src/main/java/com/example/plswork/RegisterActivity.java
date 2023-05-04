@@ -118,7 +118,6 @@ public class RegisterActivity extends AppCompatActivity {
                                                     // Save the token to the Realtime Database
                                                     FirebaseUser currentUser = mAuth.getCurrentUser();
                                                     String uid = currentUser.getUid();
-                                                    mDatabase = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users");
                                                     writeNewUser(uid, fullName, email, municipality, token);
                                                 }
                                             });
@@ -150,8 +149,10 @@ public class RegisterActivity extends AppCompatActivity {
         //appbar buttons
         AppBarUtility.setupHomeButton(this, R.id.appbarRegister);
         AppBarUtility.setUpBackButton(this);
+        AppBarUtility.profileButton(this);
     }
     public void writeNewUser(String userId, String name, String email, String municipality, String token) {
+        mDatabase = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users");
         User user = new User(email, name, municipality, userId);
         user.setUserToken(token);
         mDatabase.child(user.getUserId()).setValue(user);

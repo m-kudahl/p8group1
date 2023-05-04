@@ -2,12 +2,20 @@ package com.example.plswork;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -33,8 +41,18 @@ import com.google.firebase.inappmessaging.FirebaseInAppMessaging;
 import com.google.firebase.installations.FirebaseInstallations;
 import com.google.firebase.installations.InstallationTokenResult;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class ProfilePage extends AppCompatActivity {
 
+
+
+    private RecyclerView recyclerView;
+    private List<Notification> notifications;
+    private NotificationAdapter adapter;
     private FirebaseAuth mAuth;
     @Override
     public void onStart() {
@@ -70,6 +88,24 @@ public class ProfilePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
         mAuth = FirebaseAuth.getInstance();
+
+        // Get the RecyclerView from the layout file
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+
+        // Set up the LinearLayoutManager
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        // Initialize the notifications list and adapter
+        notifications = new ArrayList<>();
+        adapter = new NotificationAdapter(notifications);
+        recyclerView.setAdapter(adapter);
+
+        // Call method to fetch data from database
+        fetchNotificationsFromDatabase();
+
+
 
         Button logOutBtn = (Button) findViewById(R.id.logOutBtn);
         TextView name = findViewById(R.id.textViewEditName);
@@ -158,6 +194,55 @@ public class ProfilePage extends AppCompatActivity {
             }
         });
     }
+    private void fetchNotificationsFromDatabase() {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        String userUid = currentUser.getUid();
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid + "/messages");
+
+        // Use a query to order the notifications by timestamp in descending order
+        Query query = databaseRef.orderByChild("timestamp").limitToLast(50);
+
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // Clear the list of notifications to avoid duplicates
+                notifications.clear();
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    // Get the Notification object from the snapshot
+                    Notification notification = snapshot.getValue(Notification.class);
+
+                    // Add the Notification to the list
+                    if (notifications != null) {
+                        notifications.add(notification);
+                    }
+                }
+
+                // Notify the adapter of the data change
+                if (adapter != null) {
+                    adapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "loadNotifications:onCancelled", databaseError.toException());
+            }
+        });
+    }
+
+        @Override
+        protected void onDestroy () {
+            super.onDestroy();
+            FirebaseUser currentUser = mAuth.getCurrentUser();
+            String userUid = currentUser.getUid();
+            // Remove the event listener to avoid memory leaks
+            DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users" + userUid + "messages");
+            Query query = databaseRef.orderByChild("timestamp").limitToLast(50);
+
+
+        }
+
     public void dynamicTextView(String uid, TextView yourView, String path){
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/");
         DatabaseReference myRef = database.getReference("users/" + uid);
