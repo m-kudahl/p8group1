@@ -52,7 +52,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/the_following_are_the_different_payment_options_for_travelling_with_train_in_denmark"
-                android:textSize="10dp"
+                android:textSize="11dp"
                 android:paddingBottom="15dp"
                 android:paddingTop="10dp"
                 android:textColor="@color/black"/>
@@ -86,7 +86,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/the_danish_electronic_ticket_less_tavel_card_system"
-                android:textSize="10dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingBottom="15dp"/>
 
@@ -158,7 +158,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/applications_for_planning_and_ordering_tickets"
-                android:textSize="10dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingBottom="15dp"/>
 
@@ -182,7 +182,7 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="What is DSB?"/>
+                android:text="@string/train_dialog10_title"/>
             <Button
                 android:id="@+id/WhatCanYouDoDSB"
                 android:onClick="Dialog_7"
@@ -232,7 +232,7 @@
                 android:backgroundTint="@color/white"
                 android:textAlignment="center"
                 android:textColor="@color/buttonBlueText"
-                android:text="What is Midttrafik?" />
+                android:text="@string/train_dialog11_title" />
 
             <Button
                 android:id="@+id/WhatCanYouDo"
@@ -268,7 +268,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="CASH"
+                android:text="@string/cash"
                 android:textColor="@color/blueText"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
@@ -279,7 +279,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="You CAN’T pay with cash at the trains. You should always have bought a ticket beforehand when you board the train, otherwise you get a fine (750,-). "
+                android:text="@string/no_cash"
                 android:textSize="13dp"
                 android:textColor="@color/black"
                 android:paddingBottom="15dp"/>

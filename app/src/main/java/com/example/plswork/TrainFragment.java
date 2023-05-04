@@ -115,12 +115,12 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_1() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Which card is right for me?")
-                .setMessage("There is a wide selection of Rejsekort cards that you can choose from depending on your needs. Rejsekort.dk has a guide that can help you choose the correct Rejsekort based on a few questions. Most will only require the regular Rejsekort, but if you are young, and are travelling regularly from one place to another, studying etc. there may be better options for you!")
+        builder.setTitle(R.string.train_dialog1_title)
+                .setMessage(R.string.train_dialog1_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet";
+                        String url = "https://www.rejsekort.dk/en/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
@@ -137,12 +137,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_2() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do I use my travel card?")
-                .setMessage("How do I use my travel card? \n" +
-                        "\n" +
-                        "With a Rejsekort, you must begin all journeys by checking in through a check-in card reader, which are placed outside, on a peron. If you change the means of transportation during your journey, you must remember to check in again. \n" +
-                        "At the end of your journey, you must check out through a check-out card reader.  \n" +
-                        "For more information visit: ")
+        builder.setTitle(R.string.train_dialog2_title)
+                .setMessage(R.string.train_dialog2_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -162,8 +158,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
     }
     public void Dialog_3() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Get travel card")
-                .setMessage("Use the Rejsekort website to order a travel card")
+        builder.setTitle(R.string.train_dialog3_title)
+                .setMessage(R.string.train_dialog3_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -184,10 +180,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_4() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("What can you do with the Midttrafik app?")
-                .setMessage("You can pay for your travel and look up your journey via the Journey Planner (Rejseplanen) to help plan your trip. This will provide you with an overview of arrivals and departures of the transport options suitable for your route. \n" +
-                        "\n" +
-                        "\tYou can also download Midttrafik live, where you can “trace” busses in real time. ")
+        builder.setTitle(R.string.train_dialog4_title)
+                .setMessage(R.string.train_dialog4_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -208,9 +202,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_5() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do I top up my travel card?")
-                .setMessage("You can top up your Rejsekort either by making a top up agreement or by manually depositing money on your card. This can be done at the Rejsekort self-service webpage, or by visiting a physical Rejsekort vending machine at a train station. Please note that if you use the webpage it can take up to 24 hours for your funds to become available on your card.  \n" +
-                        "For more information visit: ")
+        builder.setTitle(R.string.train_dialog5_title)
+                .setMessage(R.string.train_dialog5_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -231,8 +224,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_6() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do you pay with the Midttrafik app?")
-                .setMessage("First you must choose what kind of ticket or travel pass you wish to purchase, then you must select how many zones (minimum 2) you wish to travel. Enter the date and time of depature and then press 'fortsæt' and then 'godkend køb'. You can pay either by card or with Mobilepay (Danish mobile phone transaction app).  For more information visit the website")
+        builder.setTitle(R.string.train_dialog6_title)
+                .setMessage(R.string.train_dialog6_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -253,8 +246,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_7() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("What can you do with the DSB app?")
-                .setMessage("You can plan journeys and buy tickets with the DSB app, there are different tickets that vary in price. Some of the cheaper tickets are DSB Orange or DSB Orange Fri, which are bought in advance if available. You can also reserve a seat in a different seating zone, such as standard zone, family zone or silent zone. For more information go to the website")
+        builder.setTitle(R.string.train_dialog7_title)
+                .setMessage(R.string.train_dialog7_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -275,8 +268,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
     public void Dialog_8() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do you pay with the DSB app?")
-                .setMessage("First you must select at route. Then you must choose ticket type and finally you can choose to reserve a seat. Lastly you must accept terms and conditions and then you choose a method of payment before entering the relevant payment information. You can pay either by card or with Mobilepay (Danish mobile phone transaction app). For more information go to the website")
+        builder.setTitle(R.string.train_dialog8_title)
+                .setMessage(R.string.train_dialog8_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -296,8 +289,8 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
     }
     public void Dialog_9() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("How do I buy tickets?")
-                .setMessage("You can pay by cash or card in either one of the physical ticket machines at train stations - these accept Danish coins and at selected stations you can also pay with banknotes, or you can pay by cash or card in the integrated kiosk (7/11) that is located inside the train station. ")
+        builder.setTitle(R.string.train_dialog9_title)
+                .setMessage(R.string.train_dialog9_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -317,12 +310,12 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
     }
     public void Dialog_10() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("What is DSB?")
-                .setMessage("DSB (Danske Stats Baner) is the national application for travelling by train in Denmark. You will need it when you travel outside of your region by train. You can buy cheaper orange tickets, if you order them in good time. ")
+        builder.setTitle(R.string.train_dialog10_title)
+                .setMessage(R.string.train_dialog10_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet";
+                        String url = "https://www.dsb.dk/en/about-dsb/";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
@@ -338,12 +331,12 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
     }
     public void Dialog_11() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("What is Midttrafik?")
-                .setMessage("Every Danish region has their own traffic company with their own traffic app. The Midttrafik app is your regional travel app for the Midtjylland region and can be used to plan travels within the region.  ")
+        builder.setTitle(R.string.train_dialog11_title)
+                .setMessage(R.string.train_dialog11_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String url = "https://www.rejsekort.dk/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet";
+                        String url = "https://www.midttrafik.dk/english/customer-service/travel-rules-for-midttrafik/";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
