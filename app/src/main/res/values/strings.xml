@@ -55,14 +55,14 @@
     <string name="educationHomeToolbarText">Education</string>
     <string name="educationHomeBold1">Diplom verification</string>
     <string name="educationHomeBold2">Education options</string>
-    <string name="educationHomeBold3" translatable="false">SU</string>
+    <string name="educationHomeBold3">SU</string>
     <string name="educationHomeText1">Here is information for you If you are a refugee from Ukraine since 24th of February and consider studying in Denmark.  On this page you can get information about:</string>
     <string name="educationHomeText2">how and if you can verify your current education</string>
     <string name="educationHomeText3">what are your options for studying in Denmark</string>
     <string name="educationHomeText4">how to check if you can receive SU while studying in Denmark</string>
     <string name="educationHomeBtn1">Diplom verification</string>
     <string name="educationHomeBtn2">Education Options</string>
-    <string name="educationHomeBtn3" translatable="false">SU</string>
+    <string name="educationHomeBtn3">SU</string>
 
     <string name="educationDiplomToolbarText">Diplom verification</string>
     <string name="educationDiplomBold1">Online application:</string>
@@ -245,5 +245,7 @@
     <string name="mitidContent8">In order to use MitID, you must have downloaded the application to your phone.</string>
     <string name="mitidContent9">Already have MitID?</string>
     <string name="mitidCheckboxText">Check off here.</string>
+    <string name="essentials">Essentials</string>
+    <string name="daily_life">Daily life</string>
 
 </resources>

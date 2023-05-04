@@ -14,8 +14,8 @@
     <Button
         android:id="@+id/registerButton3"
         style="@style/WhiteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="519dp"
@@ -25,13 +25,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/registerButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/registerButton2"
         style="@style/WhiteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="24dp"
@@ -42,17 +43,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/registerButton3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginTop="75dp"
         android:layout_marginBottom="9dp"
-        android:paddingTop="0dp"
+        android:paddingTop="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dannebrog" />
@@ -77,18 +80,24 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#6F6A6666"
-        android:backgroundTint="#6A6666"
+        android:layout_margin="20dp"
+        android:background="@color/bg"
+
+        android:padding="20dp"
         android:text="@string/Welcome_To_YOUKRAINE_Text"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/registerButton3"
+        app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintStart_toStartOf="@+id/registerButton2"
         app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.23000002"
+        app:layout_constraintVertical_bias="0.331"
         tools:ignore="VisualLintLongText,TextContrastCheck" />
 
     <TextView
+        android:padding="20dp"
         android:id="@+id/textView3"
+        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Sign_in_to_receive"

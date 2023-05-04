@@ -19,8 +19,8 @@
     <string name="textViewLogOut">"Вийти "</string>
     <string name="edit_profile">" РЕДАГУВАТИ ПРОФІЛЬ"</string>
     <string name="edit_what_you_want_to_change">" Відредагуйте те, що ви хочете змінити"</string>
-    <string name="continue_without_signing_in">Продовжити без входу в обліковий запис.</string>
-    <string name="register_slash_sign_in">Зареєструватися / Увійти в обліковий запис.</string>
+    <string name="continue_without_signing_in">Продовжити без входу в обліковий запис</string>
+    <string name="register_slash_sign_in">Зареєструватися / Увійти в обліковий запис</string>
     <string name="welcome_2_denmark">Ласкаво просимо до Данії.</string>
     <string name="Welcome_To_YOUKRAINE_Text">Ласкаво просимо до \"Youkraine\"! Данська система може бути складною для орієнтування. Вона дуже цифрова, що може бути новим та викликаючим для деяких людей. Тому ми надаємо вам хороший огляд основних додатків та процесів, таких як MitID, E-Boks, допомоги та іншого. А також, різноманітні речі, з якими ви зіткнетесь щоденно. Це включає транспортну систему, систему охорони здоров\'я та інше.</string>
     <string name="Sign_in_to_receive">Увійдіть, щоб отримати відповідну інформацію від вашої муніципалітету та налаштувати додаток під свої потреби</string>
@@ -44,7 +44,8 @@
     <string name="educationHomeToolbarText">" Освіта"</string>
     <string name="educationHomeBold1">" Перевірка диплома"</string>
     <string name="educationHomeBold2">" Варіанти освіти"</string>
-    <string name="educationHomeText1">" Ось інформація для вас. Якщо ви є біженцем з України з 24 лютого і розглядаєте можливість навчання в Данії. На цій сторінці ви можете отримати інформацію про:"</string>
+
+    <string name="educationHomeText1">" Це інформація для вас, якщо ви є біженцем з України з 24 лютого і розглядаєте можливість навчання в Данії. На цій сторінці ви можете отримати інформацію про:"</string>
     <string name="educationHomeText2">як і чи можна підтвердити свою поточну освіту</string>
     <string name="educationHomeText3">які у вас є варіанти навчання в Данії</string>
     <string name="educationHomeText4">як перевірити, чи можете ви отримати SU під час навчання в Данії</string>
@@ -64,10 +65,10 @@
     <string name="educationOptionsText4">Більше інформації про варіанти навчання та відповідні посилання можна знайти тут:</string>
     <string name="educationOptionsBtn1">Як подати заявку на переведення?</string>
     <string name="educationOptionsBtn2">" Як подати заявку на вступ?"</string>
-    <string name="educationSUBold1">" Що таке SU та SU-кредит?"</string>
-    <string name="educationSUBold2">Як подати заявку на SU або SU-кредит?</string>
+    <string name="educationSUBold1">" Що таке SU (стипендія) та SU-кредит?"</string>
+    <string name="educationSUBold2">Як подати заявку на SU (стипендія) або SU-кредит?</string>
     <string name="educationSUBold3">" Особливі умови для українських біженців"</string>
-    <string name="educationSUText1">" «SU» та «SU-loan» — це державна схема освітніх грантів та позик. Суспільство протягує студентам руку допомоги, покриваючи витрати на проживання на різноманітних курсах і навчаннях."</string>
+    <string name="educationSUText1">" «SU» (стипендія) та «SU-loan» (кредит) — це державна схема освітніх грантів та позик. Суспільство протягує студентам руку допомоги, покриваючи витрати на проживання на різноманітних курсах і навчаннях."</string>
     <string name="educationSUText2">"Якщо ви хочете оформити SU або SU-кредит, ви повинні подати заявку на SU в minSU. Заходьте в minSU з комп'ютера, а не з мобільного пристрою - вони не отримують всі заявки, заповнені через мобільний пристрій. Для цього потрібно увійти під своїм MitID. Якщо ви не впевнені, як використовувати MitID, перегляньте сторінку в категорії Essentials або натисніть цю кнопку: "</string>
     <string name="educationSUText3">Більше інформації тут:</string>
     <string name="educationSUText4">Якщо ви є біженцем з України, ви можете подати заяву на отримання рівного статусу з громадянами Данії, якщо на вас поширюється дія розділу 2(2) Закону про інтеграцію іноземців у Данії:</string>
@@ -80,7 +81,7 @@
     <string name="the_danish_electronic_ticket_less_travel_card_system">ДАТСЬКА ЕЛЕКТРОННА СИСТЕМА ПРОЇЗДНИХ БЕЗКВИТКІВ</string>
     <string name="cash_card">ГОТІВКА/КАРТКА</string>
     <string name="how_do_you_pay_with_the_app">ЯК ОПЛАТИТИ ЗА ДОПОМОГОЮ ДОДАТКУ?</string>
-    <string name="what_can_you_do_with_the_app">ЩО ВИ МОЖЕТЕ РОБИТИ З ДОДАТКОМ?</string>
+    <string name="what_can_you_do_with_the_app">ДЛЯ ЧОГО ВИ МОЖЕТЕ ВИКОРИСТОВУВАТИ ДОДАТОК? M?</string>
     <string name="midttrafik_app">ДОДАТОК MIDTTRAFIK</string>
     <string name="applications_for_planning_and_ordering_tickets">ПРОГРАМИ ДЛЯ ПЛАНУВАННЯ ТА ЗАМОВЛЕННЯ КВИТКІВ</string>
     <string name="applications">ДОДАТКИ НА ТЕЛЕФОН</string>
@@ -167,6 +168,10 @@
     <string name="train_dialog11_message">"У кожному регіоні Данії є своя транспортна компанія зі своїм власним додатком для трафіку. Додаток Midttrafik — це ваш регіональний додаток для подорожей у регіоні Midtjylland, який можна використовувати для планування подорожей у регіоні."</string>
     <string name="no_cash">Ви НЕ МОЖЕТЕ платити готівкою в поїздах. Ви завжди повинні купувати квиток заздалегідь, перед посадкою в поїзд, інакше ви отримаєте штраф (750,-).</string>
     <string name="cash">ГОТІВКА </string>
+    <string name="educationSUToolbarText" translatable="false">SU (стипендія) </string>
+    <string name="educationHomeBtn3">SU (стипендія)</string>
+    <string name="essentials">Найнеобхідніше </string>
+    <string name="daily_life">Повсякденність </string>
     <string name="benefitsTitle">Переваги</string>
     <string name="benefitsSubtitle1">Що таке державні пільги в Данії?</string>
     <string name="benefitsContent1">Данія має потужну систему соціального захисту. Залежно від вашої поточної ситуації ви можете подати заявку на різні соціальні виплати. Як біженець, існують різні фактори, які впливають на те, скільки, якщо і що ви отримаєте. Тут ви отримаєте їх огляд.</string>
