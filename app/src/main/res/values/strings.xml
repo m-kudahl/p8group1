@@ -26,6 +26,8 @@
     <string name="title_activity_landing" translatable="false">LandingActivity</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- TRANSPORT STRINGS -->
     <string name="how_do_i_buy_tickets">HOW DO I BUY TICKETS</string>
     <string name="the_danish_electronic_ticket_less_travel_card_system">THE DANISH ELECTRONIC TICKET-LESS TRAVEL CARD SYSTEM</string>
     <string name="cash_card">CASH/CARD</string>
@@ -47,6 +49,18 @@
     <string name="dsb_app">DSB APP</string>
     <string name="what_can_you_do_with_the_app_DSB">WHAT CAN YOU DO WITH THE APP?</string>
     <string name="how_do_you_pay_with_the_app_DSB">HOW DO YOU PAY WITH THE APP?</string>
+
+    <string name="Bus_which_card_is_right_for_me_MESSAGE">"There is a wide selection of Rejsekort cards that you can choose from depending on your needs.  Rejsekort.dk has a guide that can help you choose the correct Rejsekort based on a few questions. Most will only require the regular Rejsekort, but if you are young, and are travelling regularly from one place to another, studying etc. there may be better options for you!  The Rejsekort test can help you choose which card is right for you.   Click “GO TO” to be redirected to the page "</string>
+    <string name="Bus_how_do_i_use_my_travel_card_MESSAGE">With a Rejsekort, you must begin all journeys by checking in through check-in card readers, which are placed inside the buses. If you change the means of transportation during your journey, you must remember to check in again. \n\nAt the end of your journey, you must check out through a check-out card reader. \n\nFor more information click “GO TO” to be redirected to the page</string>
+    <string name="Bus_how_do_i_top_up_my_travel_card_MESSAGE">You can top up your Rejsekort either by making a top up agreement, which automatically deposits money to your card either at a specified time or when your balance is below a specified amount, or you can manually deposit money onto your card. This can be done at the Rejsekort self-service webpage, or by visiting a physical Rejsekort self-service machine at most big stations and various public areas. Please note that if you use the webpage it can take up to 24 hours for your funds to become available on your card, whereas if you deposit money at the physical machines, it is instant. \n\nFor more information click “GO TO” to be redirected to the page</string>
+    <string name="BUS_get_travel_card_MESSAGE">Click "GO TO" to be redirected to the Rejsekort.dk website to order a travel card</string>
+    <string name="what_is_midttrafik">What is Midttrafik?</string>
+    <string name="what_is_midttrafik_MESSAGE">"Every Danish region has their own traffic company with their own traffic app. The Midttrafik app is your regional travel app for the Midtjylland region and can be used to plan travels within the region.   For more information, click GO TO.  "</string>
+    <string name="what_can_you_do_with_the_app_Midttrafik_MESSAGE">"You can pay for your travel and look up your journey via the Journey Planner (Rejseplanen) to help plan your trip. This will provide you with an overview of arrivals and departures of the transport options suitable for your route.   You can also download Midttrafik live, where you can “trace” busses in real time.  "</string>
+    <string name="how_do_you_pay_with_the_app_Midttrafik_MESSAGE">You can pay either by card or with Mobilepay (Danish mobile phone transaction app).</string>
+    <string name="how_do_i_buy_tickets_Midttrafik_MESSAGE">You can pay by cash (not card) at the bus chauffeur to purchase a ticket. This is only for buses - for paying with card or cash at trains, see the train section in the app.   An overview if prices can be found at Midttrafik\'s website.</string>
+    <string name="Dialog_go_to">Go to</string>
+    <string name="Dialog_cancel">Cancel</string>
 
     <!-- EDUCATION STRINGS -->
     <string name="educationHomeToolbarText">Education</string>
@@ -126,6 +140,7 @@
     <string name="educatioSUPopUp1">How do I apply for SU as a Ukrainian refugee?</string>
     <string name="educatioSUPopUp12">If you are a refugee from Ukraine, you may apply for equal status with Danish citizens, if you fall within Section 2(2) of the Act on Integration of Aliens in Denmark</string>
     <string name="educatioSUPopUp13">"\n\nPlease be aware that if you want to apply for equal status with Danish citizens because you fall within Section 2(4) (other aliens granted family reunification) of the Act on Integration of Aliens in Denmark, you must have obtained the right to reside in Denmark according to this rule on 1 July 2019 or later."</string>
+
 
     <string name="Welcome">Welcome to “Youkraine!” The Danish system can be hard to navigate. It is very digitalised, which might be new and challenging to some people. Therefore, we provide you with a good overview of essential applications and processes such as MitID, E-Boks, benefits and more. As well as, stuff you will encounter on an everyday basis. This includes the likes of the transportation system, health system and more........</string>
     <string name="helth">Helth</string>
@@ -248,5 +263,7 @@
     <string name="please_grant_permission_to_show_notification_to_receive_news_from_your_municipality">Please grant permission to show notification, to receive news from your municipality</string>
     <string name="notification_permission">Notification Permission</string>
     <string name="link_EducationDiplomOnlineApp">https://ufm.dk/en/education/recognition-and-transparency/get-assessment/form-standard</string>
+
+
 
 </resources>

@@ -173,6 +173,18 @@
                 android:textSize="15dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"/>
+
+            <Button
+                android:id="@+id/WhatIsMidttrafikBus"
+                android:onClick="Dialog_10"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/buttonBlueText"
+                android:text="@string/what_is_midttrafik" />
             <Button
                 android:id="@+id/WhatCanYouDo"
                 android:onClick="Dialog_4"
