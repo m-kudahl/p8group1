@@ -18,6 +18,7 @@ public class LandingActivity extends AppCompatActivity {
         //appbar buttons
         AppBarUtility.setupHomeButton(this, R.id.appbarLanding);
         AppBarUtility.setUpBackButton(this);
+        AppBarUtility.setupLangButton(this, R.id.appbarLanding);
     }
         public void goToRegister (View view) {
             Intent intent = new Intent (this, RegisterActivity.class);
