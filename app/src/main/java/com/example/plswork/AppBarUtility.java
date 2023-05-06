@@ -45,15 +45,15 @@ public class AppBarUtility {
             langButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // get the current locale configuration
+                    // get the current locale
                     Configuration config = activity.getResources().getConfiguration();
 
-                    // if the current language is default (English)
+                    // check if language is already Ukrainian
                     if (config.locale.getLanguage().equals("uk")) {
-                        // set the locale to Ukrainian
+                        // set the locale to our default values (English)
                         config.setLocale(Locale.getDefault());
                     } else {
-                        // set the locale back to default
+                        // else set the locale back to Ukrainian
                         config.setLocale(new Locale("uk"));
                     }
 
