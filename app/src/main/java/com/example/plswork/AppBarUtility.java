@@ -45,23 +45,28 @@ public class AppBarUtility {
             langButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // get the current locale
+                    // declare the current configuration as a variable
                     Configuration config = activity.getResources().getConfiguration();
 
-                    // check if language is already Ukrainian
+                    // check if language in configuration is already Ukrainian
                     if (config.locale.getLanguage().equals("uk")) {
-                        // set the locale to our default values (English)
-                        config.setLocale(Locale.getDefault());
+
+                        // set the locale to our default values (English) if already Ukrainian
+                        Locale.setDefault(new Locale("en"));
+                        config.locale = new Locale("en"); // Save config
                     } else {
-                        // else set the locale back to Ukrainian
-                        config.setLocale(new Locale("uk"));
+                        // else set the locale to Ukrainian
+                        Locale.setDefault(new Locale("uk"));
+                        config.locale = new Locale("uk"); // Save config
                     }
 
-                    // update the configuration
+                    // update the configuration with changes
                     activity.getResources().updateConfiguration(config, activity.getResources().getDisplayMetrics());
 
-                    // recreate the activity to apply the new locale
-                    activity.recreate();
+                    // recreate ALL activities with new changes
+                    Intent intent = new Intent(activity, activity.getClass());
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    activity.startActivity(intent);
                 }
             });
         }
