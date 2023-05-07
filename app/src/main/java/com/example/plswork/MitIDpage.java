@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class MitIDpage extends AppCompatActivity {
+public class MitIDpage extends InformationPagesActivity {
 
     ImageButton appleButton, googleButton;
     @Override
@@ -21,13 +21,11 @@ public class MitIDpage extends AppCompatActivity {
         appleButton = findViewById(R.id.appleStoreButtonMitID);
         googleButton = findViewById(R.id.googleStoreButtonMitID);
 
+        //Set up the apple button
         appleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://apps.apple.com/dk/app/mitid/id1555231176";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
+                setupImageButton("https://apps.apple.com/dk/app/mitid/id1555231176");
             }
         });
 
@@ -41,9 +39,9 @@ public class MitIDpage extends AppCompatActivity {
             }
         });
 
-        //appbar
-        AppBarUtility.setupHomeButton(this, R.id.appbarMitID);
-        AppBarUtility.setUpBackButton(this);
+        //setting up back button and home button
+        setupHomeButton(R.id.appbarMitID);
+        setUpBackButton();
     }
 
 }
