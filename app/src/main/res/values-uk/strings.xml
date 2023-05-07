@@ -65,7 +65,7 @@
     <string name="educationDiplomToolbarText">"Перевірка диплома"</string>
     <string name="educationDiplomBold1">"Онлайн заявка:"</string>
     <string name="educationDiplomBold2">"PDF форма заявки:"</string>
-    <string name="educationDiplomText1">Ви можете змінити свій диплом, щоб мати можливість навчатися або працювати в Данії за своєю професією. Вашу оцінку можна застосувати онлайн або у форматі PDF.</string>
+    <string name="educationDiplomText1">Ви можете підтвердити свій диплом, щоб мати можливість навчатися або працювати в Данії за своєю професією. Запросити підтвердження диплому можна онлайн або у форматі PDF.</string>
     <string name="educationDiplomBtn1">"Які документи необхідно додати до заявки?"</string>
     <string name="educationDiplomBtn2">Як заповнити онлайн заявку?</string>
     <string name="educationDiplomBtn3">"Як заповнити PDF заявку?"</string>
@@ -92,7 +92,7 @@
     <string name="the_danish_electronic_ticket_less_travel_card_system">ДАТСЬКА ЕЛЕКТРОННА СИСТЕМА ПРОЇЗДНИХ БЕЗКВИТКІВ</string>
     <string name="cash_card">ГОТІВКА/КАРТКА</string>
     <string name="how_do_you_pay_with_the_app">ЯК ОПЛАТИТИ ЗА ДОПОМОГОЮ ДОДАТКУ?</string>
-    <string name="what_can_you_do_with_the_app">ДЛЯ ЧОГО ВИ МОЖЕТЕ ВИКОРИСТОВУВАТИ ДОДАТОК? M?</string>
+    <string name="what_can_you_do_with_the_app">ДЛЯ ЧОГО ВИ МОЖЕТЕ ВИКОРИСТОВУВАТИ ДОДАТОК?</string>
     <string name="midttrafik_app">ДОДАТОК MIDTTRAFIK</string>
     <string name="applications_for_planning_and_ordering_tickets">ПРОГРАМИ ДЛЯ ПЛАНУВАННЯ ТА ЗАМОВЛЕННЯ КВИТКІВ</string>
     <string name="applications">ДОДАТКИ НА ТЕЛЕФОН</string>
@@ -223,4 +223,7 @@
     <string name="mitidContent8">" Щоб використовувати MitID, ви повинні завантажити програму на свій телефон."</string>
     <string name="mitidContent9">" Уже маєте MitID?"</string>
     <string name="mitidCheckboxText">" Позначте тут."</string>
+    <string name="bus">Автобус </string>
+    <string name="train">Поїзд</string>
+
 </resources>
