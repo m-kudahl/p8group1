@@ -29,13 +29,19 @@
         </service>
         <activity
             android:name=".LandingActivity"
-            android:exported="true"/>
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".ProfilePage"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="true"/>
+
         <activity
             android:name=".EducationSUActivity"
             android:exported="false" />
@@ -56,13 +62,8 @@
             android:exported="true" />
         <activity
             android:name=".Tab_Layout"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".EBoksPage"
             android:exported="true" />

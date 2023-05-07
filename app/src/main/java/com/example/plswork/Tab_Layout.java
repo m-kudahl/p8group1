@@ -29,7 +29,7 @@ public class Tab_Layout extends AppCompatActivity implements NotificationPermiss
     CardView cardViewEducation;
     private NotificationPermissionAsk notificationPermissionAsk;
 
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
 
     @SuppressLint("MissingInflatedId")
     @Override

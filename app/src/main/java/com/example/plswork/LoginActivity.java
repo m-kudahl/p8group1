@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     @Override
     public void onStart() {
         super.onStart();
@@ -46,7 +46,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
 
         EditText editTextEmail = findViewById(R.id.editTextEmailAddress);
         EditText editTextPassword = findViewById(R.id.editTextPassword);

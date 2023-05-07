@@ -43,7 +43,7 @@ public class ProfilePage extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<Notification> notifications;
     private NotificationRecyclerView notificationRecyclerView;
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     @Override
     public void onStart() {
         super.onStart();
