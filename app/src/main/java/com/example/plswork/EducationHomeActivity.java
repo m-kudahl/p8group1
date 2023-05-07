@@ -1,14 +1,10 @@
 package com.example.plswork;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 
-public class EducationHomeActivity extends AppCompatActivity {
+public class EducationHomeActivity extends InformationPagesActivity {
 
 
     Button DiplomVerificationBtn, EducationOptionsBtn, SUBtn;
@@ -22,26 +18,15 @@ public class EducationHomeActivity extends AppCompatActivity {
         EducationOptionsBtn = (Button) findViewById(R.id.EducationOptions);
         SUBtn = (Button) findViewById(R.id.SU);
 
-        DiplomVerificationBtn.setOnClickListener(new View.OnClickListener(){
+        //Diplom knappen
+        setupInternalLinkButton(DiplomVerificationBtn,EducationDiplomActivity.class);
 
-            public void onClick(View view){
-                startActivity(new Intent(EducationHomeActivity.this, EducationDiplomActivity.class));
-            }
-        });
+        //Options knappen
+        setupInternalLinkButton(DiplomVerificationBtn,EducationOptionsActivity.class);
 
-        EducationOptionsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(EducationHomeActivity.this, EducationOptionsActivity.class));
-            }
-        });
+        //SU knappen
+        setupInternalLinkButton(DiplomVerificationBtn,EducationSUActivity.class);
 
-        SUBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(EducationHomeActivity.this, EducationSUActivity.class));
-            }
-        });
 
         //appbar buttons
         AppBarUtility.setupHomeButton(this, R.id.my_toolbar);

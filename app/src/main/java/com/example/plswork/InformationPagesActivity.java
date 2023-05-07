@@ -26,14 +26,15 @@ public class InformationPagesActivity extends AppCompatActivity {
     }
 
     //setup imagebuttons when u have the url
-    protected void setupImageButton(String url) {
+    protected void setupLinkImageButton(String url) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);
     }
 
     //Class<?> is a generic type in Java that represents a class of any type. Used when the type of the class is not known initially and could be any type.
-    protected void setupButton(Button button, Class<?> activityClass) {
+    //Knappe der skaber interne links fra den aktuelle side til en anden side i applikationen.
+    protected void setupInternalLinkButton(Button button, Class<?> activityClass) {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
