@@ -132,6 +132,6 @@ public class Tab_Layout extends AppCompatActivity implements NotificationPermiss
                 return;
             }
         }
-    }
 
+    }
 }
