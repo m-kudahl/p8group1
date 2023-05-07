@@ -20,7 +20,7 @@ public class MitIDpage extends AppCompatActivity {
 
         appleButton = findViewById(R.id.appleStoreButtonMitID);
         googleButton = findViewById(R.id.googleStoreButtonMitID);
-
+        AppBarUtility.setupLangButton(this, R.id.appbarMitID);
         appleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

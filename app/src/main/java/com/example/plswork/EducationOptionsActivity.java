@@ -40,7 +40,7 @@ public class EducationOptionsActivity extends AppCompatActivity {
                 builder.show();
             }
         });
-
+        AppBarUtility.setupLangButton(this, R.id.textViewEducationOptions);
         buttonEducationOptions2 = findViewById(R.id.buttonEducationOptions2);
 
         buttonEducationOptions2.setOnClickListener(new View.OnClickListener() {

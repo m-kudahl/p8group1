@@ -21,6 +21,7 @@ public class EducationHomeActivity extends AppCompatActivity {
         DiplomVerificationBtn = (Button) findViewById(R.id.DiplomVerification);
         EducationOptionsBtn = (Button) findViewById(R.id.EducationOptions);
         SUBtn = (Button) findViewById(R.id.SU);
+        AppBarUtility.setupLangButton(this, R.id.textViewEducationHome);
 
         DiplomVerificationBtn.setOnClickListener(new View.OnClickListener(){
 

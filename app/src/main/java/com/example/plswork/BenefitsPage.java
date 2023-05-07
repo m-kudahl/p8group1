@@ -15,7 +15,7 @@ public class BenefitsPage extends AppCompatActivity {
         //appbar
         AppBarUtility.setupHomeButton(this, R.id.appbarBenefits);
         AppBarUtility.setUpBackButton(this);
-
+        AppBarUtility.setupLangButton(this, R.id.appbarBenefits);
     }
 
 }

@@ -21,6 +21,7 @@ public class MainTransport extends AppCompatActivity {
         viewPager2 = findViewById(R.id.view_pager_transport);
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(viewPagerAdapter);
+        AppBarUtility.setupLangButton(this, R.id.MainTransport);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

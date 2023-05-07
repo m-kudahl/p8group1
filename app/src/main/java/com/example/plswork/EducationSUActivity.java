@@ -27,7 +27,7 @@ public class EducationSUActivity extends AppCompatActivity {
                 startActivity(new Intent(EducationSUActivity.this, MitIDpage.class));
             }
         });
-
+        AppBarUtility.setupLangButton(this, R.id.textViewEducationSU);
         buttonEducationSU2 = findViewById(R.id.buttonEducationSU2);
 
         buttonEducationSU2.setOnClickListener(new View.OnClickListener() {

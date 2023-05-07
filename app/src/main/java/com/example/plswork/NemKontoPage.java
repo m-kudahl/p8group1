@@ -15,6 +15,7 @@ public class NemKontoPage extends AppCompatActivity {
         //appbar buttons
         AppBarUtility.setupHomeButton(this, R.id.appbarNemKonto);
         AppBarUtility.setUpBackButton(this);
+        AppBarUtility.setupLangButton(this, R.id.appbarNemKonto);
     }
 
 

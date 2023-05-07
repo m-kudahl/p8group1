@@ -64,6 +64,7 @@ public class Tab_Layout extends AppCompatActivity implements NotificationPermiss
         Button myBackButton = includedLayout.findViewById(R.id.back_button);
         Button myHomeButton = includedLayout.findViewById(R.id.home_button);
 
+
         // Disable and make the Button invisible
         myBackButton.setEnabled(false);
         myBackButton.setVisibility(View.INVISIBLE);
@@ -71,6 +72,8 @@ public class Tab_Layout extends AppCompatActivity implements NotificationPermiss
         // Disable and make the Button invisible
         myHomeButton.setEnabled(false);
         myHomeButton.setVisibility(View.INVISIBLE);
+
+        AppBarUtility.setupLangButton(this, R.id.appbarHomeActivity);
 
 
         Button toolbarProfileBtn = (Button) findViewById(R.id.profile_button);
