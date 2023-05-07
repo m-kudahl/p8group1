@@ -27,10 +27,5 @@ public class EducationHomeActivity extends InformationPagesActivity {
         //SU knappen
         setupInternalLinkButton(DiplomVerificationBtn,EducationSUActivity.class);
 
-
-        //appbar buttons
-        AppBarUtility.setupHomeButton(this, R.id.my_toolbar);
-        AppBarUtility.setUpBackButton(this);
-
     }
 }
