@@ -40,9 +40,5 @@ public class EBoksPage extends AppCompatActivity {
             }
         });
 
-        //appbar buttons
-        AppBarUtility.setupHomeButton(this);
-        AppBarUtility.setUpBackButton(this);
-
     }
 }

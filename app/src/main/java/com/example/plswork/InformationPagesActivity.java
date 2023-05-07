@@ -13,15 +13,9 @@ public class InformationPagesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
-
-    // Set up the home button
-    protected void setupHomeButton() {
+        //set up the home button
         AppBarUtility.setupHomeButton(this);
-    }
-
-    // Set up the back button
-    protected void setUpBackButton() {
+        //set up the back button
         AppBarUtility.setUpBackButton(this);
     }
 
