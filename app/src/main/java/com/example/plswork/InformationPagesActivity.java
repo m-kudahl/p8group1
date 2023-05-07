@@ -16,8 +16,8 @@ public class InformationPagesActivity extends AppCompatActivity {
     }
 
     // Set up the home button
-    protected void setupHomeButton(int appBarLayoutId) {
-        AppBarUtility.setupHomeButton(this, appBarLayoutId);
+    protected void setupHomeButton() {
+        AppBarUtility.setupHomeButton(this);
     }
 
     // Set up the back button

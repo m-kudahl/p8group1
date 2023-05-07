@@ -36,7 +36,7 @@ public class MitIDpage extends InformationPagesActivity {
         });
 
         //setting up back button and home button
-        setupHomeButton(R.id.appbarMitID);
+        setupHomeButton();
         setUpBackButton();
     }
 
