@@ -32,6 +32,7 @@ public class Tab_Layout extends AppBarPagesActivity {
         viewPagerAdapter = new TabLayoutViewPage(this);
         viewPager2.setAdapter(viewPagerAdapter);
 
+        //WE WANT TO DISABLE THE HOME/BACK BUTTON FROM THIS PAGE, SINCE IT SHOULDNT BE HERE.
         // Get a reference to the included layout
         View includedLayout = findViewById(R.id.appbarHomeActivity);
 

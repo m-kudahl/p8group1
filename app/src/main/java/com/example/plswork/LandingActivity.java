@@ -12,7 +12,7 @@ public class LandingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_landing);
 
         //appbar buttons
-        AppBarUtility.setupHomeButton(this, R.id.appbarLanding);
+        AppBarUtility.setupHomeButton(this);
         AppBarUtility.setUpBackButton(this);
     }
 }

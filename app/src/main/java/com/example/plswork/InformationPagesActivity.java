@@ -1,5 +1,6 @@
 package com.example.plswork;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,7 +23,7 @@ public class InformationPagesActivity extends AppBarPagesActivity {
         startActivity(intent);
     }
 
-    //Class<?> is a generic type in Java that represents a class of any type. Used when the type of the class is not known initially and could be any type.
+    //Class<?> is a generic type in Java that represents a class of any type. Used when the type of the class is not known initially and could be any type. ? is a wildcard
     //Knappe der skaber interne links fra den aktuelle side til en anden side i applikationen.
     protected void setupInternalLinkButton(Button button, Class<?> activityClass) {
         button.setOnClickListener(new View.OnClickListener() {
@@ -31,5 +32,13 @@ public class InformationPagesActivity extends AppBarPagesActivity {
                 startActivity(new Intent(view.getContext(), activityClass));
             }
         });
+    }
+    //Making a recallable method for pop-up messages that we only need to input a title, a message and a view on the onClick.
+    public void showPopUp(View view, String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setPositiveButton("OK", null);
+        builder.show();
     }
 }

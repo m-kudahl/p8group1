@@ -148,7 +148,7 @@ public class RegisterActivity extends AppBarPagesActivity {
             }
         });
         //appbar buttons
-        AppBarUtility.setupHomeButton(this, R.id.appbarRegister);
+        AppBarUtility.setupHomeButton(this);
         AppBarUtility.setUpBackButton(this);
     }
     public void writeNewUser(String userId, String name, String email, String municipality, String token) {
