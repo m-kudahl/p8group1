@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class EducationSUActivity extends AppCompatActivity {
+public class EducationSUActivity extends InformationPagesActivity {
 
     Button SUMitIDBtn;
 
@@ -22,11 +22,8 @@ public class EducationSUActivity extends AppCompatActivity {
 
         SUMitIDBtn = (Button) findViewById(R.id.buttonEducationSU);
 
-        SUMitIDBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                startActivity(new Intent(EducationSUActivity.this, MitIDpage.class));
-            }
-        });
+        //link to MitID
+        setupInternalLinkButton(SUMitIDBtn,MitIDpage.class);
 
         buttonEducationSU2 = findViewById(R.id.buttonEducationSU2);
 

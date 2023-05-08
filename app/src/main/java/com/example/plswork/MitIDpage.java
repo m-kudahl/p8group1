@@ -18,12 +18,7 @@ public class MitIDpage extends InformationPagesActivity {
         googleButton = findViewById(R.id.googleStoreButtonMitID);
 
         //Set up the apple button
-        appleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setupLinkImageButton("https://apps.apple.com/dk/app/mitid/id1555231176");
-            }
-        });
+        setupLinkImageButton(appleButton, "https://apps.apple.com/dk/app/mitid/id1555231176");
 
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
