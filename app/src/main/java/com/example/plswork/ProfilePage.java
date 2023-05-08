@@ -53,25 +53,10 @@ public class ProfilePage extends AppCompatActivity {
             Intent intent = new Intent(ProfilePage.this, LoginActivity.class);
             startActivity(intent);
             finish();
-        } else {
-
-
-            boolean forceRefresh = true;
-            FirebaseInstallations.getInstance().getToken(forceRefresh)
-                    .addOnCompleteListener(new OnCompleteListener<InstallationTokenResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<InstallationTokenResult> task) {
-                            if (task.isSuccessful()) {
-                                String token = task.getResult().getToken();
-                                Log.d(TAG, "Firebase Installation Token: " + token);
-                            } else {
-                                Log.e(TAG, "Failed to get Firebase Installation Token: ", task.getException());
-                            }
-                        }
-                    });
         }
-
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,38 +111,7 @@ public class ProfilePage extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (currentUser != null) {
-                            String userUid = currentUser.getUid();
-                            currentUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
-                                        DatabaseReference deleteUser = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid);
-                                        deleteUser.removeValue()
-                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                    @Override
-                                                    public void onSuccess(Void unused) {
-                                                        Toast.makeText(ProfilePage.this, "Account Deleted", Toast.LENGTH_SHORT).show();
-
-                                                    }
-                                                }).addOnFailureListener(new OnFailureListener() {
-                                                    @Override
-                                                    public void onFailure(@NonNull Exception e) {
-                                                        Toast.makeText(ProfilePage.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-
-                                                    }
-                                                });
-
-                                        Toast.makeText(ProfilePage.this, "Account deleted", Toast.LENGTH_SHORT);
-                                        Intent intent = new Intent(ProfilePage.this, Tab_Layout.class);
-                                        startActivity(intent);
-
-                                    } else {
-                                        Toast.makeText(ProfilePage.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-
-                                    }
-                                }
-                            });
-
+                            deleteAccount();
                         }
                     }
                 });
@@ -185,6 +139,41 @@ public class ProfilePage extends AppCompatActivity {
                 Intent intent = new Intent(ProfilePage.this, LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+            }
+        });
+    }
+
+    public void deleteAccount() {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        String userUid = currentUser.getUid();
+        currentUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    DatabaseReference deleteUser = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid);
+                    deleteUser.removeValue()
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Toast.makeText(ProfilePage.this, "Account Deleted", Toast.LENGTH_SHORT).show();
+
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(ProfilePage.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                                }
+                            });
+
+                    Toast.makeText(ProfilePage.this, "Account deleted", Toast.LENGTH_SHORT);
+                    Intent intent = new Intent(ProfilePage.this, Tab_Layout.class);
+                    startActivity(intent);
+
+                } else {
+                    Toast.makeText(ProfilePage.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
     }
