@@ -8,15 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class InformationPagesActivity extends AppCompatActivity {
+public class InformationPagesActivity extends AppBarPagesActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //set up the home button
-        AppBarUtility.setupHomeButton(this);
-        //set up the back button
-        AppBarUtility.setUpBackButton(this);
     }
 
     //setup imagebuttons when u have the url

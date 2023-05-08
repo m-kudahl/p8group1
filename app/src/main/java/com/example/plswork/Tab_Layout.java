@@ -14,7 +14,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Tab_Layout extends AppCompatActivity {
+public class Tab_Layout extends AppBarPagesActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     TabLayoutViewPage viewPagerAdapter;

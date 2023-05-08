@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppBarPagesActivity {
     AutoCompleteTextView autocomplete;
     private DatabaseReference mDatabase;
 

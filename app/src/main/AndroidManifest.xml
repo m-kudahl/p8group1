@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".AppBarPagesActivity"
+            android:exported="false" />
+        <activity
             android:name=".InformationPagesActivity"
             android:exported="false" />
         <activity
