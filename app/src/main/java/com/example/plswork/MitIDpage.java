@@ -20,6 +20,7 @@ public class MitIDpage extends InformationPagesActivity {
         //Set up the apple button
         setupLinkImageButton(appleButton, "https://apps.apple.com/dk/app/mitid/id1555231176");
 
+        //DO THE SAME TO GOOGLEBUTTON
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
