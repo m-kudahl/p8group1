@@ -242,23 +242,25 @@ public class ProfilePage extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        String userUid = currentUser.getUid();
-        DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid + "/messages");
-        Query query = databaseRef.orderByChild("timestamp");
-        ValueEventListener valueEventListener = new ValueEventListener() {
+        if (currentUser !=null) {
+            String userUid = currentUser.getUid();
+            DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid + "/messages");
+            Query query = databaseRef.orderByChild("timestamp");
+            ValueEventListener valueEventListener = new ValueEventListener() {
 
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                // No need to do anything here
-            }
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    // No need to do anything here
+                }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "Failed loading notifications", databaseError.toException());
-            }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Log.w(TAG, "Failed loading notifications", databaseError.toException());
+                }
 
-        };
-        query.removeEventListener(valueEventListener);
+            };
+            query.removeEventListener(valueEventListener);
+        }
     }
 
 

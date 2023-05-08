@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     AutoCompleteTextView autocomplete;
     private DatabaseReference mDatabase;
 
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     String[] cities = { "Randers", "Aalborg","Aarhus",
             "Copenhagen"};
 
@@ -70,16 +70,16 @@ public class RegisterActivity extends AppCompatActivity {
         EditText nameEditText = findViewById(R.id.editTextName);
 
 
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Authenticate the user with Firebase Authentication
-                FirebaseAuth mAuth = FirebaseAuth.getInstance();
-
                 String email = emailEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 String fullName = nameEditText.getText().toString();
                 String municipality = autocomplete.getText().toString();
+
                 if (municipality.isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Please select your municipality", Toast.LENGTH_SHORT).show();
                     return;
@@ -96,66 +96,117 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Please write an email", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    // Authentication successful, continue with adding data to database
 
-                                    FirebaseMessaging.getInstance().getToken()
-                                            .addOnCompleteListener(new OnCompleteListener<String>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<String> task) {
-                                                    if (!task.isSuccessful()) {
-                                                        Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                                                        return;
-                                                    }
+                //to check if the account creating process were a success before redirecting the user
+                //we use the Runnable object
+                Runnable writeUserToDBSuccess = new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                    }
+                };
+                //if there were any problems with creating the account, we show a message instead
+                Runnable writeUserToDBFailure = new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(RegisterActivity.this, "Account creation unsuccessful",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                };
+                Runnable subscribeToTopicSuccess = new Runnable() {
+                    @Override
+                    public void run() {
+                        FirebaseUser currentUser = mAuth.getCurrentUser();
+                        String uid = currentUser.getUid();
+                        writeNewUser(uid, fullName, email, municipality, writeUserToDBSuccess, writeUserToDBFailure);
+                    }
+                };
+                Runnable subscribeToTopicFailure = new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(RegisterActivity.this, "Account creation unsuccessful",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                };
+                Runnable createUserSuccess = new Runnable() {
+                    @Override
+                    public void run() {
+                        subscribeToMunicipality(municipality, subscribeToTopicSuccess, subscribeToTopicFailure);
+                    }
+                };
 
-                                                    // Get new FCM registration token
-                                                    String token = task.getResult();
+                Runnable createUserFailure = new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(RegisterActivity.this, "Account creation unsuccessful",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                };
 
-                                                    // Save the token to the Realtime Database
-                                                    FirebaseUser currentUser = mAuth.getCurrentUser();
-                                                    String uid = currentUser.getUid();
-                                                    writeNewUser(uid, fullName, email, municipality, token);
-                                                }
-                                            });
-                                    FirebaseMessaging.getInstance().subscribeToTopic(municipality)
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    String msg = "Subscribed";
-                                                    if (!task.isSuccessful()) {
-                                                        msg = "Subscribe failed";
-                                                    }
-                                                    Log.d(TAG, msg);
-                                                    Toast.makeText(RegisterActivity.this, msg, Toast.LENGTH_SHORT).show();
-                                                }
-                                            });
+                createNewAccount(email, password, createUserSuccess, createUserFailure);
 
-                                    // Redirect the user to the login page
-                                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                                    startActivity(intent);
-                                } else {
-                                    // Authentication failed, display an error message
-                                    Toast.makeText(RegisterActivity.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
+
+
+
             }
         });
         //appbar buttons
         AppBarUtility.setupHomeButton(this, R.id.appbarRegister);
         AppBarUtility.setUpBackButton(this);
     }
-    public void writeNewUser(String userId, String name, String email, String municipality, String token) {
+    public void createNewAccount(String email, String password, Runnable createUserSuccess, Runnable createUserFailure) {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Authentication successful, continue with adding data to database
+                            createUserSuccess.run();
+                        } else {
+                            // Authentication failed, display an error message
+                            createUserFailure.run();
+
+                        }
+                    }
+                });
+
+    }
+
+
+    public void subscribeToMunicipality(String municipality, Runnable subscribeToTopicSuccess, Runnable subscribeToTopicFailure) {
+        FirebaseMessaging.getInstance().subscribeToTopic(municipality)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            subscribeToTopicSuccess.run();
+                        } else {
+                            Log.w(TAG, "Failed subscribing to topic", task.getException());
+                            subscribeToTopicFailure.run();
+                        }
+                    }
+                });
+    }
+    public void writeNewUser(String userId, String name, String email, String municipality, Runnable writeUserToDBSuccess, Runnable writeUserToDBFailure) {
         mDatabase = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users");
         User user = new User(email, name, municipality, userId);
-        user.setUserToken(token);
-        mDatabase.child(user.getUserId()).setValue(user);
+
+        mDatabase.child(user.getUserId()).setValue(user)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "Failed uploading to DB", task.getException());
+                            writeUserToDBFailure.run();
+                        } else {
+                            writeUserToDBSuccess.run();
+                        }
+                    }
+                });
 
 
     }
+
 }

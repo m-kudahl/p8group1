@@ -7,8 +7,6 @@ public class User {
     private String municipality;
     private String userId;
 
-    private String token;
-
     public User() {
     }
 
@@ -51,10 +49,5 @@ public class User {
         return municipality;
     }
 
-    public String getUserToken() {
-        return token;
-    }
-    public void setUserToken(String token) {
-        this.token = token;
-    }
+
 }
