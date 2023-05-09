@@ -36,7 +36,7 @@ public class AppBarUtility {
         });
     }
 
-    public static void setupLangButton(Activity activity, int langButtonId) {
+    public static void setupLangButton(Activity activity) {
 
         AppCompatButton langButton = activity.findViewById(R.id.language_button);
 

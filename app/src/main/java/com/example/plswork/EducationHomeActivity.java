@@ -17,7 +17,7 @@ public class EducationHomeActivity extends InformationPagesActivity {
         DiplomVerificationBtn = (Button) findViewById(R.id.DiplomVerification);
         EducationOptionsBtn = (Button) findViewById(R.id.EducationOptions);
         SUBtn = (Button) findViewById(R.id.SU);
-        AppBarUtility.setupLangButton(this, R.id.textViewEducationHome);
+        AppBarUtility.setupLangButton(this);
 
         //Diplom knappen
         setupInternalLinkButton(DiplomVerificationBtn,EducationDiplomActivity.class);
