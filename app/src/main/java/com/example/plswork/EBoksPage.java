@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class EBoksPage extends AppCompatActivity {
+public class EBoksPage extends InformationPagesActivity {
 
     ImageButton appleButton, googleButton;
     @Override

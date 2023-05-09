@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class BenefitsPage extends AppCompatActivity {
+public class BenefitsPage extends InformationPagesActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

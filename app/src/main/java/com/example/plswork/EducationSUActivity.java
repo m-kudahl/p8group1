@@ -40,9 +40,5 @@ public class EducationSUActivity extends InformationPagesActivity {
             }
         });
 
-        //appbar buttons
-        AppBarUtility.setupHomeButton(this);
-        AppBarUtility.setUpBackButton(this);
-
     }
 }
