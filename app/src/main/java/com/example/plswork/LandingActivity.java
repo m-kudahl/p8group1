@@ -34,7 +34,7 @@ public class LandingActivity extends AppCompatActivity {
 
 
         //appbar buttons
-        AppBarUtility.setupHomeButton(this, R.id.appbarLanding);
+        AppBarUtility.setupHomeButton(this);
         AppBarUtility.setUpBackButton(this);
         AppBarUtility.setupLangButton(this, R.id.appbarLanding);
 

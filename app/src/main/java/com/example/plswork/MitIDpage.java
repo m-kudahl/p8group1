@@ -1,16 +1,12 @@
 package com.example.plswork;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-public class MitIDpage extends AppCompatActivity {
+public class MitIDpage extends InformationPagesActivity {
 
     ImageButton appleButton, googleButton;
     @Override
@@ -20,17 +16,11 @@ public class MitIDpage extends AppCompatActivity {
 
         appleButton = findViewById(R.id.appleStoreButtonMitID);
         googleButton = findViewById(R.id.googleStoreButtonMitID);
-        AppBarUtility.setupLangButton(this, R.id.appbarMitID);
-        appleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String url = "https://apps.apple.com/dk/app/mitid/id1555231176";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-            }
-        });
 
+        //Set up the apple button
+        setupLinkImageButton(appleButton, "https://apps.apple.com/dk/app/mitid/id1555231176");
+
+        //DO THE SAME TO GOOGLEBUTTON
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,9 +31,6 @@ public class MitIDpage extends AppCompatActivity {
             }
         });
 
-        //appbar
-        AppBarUtility.setupHomeButton(this, R.id.appbarMitID);
-        AppBarUtility.setUpBackButton(this);
     }
 
 }

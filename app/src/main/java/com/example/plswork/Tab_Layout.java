@@ -22,7 +22,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Tab_Layout extends AppCompatActivity implements NotificationPermissionChecker {
+public class Tab_Layout extends AppBarPagesActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     TabLayoutViewPage viewPagerAdapter;

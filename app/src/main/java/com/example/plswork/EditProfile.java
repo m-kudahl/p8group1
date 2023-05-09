@@ -54,7 +54,7 @@ public class EditProfile extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         Button btn = (Button)findViewById(R.id.editProfileUserButton);
         EditText nameEditText = findViewById(R.id.editTextUserFullName);
-        AppBarUtility.setupHomeButton(this, R.id.my_toolbar);
+        AppBarUtility.setupHomeButton(this);
         AppBarUtility.setUpBackButton(this);
 
         btn.setOnClickListener(new View.OnClickListener() {

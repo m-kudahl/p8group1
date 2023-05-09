@@ -11,12 +11,10 @@ import java.util.Locale;
 
 public class AppBarUtility {
     //This method takes an input of the given activity as well as an integer which would be the app.bar.layout id (fx for MitID, etc.)
-    public static void setupHomeButton(Activity activity, int appBarLayoutId) {
+    public static void setupHomeButton(Activity activity) {
 
-        //referring to the home button within the layout that we included
-        View includedLayout = activity.findViewById(appBarLayoutId);
         //gotta make an appCompatButton here cause that is the type of the home button
-        AppCompatButton homeButton = includedLayout.findViewById(R.id.home_button);
+        View homeButton = activity.findViewById(R.id.home_button);
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
