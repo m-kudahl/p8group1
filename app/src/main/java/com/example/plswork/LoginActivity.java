@@ -25,7 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 
 import java.util.ResourceBundle;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppBarPagesActivity {
 
     FirebaseAuth mAuth;
     @Override
@@ -113,10 +113,6 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 });
-
-        //appbar buttons
-        AppBarUtility.setupHomeButton(this, R.id.appbarLogin);
-        AppBarUtility.setUpBackButton(this);
     }
     public void login(String email, String password) {
         mAuth = FirebaseAuth.getInstance();
