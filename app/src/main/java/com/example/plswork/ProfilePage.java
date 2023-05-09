@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ProfilePage extends AppCompatActivity {
+public class ProfilePage extends InformationPagesActivity {
 
 
 
@@ -98,8 +98,7 @@ public class ProfilePage extends AppCompatActivity {
             dynamicTextView(userUid, municipality, "userMunicipality");
         }
 
-        AppBarUtility.setupHomeButton(this, R.id.my_toolbar);
-        AppBarUtility.setUpBackButton(this);
+
 
         deleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
