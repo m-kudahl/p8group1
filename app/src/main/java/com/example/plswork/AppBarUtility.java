@@ -36,7 +36,7 @@ public class AppBarUtility {
         });
     }
 
-    public static void setupLangButton(Activity activity) {
+
     public static void setupProfilePage(Activity activity) {
         View profileButton = activity.findViewById(R.id.profile_button);
         profileButton.setOnClickListener(new View.OnClickListener() {
