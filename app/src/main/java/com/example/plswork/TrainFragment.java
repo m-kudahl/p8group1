@@ -303,7 +303,7 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        // Do something when the Cancel button is clicked
+                          // Do something when the Cancel button is clicked
                     }
                 })
                 .show();

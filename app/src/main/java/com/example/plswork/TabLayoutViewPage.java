@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.google.android.material.tabs.TabLayout;
-
 public class TabLayoutViewPage extends FragmentStateAdapter{
 
     public TabLayoutViewPage(@NonNull FragmentActivity fragmentActivity) {
@@ -21,7 +19,7 @@ public class TabLayoutViewPage extends FragmentStateAdapter{
                 return new EssentialsTab();
 
             case 1:
-                return new EverydayTap();
+                return new EverydayTab();
             default: return new  EssentialsTab();
         }
 
