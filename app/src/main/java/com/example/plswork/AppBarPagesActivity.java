@@ -15,8 +15,9 @@ public class AppBarPagesActivity extends AppCompatActivity {
         //set up the back button
         AppBarUtility.setUpBackButton(this);
         //set up profile button
-
+        AppBarUtility.setupProfilePage(this);
         //set up language button
+        AppBarUtility.setupLangButton(this);
 
     }
 }

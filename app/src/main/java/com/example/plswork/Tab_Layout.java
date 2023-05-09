@@ -73,14 +73,6 @@ public class Tab_Layout extends AppBarPagesActivity implements NotificationPermi
         AppBarUtility.setupLangButton(this);
 
 
-        Button toolbarProfileBtn = (Button) findViewById(R.id.profile_button);
-        toolbarProfileBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Tab_Layout.this, ProfilePage.class);
-                startActivity(intent);
-            }
-        });
 
 
 
