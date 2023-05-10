@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class MitIDpage extends InformationPagesActivity {
+public class MitIDpage extends StandardPagesActivity {
 
     ImageButton appleButton, googleButton;
     @Override

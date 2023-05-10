@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class EducationOptionsActivity extends InformationPagesActivity {
+public class EducationOptionsActivity extends StandardPagesActivity {
 
     //TextView textView;
 

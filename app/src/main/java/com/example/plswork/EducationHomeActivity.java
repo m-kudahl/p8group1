@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 
-public class EducationHomeActivity extends InformationPagesActivity {
+public class EducationHomeActivity extends StandardPagesActivity {
 
 
     Button DiplomVerificationBtn, EducationOptionsBtn, SUBtn;

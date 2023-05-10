@@ -1,11 +1,9 @@
 
 package com.example.plswork;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class BenefitsPage extends InformationPagesActivity {
+public class BenefitsPage extends StandardPagesActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
