@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
-public class RegisterActivity extends NotUserPages {
+public class RegisterActivity extends AppBarPagesActivity {
     AutoCompleteTextView autocomplete;
     private DatabaseReference mDatabase;
 
@@ -36,7 +36,17 @@ public class RegisterActivity extends NotUserPages {
     String[] cities = { "Randers", "Aalborg","Aarhus",
             "Copenhagen"};
 
-
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(RegisterActivity.this, Tab_Layout.class);
+            startActivity(intent);
+            finish();
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

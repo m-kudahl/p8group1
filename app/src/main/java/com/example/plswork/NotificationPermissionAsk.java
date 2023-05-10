@@ -38,7 +38,7 @@ public class NotificationPermissionAsk extends AppCompatActivity {
                 callback.onPermissionResult(true);
 
             } else {
-                // permission not yet granted, show why they should grant permission and request permission
+                // permission not yet granted, show rationale and request permission
                 if (ActivityCompat.shouldShowRequestPermissionRationale(activity,
                         Manifest.permission.POST_NOTIFICATIONS)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(activity);

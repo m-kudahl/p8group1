@@ -4,6 +4,7 @@ import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,12 +29,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.installations.FirebaseInstallations;
+import com.google.firebase.installations.InstallationTokenResult;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ProfilePage extends NotUserPages {
+public class ProfilePage extends InformationPagesActivity {
 
 
 
@@ -41,7 +44,17 @@ public class ProfilePage extends NotUserPages {
     private List<Notification> notifications;
     private NotificationRecyclerView notificationRecyclerView;
     FirebaseAuth mAuth;
-
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser == null){
+            Intent intent = new Intent(ProfilePage.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
 
 
 
@@ -113,7 +126,7 @@ public class ProfilePage extends NotUserPages {
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProfilePage.this, EditProfileActivity.class);
+                Intent intent = new Intent(ProfilePage.this, EditProfile.class);
                 startActivity(intent);
             }
         });

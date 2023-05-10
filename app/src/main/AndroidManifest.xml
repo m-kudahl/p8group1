@@ -17,7 +17,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".EditProfile"
             android:exported="true" />
 
         <service

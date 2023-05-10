@@ -46,7 +46,7 @@ public class MainTransport extends AppCompatActivity {
             }
         });
 
-        AppBarUtility.setupHomeButton(this);
+        AppBarUtility.setupHomeButton(this, R.id.MainTransport);
         AppBarUtility.setUpBackButton(this);
     }
 }

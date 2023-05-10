@@ -1,12 +1,15 @@
 package com.example.plswork;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class EducationSUActivity extends StandardPagesActivity {
+public class EducationSUActivity extends InformationPagesActivity {
 
     Button SUMitIDBtn;
 
