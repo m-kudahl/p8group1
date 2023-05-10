@@ -36,7 +36,6 @@ public class AppBarUtility {
         });
     }
 
-
     public static void setupProfilePage(Activity activity) {
         View profileButton = activity.findViewById(R.id.profile_button);
         profileButton.setOnClickListener(new View.OnClickListener() {

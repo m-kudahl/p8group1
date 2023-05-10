@@ -14,6 +14,7 @@ public class EBoksPage extends StandardPagesActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eboks_page);
 
+        AppBarUtility.setupLangButton(this);
         appleButton = findViewById(R.id.appleStoreButtonEBoks);
         googleButton = findViewById(R.id.googleStoreButtonEBoks);
         appleButton.setOnClickListener(new View.OnClickListener() {
