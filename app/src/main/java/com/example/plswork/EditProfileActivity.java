@@ -50,8 +50,7 @@ public class EditProfileActivity extends UserPages {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         Button btn = (Button)findViewById(R.id.editProfileUserButton);
         EditText nameEditText = findViewById(R.id.editTextUserFullName);
-        AppBarUtility.setupHomeButton(this);
-        AppBarUtility.setUpBackButton(this);
+        setupToolbar(this);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

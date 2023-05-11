@@ -9,32 +9,16 @@ import android.view.View;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LandingActivity extends AppCompatActivity {
+public class LandingActivity extends NotUserPages {
 
-    private FirebaseAuth mAuth;
-    @Override
-    public void onStart() {
-        super.onStart();
-        mAuth = FirebaseAuth.getInstance();
 
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            Intent intent = new Intent(LandingActivity.this, Tab_Layout.class);
-            startActivity(intent);
-            finish();
-        }
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
 
 
-        //appbar buttons
-        AppBarUtility.setupHomeButton(this);
-        AppBarUtility.setUpBackButton(this);
-        AppBarUtility.setupLangButton(this);
+        setupToolbar(this);
 
 
     }

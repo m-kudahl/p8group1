@@ -16,7 +16,7 @@ public class EducationOptionsActivity extends StandardPagesActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education_options);
-
+        setupToolbar(this);
         buttonEducationOptions1 = findViewById(R.id.buttonEducationOptions1);
         buttonEducationOptions1.setOnClickListener(new View.OnClickListener() {
             @Override

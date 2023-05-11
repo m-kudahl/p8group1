@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class EducationDiplomActivity extends AppCompatActivity {
+public class EducationDiplomActivity extends StandardPagesActivity {
 
     private Button buttonEducationDiplom1;
 
@@ -22,7 +22,7 @@ public class EducationDiplomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_education_diplom);
 
         buttonEducationDiplom1 = findViewById(R.id.buttonEducationDiplom1);
-        AppBarUtility.setupLangButton(this);
+        setupToolbar(this);
 
         buttonEducationDiplom1.setOnClickListener(new View.OnClickListener() {
             @Override

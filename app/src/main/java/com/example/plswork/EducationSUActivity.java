@@ -18,7 +18,7 @@ public class EducationSUActivity extends StandardPagesActivity {
         setContentView(R.layout.activity_education_suactivity);
 
         SUMitIDBtn = (Button) findViewById(R.id.buttonEducationSU);
-
+        setupToolbar(this);
         //link to MitID
         setupInternalLinkButton(SUMitIDBtn,MitIDpage.class);
 

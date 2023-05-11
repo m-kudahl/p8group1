@@ -13,7 +13,7 @@ public class EBoksPage extends StandardPagesActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eboks_page);
-
+        setupToolbar(this);
         appleButton = findViewById(R.id.appleStoreButtonEBoks);
         googleButton = findViewById(R.id.googleStoreButtonEBoks);
         appleButton.setOnClickListener(new View.OnClickListener() {
