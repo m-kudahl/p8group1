@@ -1,10 +1,8 @@
 package com.example.plswork;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class NemKontoPage extends InformationPagesActivity {
+public class NemKontoPage extends StandardPagesActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
