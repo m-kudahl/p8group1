@@ -36,10 +36,6 @@ public class AppBarUtility {
         });
     }
 
-<<<<<<< HEAD
-=======
-    public static void setupLangButton(Activity activity) {
->>>>>>> parent of c6dc47c (lol)
     public static void setupProfilePage(Activity activity) {
         View profileButton = activity.findViewById(R.id.profile_button);
         profileButton.setOnClickListener(new View.OnClickListener() {
