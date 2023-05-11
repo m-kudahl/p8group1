@@ -12,12 +12,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Tab_Layout extends AppBarPagesActivity implements NotificationPermissionChecker {
     TabLayout tabLayout;
@@ -70,9 +73,17 @@ public class Tab_Layout extends AppBarPagesActivity implements NotificationPermi
         myHomeButton.setEnabled(false);
         myHomeButton.setVisibility(View.INVISIBLE);
 
-        AppBarUtility.setupLangButton(this);
+        AppBarUtility.setupLangButton(this, R.id.appbarHomeActivity);
 
 
+        Button toolbarProfileBtn = (Button) findViewById(R.id.profile_button);
+        toolbarProfileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Tab_Layout.this, ProfilePage.class);
+                startActivity(intent);
+            }
+        });
 
 
 

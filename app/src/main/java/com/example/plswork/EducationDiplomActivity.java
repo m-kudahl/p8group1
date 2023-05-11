@@ -22,7 +22,7 @@ public class EducationDiplomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_education_diplom);
 
         buttonEducationDiplom1 = findViewById(R.id.buttonEducationDiplom1);
-        AppBarUtility.setupLangButton(this);
+        AppBarUtility.setupLangButton(this, R.id.textViewEducationDiplom);
 
         buttonEducationDiplom1.setOnClickListener(new View.OnClickListener() {
             @Override

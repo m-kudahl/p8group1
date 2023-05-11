@@ -1,6 +1,7 @@
 package com.example.plswork;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,7 +17,7 @@ public class EBoksPage extends InformationPagesActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eboks_page);
 
-        AppBarUtility.setupLangButton(this);
+        AppBarUtility.setupLangButton(this, R.id.appbarEBoks);
         appleButton = findViewById(R.id.appleStoreButtonEBoks);
         googleButton = findViewById(R.id.googleStoreButtonEBoks);
         appleButton.setOnClickListener(new View.OnClickListener() {
