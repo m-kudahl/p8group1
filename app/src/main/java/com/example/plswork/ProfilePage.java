@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ProfilePage extends NotUserPages {
+public class ProfilePage extends UserPages {
 
 
 
@@ -68,7 +68,7 @@ public class ProfilePage extends NotUserPages {
 
         // Call method to fetch data from database
         fetchNotificationsFromDatabase();
-
+        setupToolbar(this);
 
 
         Button logOutBtn = (Button) findViewById(R.id.logOutBtn);
@@ -233,36 +233,38 @@ public class ProfilePage extends NotUserPages {
     }
     public void deleteAccount() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        String userUid = currentUser.getUid();
-        currentUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    DatabaseReference deleteUser = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/"+userUid);
-                    deleteUser.removeValue()
-                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void unused) {
-                                    Toast.makeText(ProfilePage.this, R.string.account_deleted, Toast.LENGTH_SHORT).show();
+        if (currentUser != null) {
+            String userUid = currentUser.getUid();
+            currentUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+                        DatabaseReference deleteUser = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid);
+                        deleteUser.removeValue()
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Toast.makeText(ProfilePage.this, R.string.account_deleted, Toast.LENGTH_SHORT).show();
 
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(ProfilePage.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(ProfilePage.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
-                                }
-                            });
+                                    }
+                                });
 
-                    Toast.makeText(ProfilePage.this, R.string.account_deleted, Toast.LENGTH_SHORT);
-                    Intent intent = new Intent(ProfilePage.this, Tab_Layout.class);
-                    startActivity(intent);
+                        Toast.makeText(ProfilePage.this, R.string.account_deleted, Toast.LENGTH_SHORT);
+                        Intent intent = new Intent(ProfilePage.this, Tab_Layout.class);
+                        startActivity(intent);
 
-                } else {
-                    Toast.makeText(ProfilePage.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(ProfilePage.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 }

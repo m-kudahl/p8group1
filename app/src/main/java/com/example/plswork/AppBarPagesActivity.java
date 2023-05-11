@@ -1,23 +1,28 @@
 package com.example.plswork;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.widget.Button;
 
 public class AppBarPagesActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+    protected void setupToolbar(Activity activity) {
+        Toolbar toolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+
 
         //set up the home button
-        AppBarUtility.setupHomeButton(this);
+        AppBarUtility.setupHomeButton(activity);
         //set up the back button
-        AppBarUtility.setUpBackButton(this);
+        AppBarUtility.setUpBackButton(activity);
         //set up profile button
-        AppBarUtility.setupProfilePage(this);
+        AppBarUtility.setupProfilePage(activity);
         //set up language button
-        AppBarUtility.setupLangButton(this);
+        AppBarUtility.setupLangButton(activity);
 
     }
 }

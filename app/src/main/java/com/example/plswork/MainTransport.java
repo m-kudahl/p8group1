@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 
-public class MainTransport extends AppCompatActivity {
+public class MainTransport extends StandardPagesActivity {
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
@@ -21,7 +21,7 @@ public class MainTransport extends AppCompatActivity {
         viewPager2 = findViewById(R.id.view_pager_transport);
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(viewPagerAdapter);
-        AppBarUtility.setupLangButton(this);
+        setupToolbar(this);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -46,7 +46,5 @@ public class MainTransport extends AppCompatActivity {
             }
         });
 
-        AppBarUtility.setupHomeButton(this);
-        AppBarUtility.setUpBackButton(this);
     }
 }

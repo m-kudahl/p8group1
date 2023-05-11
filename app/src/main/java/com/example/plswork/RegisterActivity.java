@@ -59,7 +59,7 @@ public class RegisterActivity extends NotUserPages {
         EditText passwordEditText = findViewById(R.id.editTextTextPassword);
         EditText nameEditText = findViewById(R.id.editTextName);
 
-
+        setupToolbar(this);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -34,7 +34,7 @@ public class LoginActivity extends NotUserPages {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
-
+        setupToolbar(this);
         EditText editTextEmail = findViewById(R.id.editTextEmailAddress);
         EditText editTextPassword = findViewById(R.id.editTextPassword);
         Button btn = (Button)findViewById(R.id.loginButton);

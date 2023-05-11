@@ -9,6 +9,7 @@ public class BenefitsPage extends StandardPagesActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_benefits_page);
+        setupToolbar(this);
 
     }
 

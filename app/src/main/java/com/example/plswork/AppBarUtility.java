@@ -14,7 +14,7 @@ public class AppBarUtility {
     public static void setupHomeButton(Activity activity) {
 
         //gotta make an appCompatButton here cause that is the type of the home button
-        View homeButton = activity.findViewById(R.id.home_button);
+        AppCompatButton homeButton = activity.findViewById(R.id.home_button);
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,7 +26,7 @@ public class AppBarUtility {
     }
     public static void setUpBackButton(Activity activity) {
 
-        View backButton = activity.findViewById(R.id.back_button);
+        AppCompatButton backButton = activity.findViewById(R.id.back_button);
         //create an on click listener:
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +38,7 @@ public class AppBarUtility {
 
 
     public static void setupProfilePage(Activity activity) {
-        View profileButton = activity.findViewById(R.id.profile_button);
+        AppCompatButton profileButton = activity.findViewById(R.id.profile_button);
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
