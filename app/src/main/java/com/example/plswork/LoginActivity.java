@@ -25,10 +25,22 @@ import com.google.firebase.database.DatabaseReference;
 
 import java.util.ResourceBundle;
 
-public class LoginActivity extends NotUserPages {
+public class LoginActivity extends AppBarPagesActivity {
 
     FirebaseAuth mAuth;
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth = FirebaseAuth.getInstance();
 
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(LoginActivity.this, Tab_Layout.class);
+            startActivity(intent);
+            finish();
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,12 +1,14 @@
 package com.example.plswork;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class EBoksPage extends StandardPagesActivity {
+public class EBoksPage extends InformationPagesActivity {
 
     ImageButton appleButton, googleButton;
     @Override
