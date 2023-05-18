@@ -16,26 +16,10 @@ public class EBoksPage extends StandardPagesActivity {
         setupToolbar(this);
         appleButton = findViewById(R.id.appleStoreButtonEBoks);
         googleButton = findViewById(R.id.googleStoreButtonEBoks);
-        appleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String url = "https://apps.apple.com/dk/app/e-boks-dk/id482926022";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-            }
-        });
-
-        googleButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                String url = "https://play.google.com/store/apps/details?id=com.eboks.activities&hl=da&gl=US&pli=1";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-            }
-        });
+        //Set up the apple button
+        setupLinkImageButton(appleButton, "https://apps.apple.com/dk/app/mitid/id1555231176");
+        //set up googleButton
+        setupLinkImageButton(googleButton, "https://play.google.com/store/apps/details?id=dk.mitid.app.android&hl=en&gl=US");
 
     }
 }
