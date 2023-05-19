@@ -23,10 +23,10 @@ public class EducationHomeActivity extends StandardPagesActivity {
         setupInternalLinkButton(DiplomVerificationBtn,EducationDiplomActivity.class);
 
         //Options knappen
-        setupInternalLinkButton(DiplomVerificationBtn,EducationOptionsActivity.class);
+        setupInternalLinkButton(EducationOptionsBtn,EducationOptionsActivity.class);
 
         //SU knappen
-        setupInternalLinkButton(DiplomVerificationBtn,EducationSUActivity.class);
+        setupInternalLinkButton(SUBtn,EducationSUActivity.class);
 
     }
 }
