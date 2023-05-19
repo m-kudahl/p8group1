@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
 
 public class LoginActivity extends NotUserPages {
 
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -37,7 +37,7 @@ public class AppBarUtility {
     }
 
 
-    public static void setupProfilePage(Activity activity) {
+    public static void setupProfileButton(Activity activity) {
         AppCompatButton profileButton = activity.findViewById(R.id.profile_button);
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override

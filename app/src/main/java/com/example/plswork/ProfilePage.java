@@ -40,7 +40,7 @@ public class ProfilePage extends UserPages {
     private RecyclerView recyclerView;
     private List<Notification> notifications;
     private NotificationRecyclerView notificationRecyclerView;
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
 
 
@@ -135,7 +135,6 @@ public class ProfilePage extends UserPages {
         if (currentUser != null) {
             String userUid = currentUser.getUid();
             DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid + "/messages");
-                        deleteAccount();
 
             // Use a query to order the notifications by timestamp in descending order
             Query query = databaseRef.orderByChild("timestamp");

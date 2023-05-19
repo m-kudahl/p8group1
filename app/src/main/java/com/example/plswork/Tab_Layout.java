@@ -20,10 +20,10 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Tab_Layout extends AppBarPagesActivity implements NotificationPermissionChecker {
-    TabLayout tabLayout;
-    ViewPager2 viewPager2;
-    TabLayoutViewPage viewPagerAdapter;
-    CardView cardViewEducation;
+    public TabLayout tabLayout;
+    public ViewPager2 viewPager2;
+    public TabLayoutViewPage viewPagerAdapter;
+
     private NotificationPermissionAsk notificationPermissionAsk;
 
     FirebaseAuth mAuth;

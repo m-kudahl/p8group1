@@ -29,9 +29,9 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class EditProfileActivity extends UserPages {
 
-    String[] cities = { "Randers", "Aalborg","Aarhus",
+    public String[] cities = { "Randers", "Aalborg","Aarhus",
             "Copenhagen"};
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

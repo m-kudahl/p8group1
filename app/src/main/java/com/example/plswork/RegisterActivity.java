@@ -29,11 +29,11 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 public class RegisterActivity extends NotUserPages {
-    AutoCompleteTextView autocomplete;
+    public AutoCompleteTextView autocomplete;
     private DatabaseReference mDatabase;
 
-    FirebaseAuth mAuth;
-    String[] cities = { "Randers", "Aalborg","Aarhus",
+    private FirebaseAuth mAuth;
+    public String[] cities = { "Randers", "Aalborg","Aarhus",
             "Copenhagen"};
 
 
