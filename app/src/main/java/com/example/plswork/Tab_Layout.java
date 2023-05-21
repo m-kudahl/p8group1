@@ -57,7 +57,22 @@ public class Tab_Layout extends AppBarPagesActivity implements NotificationPermi
         setupToolbar(this);
 
 
+        // Get a reference to the included layout
+        View includedLayout = findViewById(R.id.appbarHomeActivity);
 
+        // Get a reference to the specific Button within the included layout
+        Button myBackButton = includedLayout.findViewById(R.id.back_button);
+        Button myHomeButton = includedLayout.findViewById(R.id.home_button);
+
+        // Disable and make the Button invisible
+        myBackButton.setEnabled(false);
+        myBackButton.setVisibility(View.INVISIBLE);
+
+        // Disable and make the Button invisible
+        myHomeButton.setEnabled(false);
+        myHomeButton.setVisibility(View.INVISIBLE);
+
+        AppBarUtility.setupLangButton(this);
 
 
 
