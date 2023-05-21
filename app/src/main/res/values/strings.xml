@@ -64,29 +64,29 @@
 
     <!-- EDUCATION STRINGS -->
     <string name="educationHomeToolbarText">Education</string>
-    <string name="educationHomeBold1">Diplom verification</string>
+    <string name="educationHomeBold1">Diploma verification</string>
     <string name="educationHomeBold2">Education options</string>
     <string name="educationHomeBold3">SU</string>
     <string name="educationHomeText1">Here is information for you If you are a refugee from Ukraine since 24th of February and consider studying in Denmark.  On this page you can get information about:</string>
-    <string name="educationHomeText2">how and if you can verify your current education</string>
-    <string name="educationHomeText3">what are your options for studying in Denmark</string>
-    <string name="educationHomeText4">how to check if you can receive SU while studying in Denmark</string>
-    <string name="educationHomeBtn1">Diplom verification</string>
+    <string name="educationHomeText2">How and if you can verify your current education.</string>
+    <string name="educationHomeText3">What are your options for studying in Denmark.</string>
+    <string name="educationHomeText4">How to check if you can receive SU while studying in Denmark.</string>
+    <string name="educationHomeBtn1">Diploma verification</string>
     <string name="educationHomeBtn2">Education Options</string>
     <string name="educationHomeBtn3">SU</string>
 
-    <string name="educationDiplomToolbarText">Diplom verification</string>
+    <string name="educationDiplomToolbarText">Diploma verification</string>
     <string name="educationDiplomBold1">Online application:</string>
     <string name="educationDiplomBold2">PDF application form:</string>
-    <string name="educationDiplomText1">You can varify your diplom to be able to study or work in Denmark within your profession.  Your assessment can be applied either online or in PDF format.</string>
+    <string name="educationDiplomText1">You can verify your diploma to be able to study or work in Denmark within your profession.  Your assessment can be applied either online or in PDF format for physical application.</string>
     <string name="educationDiplomBtn1">What are the the required document to be included in the application?</string>
     <string name="educationDiplomBtn2">How do I fill in the online application?</string>
     <string name="educationDiplomBtn3">How do I fill in the PDF application?</string>
 
     <string name="educationOptionsToolbarText">Education options</string>
     <string name="educationOptionsText1">You can continue studying your higher education programme in Denmark or begin a new higher education in Denmark.  To do this you can:</string>
-    <string name="educationOptionsText2">1. apply for a transfer from your Ukrainian higher education programme to a Danish higher education programme or</string>
-    <string name="educationOptionsText3">2. apply for admission to a new full time higher education programme in Denmark.</string>
+    <string name="educationOptionsText2">1. Apply for a transfer from your Ukrainian higher education programme to a Danish higher education programme.</string>
+    <string name="educationOptionsText3">2. Apply for admission to a new full time higher education programme in Denmark.</string>
     <string name="educationOptionsText4">More information about education options and relevant links can be found here:</string>
     <string name="educationOptionsBtn1">How do I apply for a transfer?</string>
     <string name="educationOptionsBtn2">How do I apply for admission?</string>
@@ -94,7 +94,7 @@
     <string name="educationSUToolbarText" translatable="false">SU</string>
     <string name="educationSUBold1">What is SU and SU-loan?</string>
     <string name="educationSUBold2">How do I apply for SU or SU-loan?</string>
-    <string name="educationSUBold3">Speical conditions for Ukrainian refugees</string>
+    <string name="educationSUBold3">Special conditions for Ukrainian refugees</string>
     <string name="educationSUText1">“SU” and “SU-loan” is State Educational Grant and Loan Scheme. Society lends students a helping hand in covering living costs for a great variety of courses and studies.</string>
     <string name="educationSUText2">If you want to apply for SU or a SU-loan, you must apply for SU in minSU. Log on to minSU from a computer insted af a mobile device - they do not recieve all applications completed via a mobile device. For this you need to log in with your MitID.   If you are not sure how to use MitID, check out the page within the Essentials category, or click this button:</string>
     <string name="educationSUText3">More information here:</string>
