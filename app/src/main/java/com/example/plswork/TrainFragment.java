@@ -32,13 +32,15 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
 
         View view = inflater.inflate(R.layout.fragment_train, container, false);
 
-        Spinner spinner = view.findViewById(R.id.RegionSpinner);
-        ArrayAdapter<CharSequence> RegionAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.RegionSpinner_values, android.R.layout.simple_spinner_item);
-        RegionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(RegionAdapter);
-        spinner.setOnItemSelectedListener(this);
+        Spinner spinner = view.findViewById(R.id.RegionSpinner);    // Create a spinner with ID of spinner in FragmentTrain.xml
+        ArrayAdapter<CharSequence> RegionAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.RegionSpinner_values, android.R.layout.simple_spinner_item);  // Gets values from RegionSpinner_values in strings.xml
+        RegionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); //Sets the layout of the spinner to a simple dropdown menu
+        spinner.setAdapter(RegionAdapter);  // Populates the spinner with the data from RegionAdapter
+        spinner.setOnItemSelectedListener(this); // Uses method to display selected item
         return view;
     }
+
+    //Initialize buttons using the ID's in fragment_train.xml
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         RejsekortTopUp = (Button) getView().findViewById(R.id.RejsekortTopUp);
@@ -52,7 +54,7 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
         HowDoIBuyTickets = (Button) getView().findViewById(R.id.HowDoIBuyTickets);
         WhatIsMidttrafik = (Button) getView().findViewById(R.id.WhatIsMidttrafik);
         WhatIsDSB = (Button) getView().findViewById(R.id.WhatIsDSB);
-
+    //Here we define OnClickListeners for the buttons. When clicked they call a Dialog method
         RejsekortTopUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,17 +114,17 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
     }
 
 
-
+    //These are the Dialog methods. When called, they show an alert dialog (popupbox) with a title and message. If the "go to" button is clicked it opens the URL in a web browser
     public void Dialog_1() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle(R.string.train_dialog1_title)
                 .setMessage(R.string.train_dialog1_message)
                 .setPositiveButton("Go to", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface dialog, int which) { //WE CAN DELETE WHICH HERE. Which is used to differentiate if there are 3+ buttons, not needed when we have two buttons and the code inside the onClick methods are specific to their button
                         String url = "https://www.rejsekort.dk/en/Screening/Bestil-et-kort/Hvem-skal-bruge-rejsekortet";
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(url));
+                        Intent intent = new Intent(Intent.ACTION_VIEW); // Intent is a messaging object. The .ActionView means that we intend to view something passed to it
+                        intent.setData(Uri.parse(url)); //This converts the URL to a Uri object (String object that is an identifier for a resource) and sets the data of the intent to this URI object.
                         startActivity(intent);
                     }
                 })
@@ -351,7 +353,7 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 .show();
     }
     @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
+    public void onItemSelected(AdapterView<?> parent, View view, int i, long l) { //method used by the spinner to display the selected item
         String text = parent.getItemAtPosition(i).toString();
         Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }

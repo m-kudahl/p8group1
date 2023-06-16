@@ -104,7 +104,7 @@ public class BusFragment extends Fragment implements AdapterView.OnItemSelectedL
 
     }
 
-    private void gotoUrl(String s) {
+    private void gotoUrl(String s) { //NEVER USED
         Uri uri = Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
