@@ -275,8 +275,7 @@
                 android:textSize="15dp"/>
 
             <TextView
-                android:layout_width="250dp"
-                android:layout_marginStart="40dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/no_cash"
