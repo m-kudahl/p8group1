@@ -6,7 +6,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class NotUserPages extends StandardPagesActivity {
-
+    //a class for the pages which are not accessible for users logged in
     private FirebaseAuth mAuth;
 
     @Override

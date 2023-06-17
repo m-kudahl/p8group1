@@ -30,9 +30,12 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class RegisterActivity extends NotUserPages {
     public AutoCompleteTextView autocomplete;
+    //the database reference
     private DatabaseReference mDatabase;
 
+    //the users authentication
     private FirebaseAuth mAuth;
+    //an array of cities the user can choose between
     public String[] cities = { "Randers", "Aalborg","Aarhus",
             "Copenhagen"};
 
@@ -61,15 +64,16 @@ public class RegisterActivity extends NotUserPages {
 
         setupToolbar(this);
 
+        //when the register button is clicked we create the user
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Authenticate the user with Firebase Authentication
+                // sets the variables to the users inputted text in the textfields
                 String email = emailEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 String fullName = nameEditText.getText().toString();
                 String municipality = autocomplete.getText().toString();
-
+                //if any of the fields are empty we display a message
                 if (municipality.isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Please select your municipality", Toast.LENGTH_SHORT).show();
                     return;
@@ -104,6 +108,7 @@ public class RegisterActivity extends NotUserPages {
                                 Toast.LENGTH_SHORT).show();
                     }
                 };
+                //if subscribing to municipality were a success we proceed with adding the user to the database
                 Runnable subscribeToTopicSuccess = new Runnable() {
                     @Override
                     public void run() {
@@ -112,6 +117,7 @@ public class RegisterActivity extends NotUserPages {
                         writeNewUser(uid, fullName, email, municipality, writeUserToDBSuccess, writeUserToDBFailure);
                     }
                 };
+                //if subscribing to municipality were a failure we show an error message
                 Runnable subscribeToTopicFailure = new Runnable() {
                     @Override
                     public void run() {
@@ -119,13 +125,14 @@ public class RegisterActivity extends NotUserPages {
                                 Toast.LENGTH_SHORT).show();
                     }
                 };
+                //if authenticating the user were a success we subscribe the user to the municipality
                 Runnable createUserSuccess = new Runnable() {
                     @Override
                     public void run() {
                         subscribeToMunicipality(municipality, subscribeToTopicSuccess, subscribeToTopicFailure);
                     }
                 };
-
+                //if authenticating the user were a failure we show an error message
                 Runnable createUserFailure = new Runnable() {
                     @Override
                     public void run() {
@@ -133,7 +140,9 @@ public class RegisterActivity extends NotUserPages {
                                 Toast.LENGTH_SHORT).show();
                     }
                 };
-
+                //we start by running the createNewAccount method which authenticates the user
+                //if that's a success, the user is subscribed to the municipality chosen
+                //if the subscription is a success the user is added to the database
                 createNewAccount(email, password, createUserSuccess, createUserFailure);
 
 
@@ -152,10 +161,10 @@ public class RegisterActivity extends NotUserPages {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Authentication successful, continue with adding data to database
+                            // Authentication successful, continue with subscribing the user to the database by using the createUserSuccess runnable
                             createUserSuccess.run();
                         } else {
-                            // Authentication failed, display an error message
+                            // Authentication failed, createUserFailure runnable is run
                             createUserFailure.run();
 
                         }
@@ -164,17 +173,17 @@ public class RegisterActivity extends NotUserPages {
 
     }
 
-
+    //subscribes the user to their municipality to show targeted notifications
     public void subscribeToMunicipality(String municipality, Runnable subscribeToTopicSuccess, Runnable subscribeToTopicFailure) {
         FirebaseMessaging.getInstance().subscribeToTopic(municipality)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            subscribeToTopicSuccess.run();
+                            subscribeToTopicSuccess.run(); //if the subscription is a success we run the subscribeToTopicSuccess runnable
                         } else {
                             Log.w(TAG, "Failed subscribing to topic", task.getException());
-                            subscribeToTopicFailure.run();
+                            subscribeToTopicFailure.run(); //if the subscription is a failure we run the subscribeToTopicFailure runnable
                         }
                     }
                 });
@@ -189,9 +198,9 @@ public class RegisterActivity extends NotUserPages {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "Failed uploading to DB", task.getException());
-                            writeUserToDBFailure.run();
+                            writeUserToDBFailure.run(); //if adding the user to the database is a failure we run the writeUserToDBFailure runnable
                         } else {
-                            writeUserToDBSuccess.run();
+                            writeUserToDBSuccess.run(); //if adding the user to the database is a success we run the writeUserToDBSuccess runnable
                         }
                     }
                 });

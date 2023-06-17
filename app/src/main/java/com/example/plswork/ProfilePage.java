@@ -63,7 +63,7 @@ public class ProfilePage extends UserPages {
         // Initialize the notifications list and adapter
         notifications = new ArrayList<>();
         notificationRecyclerView = new NotificationRecyclerView(notifications);
-        //the setAdapter(adapter) tells the recyclerView that we want to populate it with an arraylist of nofitications
+        //the setAdapter(adapter) tells the recyclerView that we want to populate it with an arraylist of notifications
         recyclerView.setAdapter(notificationRecyclerView);
 
         // Call method to fetch data from database
@@ -77,7 +77,11 @@ public class ProfilePage extends UserPages {
         TextView municipality = findViewById(R.id.textViewEditMunicipality);
         Button editProfile = findViewById(R.id.editProfileButton);
         Button deleteAccount = findViewById(R.id.deleteProfileBtn);
+
+        //setting the currentUser variable to the userid
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        //if the user is not null we update the dynamic text views to the users data
         if (currentUser != null) {
             String userUid = currentUser.getUid();
             dynamicTextView(userUid, name, "userFullName");
@@ -86,18 +90,18 @@ public class ProfilePage extends UserPages {
         }
 
 
-
+        //the delete account button
         deleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder deleteAccountDialog = new AlertDialog.Builder(v.getContext());
+                AlertDialog.Builder deleteAccountDialog = new AlertDialog.Builder(v.getContext()); //a dialog box that asks if the user is sure
                 deleteAccountDialog.setTitle(R.string.delete_account);
                 deleteAccountDialog.setMessage(R.string.are_you_sure_you_want_to_delete_your_account);
                 deleteAccountDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (currentUser != null) {
-                            deleteAccount();
+                            deleteAccount(); //if the user clicked yes to delete the profile it is deleted by using the deleteAccount method
                         }
                     }
                 });
@@ -114,25 +118,25 @@ public class ProfilePage extends UserPages {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfilePage.this, EditProfileActivity.class);
-                startActivity(intent);
+                startActivity(intent); //if the edit profile button is clicked redirect the user to that page
             }
         });
 
         logOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signOut();
+                mAuth.signOut(); //if the logout button is clicked we sign the user out
                 Intent intent = new Intent(ProfilePage.this, LoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK); //clear tasks and start new
+                startActivity(intent); //redirect the user to the login page
             }
         });
     }
 
 
-    private void fetchNotificationsFromDatabase() {
+    private void fetchNotificationsFromDatabase() { //a method for fetching notifications from DB
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
+        if (currentUser != null) { //only does this if the user is not null
             String userUid = currentUser.getUid();
             DatabaseReference databaseRef = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid + "/messages");
 
@@ -208,20 +212,24 @@ public class ProfilePage extends UserPages {
         }
     }
 
-
+    //a method for dynamic text views takes input as the users id, the textview we want to change, and the type of data we want to occupy it with
     public void dynamicTextView(String uid, TextView yourView, String path){
+        //creates a connection to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/");
+        //since we want data from a particular user we set the reference to that user
         DatabaseReference myRef = database.getReference("users/" + uid);
 
+        //a listener to that users database, so if changes occur the data is updated
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String text = snapshot.child(path).getValue(String.class);
-                yourView.setText(text);
+                String text = snapshot.child(path).getValue(String.class); //set the text variable to the value we're looking for
+                yourView.setText(text); //sets the chosen textview to the value from the database
 
 
             }
 
+            //if theres a database error we log the error message
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Log.w(TAG, "Failed to read value.", error.toException());
@@ -230,35 +238,42 @@ public class ProfilePage extends UserPages {
             }
         });
     }
+    //the method for deletion of accounts
     public void deleteAccount() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
+        if (currentUser != null) { //we only want to run this code if the user is actually logged in
             String userUid = currentUser.getUid();
+
+            // deletes the user from firebase auth
             currentUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
+                    if (task.isSuccessful()) { //if deletion was successful we also want to delete them from the database
+                        //connects to the database on the specific users location
                         DatabaseReference deleteUser = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users/" + userUid);
+                        //removes the data from that users location
                         deleteUser.removeValue()
-                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                .addOnSuccessListener(new OnSuccessListener<Void>() { //if it were successful we provide the user with a message
                                     @Override
                                     public void onSuccess(Void unused) {
                                         Toast.makeText(ProfilePage.this, R.string.account_deleted, Toast.LENGTH_SHORT).show();
 
                                     }
-                                }).addOnFailureListener(new OnFailureListener() {
+                                }).addOnFailureListener(new OnFailureListener() { //if not we provide with an error message
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
                                         Toast.makeText(ProfilePage.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
                                     }
                                 });
+                        //after deletion the user is shown an account deleted message and redirected to the main page
 
                         Toast.makeText(ProfilePage.this, R.string.account_deleted, Toast.LENGTH_SHORT);
                         Intent intent = new Intent(ProfilePage.this, Tab_Layout.class);
                         startActivity(intent);
 
                     } else {
+                        //if by any reason it were not possible to delete the user they're shown an error message
                         Toast.makeText(ProfilePage.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
                     }

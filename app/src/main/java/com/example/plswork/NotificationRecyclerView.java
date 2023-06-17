@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 //to show the notifications in a recyclerView, we create a class that handles showing the notifications
+//the class extends androids RecyclerView.Adapter with a custom view holder: NotificationViewHolder
 public class NotificationRecyclerView extends RecyclerView.Adapter<NotificationRecyclerView.NotificationViewHolder> {
 
     //we initiate a list of the Notification class and call it notifications
@@ -30,10 +31,11 @@ public class NotificationRecyclerView extends RecyclerView.Adapter<NotificationR
         //want to populate, the parent class is used to
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.notification_messages, viewGroup, false);
+        //we then initiate a new view to create view to be able to show more notifications
         return new NotificationViewHolder(view);
     }
 
-    //we then populate the contents in the view we just returned with the title, message and timestamp of the nofitication
+    //we then populate the contents in the view we just returned with the title, message and timestamp of the notification
     @Override
     public void onBindViewHolder(@NonNull NotificationViewHolder holder, int position) {
         Notification notification = notifications.get(position);
@@ -50,10 +52,12 @@ public class NotificationRecyclerView extends RecyclerView.Adapter<NotificationR
     //to reference the textViews in the notification_messages class we need to reference them in this class to then pass the data to the other classes
     //like the onBindViewHolder class
     public static class NotificationViewHolder extends RecyclerView.ViewHolder {
+        //this class has text views for title, message and timestamp in the notification_messages class
         public TextView titleTextView;
         public TextView messageTextView;
         public TextView timestampTextView;
 
+        //the constructor of this class takes a view (xml file) and sets the NotificationViewHolders attributes to those text views
         public NotificationViewHolder(View view) {
             super(view);
             titleTextView = view.findViewById(R.id.titleTextView);
