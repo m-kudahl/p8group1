@@ -8,8 +8,8 @@ import android.widget.Button;
 
 public class EducationSUActivity extends StandardPagesActivity {
 
+    //Declaration of buttons
     Button SUMitIDBtn;
-
     private Button buttonEducationSU2;
 
     @Override
@@ -17,13 +17,16 @@ public class EducationSUActivity extends StandardPagesActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education_suactivity);
 
+        //Initalizing button
         SUMitIDBtn = (Button) findViewById(R.id.buttonEducationSU);
         setupToolbar(this);
         //link to MitID
         setupInternalLinkButton(SUMitIDBtn,MitIDpage.class);
 
+        //Initalizing next button
         buttonEducationSU2 = findViewById(R.id.buttonEducationSU2);
 
+        //Adds clicklistener - a dialog / pop-up box shows up that contains strings
         buttonEducationSU2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

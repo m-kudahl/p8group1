@@ -10,10 +10,9 @@ import android.widget.TextView;
 
 public class EducationDiplomActivity extends StandardPagesActivity {
 
+    //Declaration of buttons
     private Button buttonEducationDiplom1;
-
     private Button buttonEducationDiplom2;
-
     private TextView buttonEducationDiplom3;
 
     @Override
@@ -21,9 +20,11 @@ public class EducationDiplomActivity extends StandardPagesActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education_diplom);
 
+        //Initializing button
         buttonEducationDiplom1 = findViewById(R.id.buttonEducationDiplom1);
         setupToolbar(this);
 
+        //Adds clicklistener - a dialog / pop-up box shows up that contains strings
         buttonEducationDiplom1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,8 +45,10 @@ public class EducationDiplomActivity extends StandardPagesActivity {
             }
         });
 
+        //Initalizing next button
         buttonEducationDiplom2 = findViewById(R.id.buttonEducationDiplom2);
 
+        //Adds clicklistener - a dialog / pop-up box shows up that contains strings
         buttonEducationDiplom2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,9 +67,10 @@ public class EducationDiplomActivity extends StandardPagesActivity {
             }
         });
 
-
+        //Initializing last button
         buttonEducationDiplom3 = findViewById(R.id.buttonEducationDiplom3);
 
+        //Adds clicklistener - a dialog / pop-up box shows up that contains strings
         buttonEducationDiplom3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

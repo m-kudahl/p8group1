@@ -7,6 +7,7 @@ import android.widget.Button;
 public class EducationHomeActivity extends StandardPagesActivity {
 
 
+    //Declaration of buttons
     Button DiplomVerificationBtn, EducationOptionsBtn, SUBtn;
 
     @Override
