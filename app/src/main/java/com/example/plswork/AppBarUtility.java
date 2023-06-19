@@ -10,7 +10,11 @@ import androidx.appcompat.widget.AppCompatButton;
 import java.util.Locale;
 
 public class AppBarUtility {
-    //This method takes an input of the given activity as well as an integer which would be the app.bar.layout id (fx for MitID, etc.)
+
+    /**
+     * This method takes an input of the given activity as well as an integer which would be the app.bar.layout id (fx for MitID, etc.)
+     * @param activity
+     */
     public static void setupHomeButton(Activity activity) {
 
         //gotta make an appCompatButton here cause that is the type of the home button
@@ -24,6 +28,11 @@ public class AppBarUtility {
             }
         });
     }
+
+    /**
+     * This method sets up an onclicklistener for the back button
+     * @param activity
+     */
     public static void setUpBackButton(Activity activity) {
 
         AppCompatButton backButton = activity.findViewById(R.id.back_button);
@@ -36,7 +45,10 @@ public class AppBarUtility {
         });
     }
 
-
+    /**
+     * this method sets up an on click listener for the profile button the app bar
+     * @param activity
+     */
     public static void setupProfileButton(Activity activity) {
         AppCompatButton profileButton = activity.findViewById(R.id.profile_button);
         profileButton.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +59,11 @@ public class AppBarUtility {
             }
         });
     }
+
+    /**
+     * this method sets up an onclicklistener for the lang
+     * @param activity
+     */
     public static void setupLangButton(Activity activity) {
 
         AppCompatButton langButton = activity.findViewById(R.id.language_button);
