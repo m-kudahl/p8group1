@@ -18,6 +18,7 @@ public class EverydayTab extends Fragment {
     CardView cardViewHelth;
     CardView cardViewWork;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

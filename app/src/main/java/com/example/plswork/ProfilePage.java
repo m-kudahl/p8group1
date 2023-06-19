@@ -121,7 +121,9 @@ public class ProfilePage extends UserPages {
                 startActivity(intent); //if the edit profile button is clicked redirect the user to that page
             }
         });
-
+        /**
+         * Clear task og starter ny (session)
+         */
         logOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,6 +136,9 @@ public class ProfilePage extends UserPages {
     }
 
 
+    /**
+     * Tager alle notifkationerne fra databasen og smider dem ind i recycle view efter dato
+     */
     private void fetchNotificationsFromDatabase() { //a method for fetching notifications from DB
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) { //only does this if the user is not null
@@ -143,6 +148,7 @@ public class ProfilePage extends UserPages {
             // Use a query to order the notifications by timestamp in descending order
             Query query = databaseRef.orderByChild("timestamp");
 
+            //kommer der nye notikationer, hvis ja så opdaterer den
             ValueEventListener valueEventListener = new ValueEventListener() {
 
                 //listen for any new notifications or changes
@@ -163,6 +169,7 @@ public class ProfilePage extends UserPages {
                             notifications.add(notification);
                         }
                     }
+                    //bare start med ny istedet for ældste:
                     //reverse the order of the list, so the newest notification is displayed first in the recyclerView
                     Collections.reverse(notifications);
 
@@ -187,6 +194,7 @@ public class ProfilePage extends UserPages {
     }
     //when this activity is ended we want to cut the connection to the database, so we use the onDestroy method
     //to stop looking for changes in the database to update UI
+    //For at lukke forbindelsen til databasen
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -211,7 +219,7 @@ public class ProfilePage extends UserPages {
             query.removeEventListener(valueEventListener);
         }
     }
-
+    //ændrer sig efter hvilken kommune man er i osv:
     //a method for dynamic text views takes input as the users id, the textview we want to change, and the type of data we want to occupy it with
     public void dynamicTextView(String uid, TextView yourView, String path){
         //creates a connection to the database
@@ -239,6 +247,7 @@ public class ProfilePage extends UserPages {
         });
     }
     //the method for deletion of accounts
+    //sådan fjerner man en account fra Databasen og mAuth - ifølge firebase
     public void deleteAccount() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) { //we only want to run this code if the user is actually logged in

@@ -7,7 +7,8 @@ import android.app.Activity;
 
 public class AppBarPagesActivity extends AppCompatActivity {
 
-
+//måske kan man lave en konstruktor som bare kalder setupToolBar, istedet for at man skal gøre det for
+    //samtlige undersider
     protected void setupToolbar(Activity activity) {
         Toolbar toolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);

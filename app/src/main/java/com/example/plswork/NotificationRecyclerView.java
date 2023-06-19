@@ -10,6 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * Hvordan viser vi notifkiationer i message under profile page - kan tilføje nye views vertikalt for hvert
+ * notifkation der bliver lavet
+ */
 //to show the notifications in a recyclerView, we create a class that handles showing the notifications
 //the class extends androids RecyclerView.Adapter with a custom view holder: NotificationViewHolder
 public class NotificationRecyclerView extends RecyclerView.Adapter<NotificationRecyclerView.NotificationViewHolder> {

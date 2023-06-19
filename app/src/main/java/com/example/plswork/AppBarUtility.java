@@ -89,7 +89,8 @@ public class AppBarUtility {
                     // update the configuration with changes
                     activity.getResources().updateConfiguration(config, activity.getResources().getDisplayMetrics());
 
-                    // recreate ALL activities with new changes
+                    // recreate ALL activities with new changes - på tværs af activities - hvis man åbner appen
+                    // starter den op på det sprog som man var i, da man lukkede
                     Intent intent = new Intent(activity, activity.getClass());
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     activity.startActivity(intent);

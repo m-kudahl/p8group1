@@ -352,8 +352,16 @@ public class TrainFragment extends Fragment implements AdapterView.OnItemSelecte
                 })
                 .show();
     }
+
+    /**
+     * Method used by the spinner to display the selected item
+     * @param parent
+     * @param view
+     * @param i
+     * @param l
+     */
     @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int i, long l) { //method used by the spinner to display the selected item
+    public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
         String text = parent.getItemAtPosition(i).toString();
         Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }

@@ -1,5 +1,8 @@
 package com.example.plswork;
 
+/**
+ * Getters and setters for notifikationerne
+ */
 public class Notification {
 
     //the notification class, a notification consists of a title, message and a timestamp

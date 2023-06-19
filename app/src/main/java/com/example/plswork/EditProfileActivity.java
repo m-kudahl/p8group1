@@ -27,10 +27,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+/**
+ * Hvis man er en user kan man komme ind på denne side
+ *
+ * Formålet med siden er at man kan redigere sine profilindstillinger
+ */
 public class EditProfileActivity extends UserPages {
 
     public String[] cities = { "Randers", "Aalborg","Aarhus",
             "Copenhagen"};
+    //For at få brugerens user id:
     private FirebaseAuth mAuth;
 
     @Override
@@ -47,12 +53,16 @@ public class EditProfileActivity extends UserPages {
 
         autocomplete.setThreshold(2);
         autocomplete.setAdapter(adapter);
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        //FirebaseUser currentUser = mAuth.getCurrentUser();
         Button btn = (Button)findViewById(R.id.editProfileUserButton);
         EditText nameEditText = findViewById(R.id.editTextUserFullName);
         setupToolbar(this);
 
         btn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Knap til at ændre municipality for brugeren
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 String name = nameEditText.getText().toString();
@@ -67,11 +77,12 @@ public class EditProfileActivity extends UserPages {
                 }
 
                 if(municipality.isEmpty()){
-
+                //her opdaterer man sin municipality fra nuværende til den nye - unsubscriber til nuværende og subscriber til ny
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/");
                     DatabaseReference myRef = database.getReference("users/" + userUid + "/userMunicipality");
                     myRef.addValueEventListener(new ValueEventListener() {
+                        //når dataen i snapshottet ændres sker det her
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             String userMunicipality = snapshot.getValue(String.class);
@@ -102,7 +113,7 @@ public class EditProfileActivity extends UserPages {
                                     });
 
                         }
-
+                        //hvis der er en fejl med at oprette connection - er der her en exception handler
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
                             Log.w(TAG, "Failed to read value.", error.toException());
@@ -118,6 +129,12 @@ public class EditProfileActivity extends UserPages {
         });
     }
 
+    /**
+     * Opdaterer den værdi man vil ændre i databasen
+     * @param uid - user id
+     * @param updateValue - value man opdaterer
+     * @param path - path til den value
+     */
     public void updateValue(String uid, String updateValue, String path) {
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://p8-g1-bc27c-default-rtdb.europe-west1.firebasedatabase.app/");
         DatabaseReference myRef = database.getReference("users/" + uid + path);

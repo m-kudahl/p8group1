@@ -91,8 +91,5 @@ public class EducationDiplomActivity extends StandardPagesActivity {
             }
         });
 
-        //appbar buttons
-        AppBarUtility.setupHomeButton(this);
-        AppBarUtility.setUpBackButton(this);
     }
 }

@@ -17,10 +17,12 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 
 
-
-
+/**
+ * Måden vi spørger om lov til at sende notifikationer
+ */
 public class NotificationPermissionAsk extends AppCompatActivity {
     //a class that asks the user for permission to post notifications, used to define when permission is granted
+    //denne vurder om man får adgang, hvis den returnerer et tal mindre end 123 - hvis den er over så no good
     public static final int MY_PERMISSIONS_REQUEST_POST_NOTIFICATIONS = 123;
     //a callback variable that takes a boolean value from the NotificationPermissionChecker to show if permission was granted
     private NotificationPermissionChecker callback;
@@ -31,6 +33,7 @@ public class NotificationPermissionAsk extends AppCompatActivity {
     }
 
     //a method that asks for permission to post notifications
+    //hvis ens build/system er over Tiramisu så skal man spørge om lov til at sende notifikationer, hvis ikke så er det automatisk
     public void askNotificationPermission(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) { //since this only applies to newer androids we only ask on those
             if (ContextCompat.checkSelfPermission(activity, Manifest.permission.POST_NOTIFICATIONS) //checks if the user already granted permission

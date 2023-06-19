@@ -10,9 +10,15 @@ import com.google.android.material.tabs.TabLayout;
 public class MainTransport extends StandardPagesActivity {
 
     TabLayout tabLayout;
+    //ViewPager deprecated
     ViewPager2 viewPager2;
+    //Kan gøre at man kan slide mellem fragments
     ViewPagerAdapter viewPagerAdapter;
 
+    /**
+     * Denne side holder de to fragments bus/train og kontrollerer dem
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +44,7 @@ public class MainTransport extends StandardPagesActivity {
 
             }
         });
+        //holder styr på din position
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {

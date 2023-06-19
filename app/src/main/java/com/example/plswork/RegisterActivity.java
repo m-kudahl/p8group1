@@ -40,6 +40,10 @@ public class RegisterActivity extends NotUserPages {
             "Copenhagen"};
 
 
+    /**
+     * Her opretter man en bruger
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +58,7 @@ public class RegisterActivity extends NotUserPages {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this,android.R.layout.select_dialog_item, cities);
 
+        //arrayliste af municipalities - en slags edit text view
         autocomplete.setThreshold(2);
         autocomplete.setAdapter(adapter);
 
@@ -92,7 +97,8 @@ public class RegisterActivity extends NotUserPages {
                 }
 
                 //to check if the account creating process were a success before redirecting the user
-                //we use the Runnable object
+                //we use the Runnable object - er den sidste hændelse en success, hvis ikke stopper vi processen
+                //med at oprette brugere
                 Runnable writeUserToDBSuccess = new Runnable() {
                     @Override
                     public void run() {

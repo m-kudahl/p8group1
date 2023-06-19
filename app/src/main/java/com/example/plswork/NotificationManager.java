@@ -11,7 +11,7 @@ import androidx.core.app.NotificationManagerCompat;
 
 public class NotificationManager {
     //To handle firebase notifications and notifications in general we need a notification channel
-    //and a way to handle incoming notification
+    //and a way to handle incoming notification - hvordan skal telefonen vibrere, hvor vigtig er notifikationen?
     //first we initiate the different variables, the channels ID, name and description
     private static final String CHANNEL_ID = "Youkraine_Notifications";
     private static final String CHANNEL_NAME = "Youkraine Notifications";

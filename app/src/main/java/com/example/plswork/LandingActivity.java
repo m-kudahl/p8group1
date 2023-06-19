@@ -38,10 +38,12 @@ public class LandingActivity extends NotUserPages {
 
         AppBarUtility.setupLangButton(this);
     }
+    //button til register page
         public void goToRegister (View view) {
             Intent intent = new Intent (this, RegisterActivity.class);
             startActivity(intent);
     }
+    //button til login page
     public void goToLogin (View view) {
         Intent intent = new Intent (this, Tab_Layout.class);
         startActivity(intent);
