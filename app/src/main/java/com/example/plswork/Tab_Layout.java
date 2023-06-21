@@ -74,8 +74,6 @@ public class Tab_Layout extends AppBarPagesActivity implements NotificationPermi
         myHomeButton.setEnabled(false);
         myHomeButton.setVisibility(View.INVISIBLE);
 
-        AppBarUtility.setupLangButton(this);
-
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

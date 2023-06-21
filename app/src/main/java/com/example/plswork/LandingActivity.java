@@ -36,7 +36,6 @@ public class LandingActivity extends NotUserPages {
         myHomeButton.setEnabled(false);
         myHomeButton.setVisibility(View.INVISIBLE);
 
-        AppBarUtility.setupLangButton(this);
     }
     //button til register page
         public void goToRegister (View view) {
